@@ -4,3 +4,6 @@ Questa directory contiene tutti i template LaTeX per la
 produzione di documenti interni ed esterni al gruppo.
 
 ## Cosa contengono le varie cartelle?
+
+- `assets`: Conteiene tutte le immagini necessarie all'interno
+dei documenti (e.g. logo).
