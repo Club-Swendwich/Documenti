@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+
+% Configurazione standard documento
+
+\newcommand{\docname}{Nome del documento}
+\newcommand{\docprojectname}{Nome del progetto}
+\newcommand{\docversion}{0.0.0}
+\newcommand{\docstatus}{In redazione / Approvato}
+\newcommand{\docusage}{Interno / Esterno}
+\newcommand{\docdescription}{Descrizione breve}
+
+\newcommand{\doceditors}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docverifiers}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docapprovers}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docdistribution}{Nome Cognome \\& Nome Cognome}
+
+% Configurazione ORG
+
+\definecolor{orgcolorlight}{HTML}{99b755}
+\definecolor{orgcolordark}{HTML}{214932}
+
+% Altra configurazione
+
+\graphicspath{ {./res/} }
+
+\begin{document}
+
+\begin{center}
+\includegraphics{ClubSweLogo}
+
+Progetto: \textbf{\docprojectname}
+
+\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|l}
+    \multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
+    \hline
+    \textbf{Versione}      & \docversion                     \\
+    \textbf{Approvatori}   & \docapprovers                   \\
+    \textbf{Redattori}     & \doceditors                     \\
+    \textbf{Verificatori}  & \docverifiers                   \\
+    \textbf{Uso}           & \docusage                       \\
+    \textbf{Distribuzione} & \docdistribution
+    \end{tabular}
+\end{table}
+
+\textbf{Descrizione}
+
+\docdescription
+
+
+\end{center}
+
+\newpage
+
+% Prima pagina
+\end{document}
