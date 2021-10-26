@@ -1,58 +1,14 @@
-\documentclass{article}
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{float}
+\documentclass[a4paper, 12pt]{article}
 
-% Configurazione standard documento
+\usepackage{package}
 
-\newcommand{\docname}{Verbale riunione #1}
-\newcommand{\docdate}{01 gennaio 1970}
-
-\newcommand{\docattendant}{Nome Cognome \\& Nome Cognome}
-\newcommand{\doc}{Nome Cognome \\& Nome Cognome}
-\newcommand{\docapprovers}{Nome Cognome \\& Nome Cognome}
-\newcommand{\docdistribution}{Nome Cognome \\& Nome Cognome}
-
-% Configurazione ORG
-
-\definecolor{orgcolorlight}{HTML}{99b755}
-\definecolor{orgcolordark}{HTML}{214932}
-
-% Altra configurazione
-
-\graphicspath{ {./res/} }
+\input{comandi.tex}
 
 \begin{document}
 
-\begin{center}
-\includegraphics{ClubSweLogo}
+\FirstPage{}
 
-Progetto: \textbf{\docprojectname}
+\include{sezioni/registro_modifiche}
+\include{sezioni/contenuto}
 
-\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}{l|l}
-    \multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
-    \hline
-    \textbf{Versione}      & \docversion                     \\
-    \textbf{Approvatori}   & \docapprovers                   \\
-    \textbf{Redattori}     & \doceditors                     \\
-    \textbf{Verificatori}  & \docverifiers                   \\
-    \textbf{Uso}           & \docusage                       \\
-    \textbf{Distribuzione} & \docdistribution
-    \end{tabular}
-\end{table}
-
-\textbf{Descrizione}
-
-\docdescription
-
-
-\end{center}
-
-\newpage
-
-% Prima pagina
 \end{document}
