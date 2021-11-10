@@ -1,0 +1,49 @@
+\section{Ordine del giorno}
+\begin{itemize}
+    \item Conoscenza con l'azienda committente.
+    \item Chiarimento dei dubbi sorti sul capitolato.
+\end{itemize}
+
+\section{Resoconto}
+Inizio della call: 16:05
+
+\subsection{Conoscenza}
+I membri del gruppo sono stati colpiti dalla grande disponibilità dei rappresentanti aziendali a 
+rispondere alle domande poste e a fornire la documentazione necessaria per la valutazione del capitolato.
+
+\subsection{Questioni poste e risposte}
+\begin{enumerate}
+    \item Esistono librerie per poter interagire con l'UPS?
+    \begin{itemize}
+        \item Comunicazione tramite protocollo Modbus, in modalità master-slave.
+        \item Informazioni vengono trasmesse in word da 128 bit di cui ci fornirebbero la documentazione per l'interpretazione e un emulatore per il testing.
+    \end{itemize}
+    \item Come decidere quali informazioni rappresentare e quali non sono rilevanti?
+    \begin{itemize}
+        \item Fornirebbero la lista delle informazioni rilevanti.
+        \item Fornirebbero gli asset per la rappresentazione dei dati.
+        \item Fornirebbero gli screenshot di un loro prototipo per permetterci di capire come rappresentare i dati.
+    \end{itemize}
+    \item Come gestire la bassa latenza richiesta?
+    \begin{itemize}
+        \item La latenza del protocollo Modbus è molto bassa ed è possibile richiedere tutti i dati necessari entro i tempi stabiliti.
+        \item Suggeriscono un aggiornamento intelligente dei dati, dato che non tutti i parametri cambiano frequente.
+    \end{itemize}
+    \item Che SO è necessario per l'esecuzione dell'emulatore?
+    \begin{itemize}
+        \item Windows (min. Vista).
+        \item Se necessario, cercherebbero di renderlo portabile.
+    \end{itemize}
+    \item Chiarimenti sull'obiettivo opzionale della videochiamata con il tecnico.
+    \begin{itemize}
+        \item Il tecnico deve evere feedback visivo.
+        \item Il tecnico deve poter aver accesso alle informazioni sullo stato dell'UPS. Tali dati \emph{non devono} partire dall'UPS.
+    \end{itemize}
+\end{enumerate}
+Ci hanno inoltre informati che l'emulatore non è abilitato alla simulazione della comunicazione tramite Bluetooth ma solo a quella tramite ethernet e, pertanto, l'obiettivo opzionale relativo alla comunicazione tramite protocollo Bluetooth potrebbe essere abbandonato.\\
+Termine della call: 16:45
+
+\section{Tracciamento decisioni}
+\begin{itemize}
+    \item Il gruppo ha deciso di considerare provvisoriamente il capitolato come seconda scelta, in attesa dell'incontro con il rappresentante della Zucchetti SpA.
+\end{itemize}
