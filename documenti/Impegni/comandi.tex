@@ -1,0 +1,61 @@
+% Configurazione standard documento
+\newcommand{\docname}{Impegni}
+\newcommand{\docprojectname}{LoginWarrior}
+\newcommand{\docversion}{1.0.0}
+\newcommand{\docstatus}{In redazione}
+\newcommand{\docusage}{Esterno}
+\newcommand{\docdescription}{
+	\begin{flushleft}
+		In questo documento il team clubswendwich definisce gli impegni necessari da mantenere, al fine di garantire al committente un prodotto finito nei tempi dichiarati
+		ed in accordo con i costi previsti.
+	\end{flushleft}
+}
+\newcommand{\groupname}{Club Swendwich}
+\newcommand{\groupmail}{clubswendwich@gmail.com}
+\newcommand{\doceditors}{Marco Bustaffa \\& Valentina Beni \\& Alessio Ferrarini}
+\newcommand{\docverifiers}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docapprovers}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docdistribution}{Nome Cognome \\& Nome Cognome}
+
+% Configurazione ORG
+\definecolor{orgcolorlight}{HTML}{99b755}
+\definecolor{orgcolordark}{HTML}{214932}
+
+
+% Definizione copertina
+\newcommand{\FirstPage}{
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.35]{../../assets/ClubSweLogo.png}
+
+			\vspace{0.5cm}
+			
+			\textcolor{orgcolordark}{\Large\textbf{\docprojectname}{}} \\
+					
+			\href{mailto:clubswendwich@gmail.com}{clubswendwich@gmail.com}
+			
+			\vspace{0.3cm}
+			
+			\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
+
+			\begin{table}[H]
+   			\centering
+    				\begin{tabular}{l|l}
+    				\multicolumn{2}{l}{\textbf{Informazioni sul documento}}  	\\
+    				\hline
+    				\textbf{Versione}      	& \docversion                     	\\
+    				\textbf{Approvatori}   	& \docapprovers                     \\
+    				\textbf{Redattori}     	& \doceditors                     	\\
+    				\textbf{Verificatori}  	& \docverifiers                   	\\
+    				\textbf{Uso}           	& \docusage                       	\\
+    				\textbf{Distribuzione} 	& \docdistribution
+    				\end{tabular}
+			\end{table}
+
+			\vspace{1cm}
+			\textbf{Descrizione}
+			\docdescription
+	\end{center}
+\end{titlepage}
+}
+
