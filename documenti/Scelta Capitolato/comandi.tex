@@ -1,0 +1,59 @@
+% Configurazione standard documento
+\newcommand{\docname}{Scelta Capitolato}
+\newcommand{\docprojectname}{Login Warrior}
+\newcommand{\docversion}{0.0.0}
+\newcommand{\docstatus}{In redazione / Approvato}
+\newcommand{\docusage}{Interno / Esterno}
+\newcommand{\docdescription}{Documento riguardante la scelta del capitolato Login Warrior}
+\newcommand{\groupname}{Club Swendwich}
+\newcommand{\groupmail}{clubswendwich@gmail.com}
+\newcommand{\doceditors}{Beni Valentina \\& Barilla Gianmarco \\& Canel Alessandro}
+\newcommand{\docverifiers}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docapprovers}{Nome Cognome \\& Nome Cognome}
+\newcommand{\docdistribution}{Nome Cognome \\& Nome Cognome}
+
+
+
+% Configurazione ORG
+\definecolor{orgcolorlight}{HTML}{99b755}
+\definecolor{orgcolordark}{HTML}{214932}
+
+
+
+% Definizione copertina
+\newcommand{\FirstPage}{
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.35]{../../assets/ClubSweLogo.png}
+
+			\vspace{0.5cm}
+			
+			\textcolor{orgcolordark}{\Large\textbf{\docprojectname}{}} \\
+					
+			\href{mailto:clubswendwich@gmail.com}{clubswendwich@gmail.com}
+			
+			\vspace{0.3cm}
+			
+			\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
+
+			\begin{table}[H]
+   			\centering
+    				\begin{tabular}{l|l}
+    				\multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
+    				\hline
+    				\textbf{Versione}      	& \docversion                     	\\
+    				\textbf{Approvatori}   	& \docapprovers                        \\
+    				\textbf{Redattori}     	& \doceditors                     	\\
+    				\textbf{Verificatori}  	& \docverifiers                   	\\
+    				\textbf{Uso}           	& \docusage                       	\\
+    				\textbf{Distribuzione} 	& \docdistribution
+    				\end{tabular}
+			\end{table}
+
+			\vspace{1cm}
+			\textbf{Descrizione:}
+			\docdescription
+	\end{center}
+\end{titlepage}
+}
+
