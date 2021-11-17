@@ -1,0 +1,16 @@
+name: Compile LaTeX Documents
+on: [commit]
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+
+      - name: Compile the sources
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: |
+            documenti/*/*.tex
+            verbali/*/*.tex
