@@ -12,8 +12,8 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            documenti/*/*.tex
-            verbali/*/*.tex
+            documenti/*/main.tex
+            verbali/*/main.tex
           glob_root_file: true
       - name: Rename files
         run: |
