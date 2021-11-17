@@ -1,0 +1,75 @@
+\section{Documentazione}
+
+Lo strumento scelto dal gruppo per la stesura della documentazione è \LaTeX,
+tutta la documentazione deve essere mantenuta all'interno della repo git
+\href{https://github.com/Club-Swendwich/Documenti}{hostata su GitHub (LINK)}.
+La struttura della repository è la seguente:
+\begin{itemize}
+    \item \texttt{assets}: Contiene tutti gli elementi grafici comuni ai documenti
+        prodotti dal team.
+    \item \texttt{verbali}: Contiene i resoconti di tutti gli incontri del team sia
+        interni che con entità esterne al team.
+    \item \texttt{presentazioni}: Contiene tutte le presentazioni basate su slide.
+    \item \texttt{documenti}: Contiene tutti i documenti che non sono verbali o
+        presentazioni.
+    \item \texttt{template}: Contiene tutti i template da utilizzare quando si va a
+        creare un nuovo documento.
+\end{itemize}
+
+\subsection{Creazione e Modifica di un documento}
+
+\subsubsection{Creazione}
+Quando si decide di creare un nuovo documento è fondamentale utilizzare i template già
+disponibili essi sono il miglior modo per mantenere la documentazione uniforme e
+risparmiare tempo.
+La versione di partenza di un documento è la \texttt{0.1.0}.
+
+\subsubsection{Scelta di un template}
+
+Sono disponibili 3 tipi di template:
+\begin{itemize}
+    \item \texttt{documenti}: Tutti i documenti \LaTeX che non sono verbali.
+    \item \texttt{presentazioni}: Tutte le presentazioni sia esterne che interne.
+    \item \texttt{verbali}: Tutti i verbali.
+\end{itemize}
+Se non è presente il template di cui necessiti prima di prendere una brutta decisione
+e potenzialmente perdere tempo parlane con il resto del team.
+
+\subsection{Versionamento}
+Ogni documento che deve si sa verrà aggiornato nel tempo deve essere versionato anche
+internamente (non sempre git basta), la versione è nel formato \texttt{X.Y.Z} dove
+\texttt{X}, \texttt{Y}, \texttt{Z} sono numeri interi e positivi:
+\begin{itemize}
+    \item il numero al posto di \texttt{X} va incrementato solo se si tratta di una
+    modifica/verifica pre rilascio.
+    \item il numero al posto di \texttt{Y} va incrementato solo se la modifica
+    interessa la creazione, eliminazione o modifica totale di una sezione.
+    \item il numero al posto di \texttt{Z} va incrementato solo se la modifica
+    interessa la creazione, eliminazione o modifica totale di una sottosezione
+    anche di secondo livello.
+\end{itemize}
+Ogni modifica che apporta un cambio di versione deve essere accompagnata da una
+opportuna nuova riga nel registro delle modifiche.
+
+\textbf{Se la modifica è solo una piccola correzione specialmente se grammaticale o di
+spelling non va riportata nel registro modifiche a quello ci pensa già git.}
+
+
+\subsection{Verifica di un documento}
+La fase di verifica non è meramente un controllo di spelling e grammatica esso
+deve verificare anche che il contenuto sia completo e coerente al documento.
+
+\subsubsection{Segnalare un problema}
+Un errore trovato durante la fase di verifica va segnalato tramite le issue su github
+seguendo le seguenti regole:
+\begin{itemize}
+    \item Il titolo della issue deve essere
+    \texttt{Nome Documento - Descrizione problema}
+    \item Nella descrizione va spiegato più approfonditamente la natura del
+    problema e eventuali puntatori alle righe interessate.
+    \item  Come assignee invece va indicato l'ultimo redattore che ha toccato il file
+    interessato.
+    \item Fondamentale l'utilizzo delle label soprattutto indicare se si tratta
+    di un bug o di un miglioramento e se il documento interessato è un verbale.
+\end{itemize}
+
