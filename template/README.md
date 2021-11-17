@@ -14,6 +14,9 @@ Img contiene le immagini utilizzate.
 Sezioni verrà usato per scrivere le varie sezioni del nostro
 documento.
 
+- `presentazioni`: Il template presentazioni va utilizzato per
+le presentazioni basate su slide.
+
 - `verbali`: Il template verbali va utilizzato per riassumere
 tutto ciò che si è discusso in una riunione.
 
