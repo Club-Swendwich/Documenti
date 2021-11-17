@@ -15,7 +15,7 @@ jobs:
             documenti/*/main.tex
             verbali/*/main.tex
           glob_root_file: true
-          args: cd
+          args: -cd
 
       - name: Rename files
         run: |
