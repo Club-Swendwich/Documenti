@@ -24,7 +24,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           root_file: |
-            documenti/*/*.tex
-            verbali/*/*.tex
+            documenti/*/*.pdf
+            verbali/*/*.pdf
           glob_root_file: true
 
