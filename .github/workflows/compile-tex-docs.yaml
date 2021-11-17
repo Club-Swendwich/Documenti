@@ -15,7 +15,6 @@ jobs:
             documenti/*/*.tex
             verbali/*/*.tex
           glob_root_file: true
-          extra_system_packages: "color"
       - name: Rename files
         run: |
           find . -type f -name "*.pdf" \
