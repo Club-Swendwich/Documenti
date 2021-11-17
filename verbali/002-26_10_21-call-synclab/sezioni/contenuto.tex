@@ -11,18 +11,45 @@ A seguito dell'incontro tra il gruppo e SyncLab si è poi tenuta una discussione
 I membri del gruppo sono stati piacevolmente colpiti dalla disponibilità e dalla competenza dimostrata dal responsabile
 del capitolato Fabio Pallaro.
 
-\subsection{Chiarimento dubbi}
+\subsection{Domande e risposte}
 Il gruppo ha proposto poi alcune domande al responsabile, tra le quali:
-\begin{itemize}
-    \item Abbiamo trovato un'iniziale difficoltà nell'immaginarci i diversi MVP, lei che approccio ci consiglierebbe di avere?
+\begin{enumerate}
+    \item Abbiamo trovato un'iniziale difficoltà nell'immaginarci i diversi MVP, lei su quali ci consiglierebbe di concentrarci?
+          \begin{itemize}
+              \item Primo MVP: implementazione della funzionalità di \textit{inserimento dati} relativi all'ordine, sullo smart contract.
+              \item Secondo MVP: implementazione nello smart contract della funzionalità di \textit{sblocco del pagamento}.
+              \item Terzo MVP: per quanto riguarda la parte di web-application da sviluppare, un importante step e quello relativo allo sviluppo della
+                    dashboard necessaria al venditore.
+              \item Quarto MVP: implementazione della funzionalità di \textit{sblocco pagamento}, preventivamente definita nel secondo MVP, nell'applicazione
+                    mobile.
+            \end{itemize}
     \item Che ruolo gioca il database se di fatto la BlockChain ha la capacità di conservare lei stessa i dati?
+            \begin{itemize}
+                \item Tecnicamente potremmo creare un applicativo che utilizza la blockchain direttamente come database, in generale però quando la mole di dati
+                      e la loro struttura diventa particolarmente dispendiosa in termini spazio, è sempre meglio appoggiarsi ad un database esterno. 
+                      Proprio lo stesso linguaggio Solidity mette a disposizione un set di tipo dati molto limitato, questo per evitare che la blockchain venga appesantita, ed
+                      inoltre ogni dato che viene memorizzato nella blockchain ha un costo molto alto in Ethereum, quindi usare un database è meglio anche in termini economici.
+                      E' bene limitarsi alla memorizzazione di dati molto sensibili, che sicuramente vorremo tenere sicuri ed anonimi, sulla blockchain.
+            \end{itemize}
     \item Che livello di anonimità deve essere garantito all'utente?
+            \begin{itemize}
+                \item L'utente viene identificato unicamente dall'address del suo wallet, sia dal punto di vista dell'acquirente che dal punto di vista del venditore. Non avremo bisogno di
+                      mantenere traccia di altre informazioni, quali: nomi, cognomi, anno di nascita ecc per due motivazioni:
+                      \begin{itemize}
+                          \item E' sicuramente un costo in più, visto che si andrebbero ad aggiungere dati nella blockchain.
+                          \item Utenti esterni potrebbero entrare nella blockchain e leggere i dati personali di altri utenti, facendo venire a meno il fattore di anonimità caratteristico delle blockchains
+                      \end{itemize}
+            \end{itemize}
     \item Ethereum è di fatto l'unica opzione valida o varrebbe la pena approfondire le ricerche a più blockchains (come Cardano)?
-\end{itemize}
+            \begin{itemize}
+                \item L'azienda è assolutamente aperta a possibili nuove tecnologie per la realizzazione di questo progetto, quindi se da una nostra analisi emergono soluzioni tecnologiche seconodo noi migliori
+                      le possiamo tranquillamente adottare.
+            \end{itemize}
+\end{enumerate}
 La discussione di queste tematiche con il responsabile ha sicuramente aiutato il gruppo ad avere una visione più chiara del progetto,
 sia in termini di obbiettivi da raggiungere, che in termini di difficoltà da superare.
 \section{Tracciamento decisioni}
 \begin{itemize}
     \item Il gruppo ha deciso di considerare provvisoriamente ShopChain come prima scelta.
-    \item Il gruppo ha deciso di cominciare ad informarsi sulle teconologie necessarie.
+    \item Il gruppo ha deciso di cominciare ad informarsi sulle tecnologie necessarie.
 \end{itemize}
