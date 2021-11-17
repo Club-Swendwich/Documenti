@@ -15,6 +15,8 @@ jobs:
             documenti/*/main.tex
             verbali/*/main.tex
           glob_root_file: true
+          args: cd
+
       - name: Rename files
         run: |
           find . -type f -name "*.pdf" \
