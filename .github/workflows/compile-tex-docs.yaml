@@ -1,5 +1,5 @@
 name: Compile LaTeX Documents
-on: [commit]
+on: [push]
 
 jobs:
   build_latex:
@@ -14,3 +14,15 @@ jobs:
           root_file: |
             documenti/*/*.tex
             verbali/*/*.tex
+      - name: Rename files
+        run: |
+          find . -type f -name "*.pdf" \
+                 -exec bash -c \
+                  ' DIR=$( dirname "{}"  ); mv "{}" "$DIR"/"${DIR##*/}".pdf  ' \;
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          root_file: |
+            documenti/*/*.tex
+            verbali/*/*.tex
+
