@@ -20,28 +20,27 @@ La struttura della repository è la seguente:
 
 \subsubsection{Creazione}
 Quando si decide di creare un nuovo documento è fondamentale utilizzare i template già
-disponibili essi sono il miglior modo per mantenere la documentazione uniforme e
+disponibili, essi sono il miglior modo per mantenere la documentazione uniforme e
 risparmiare tempo.
 La versione di partenza di un documento è la \texttt{0.1.0}.
 
-\subsubsection{Scelta di un template}
+\subsubsection{Scelta template}
 
 Sono disponibili 3 tipi di template:
 \begin{itemize}
-    \item \texttt{documenti}: Tutti i documenti \LaTeX che non sono verbali.
-    \item \texttt{presentazioni}: Tutte le presentazioni sia esterne che interne.
+    \item \texttt{documenti}: Tutti i documenti \LaTeX che non sono verbali, interni ed esterni.
+    \item \texttt{presentazioni}: Tutte le presentazioni.
     \item \texttt{verbali}: Tutti i verbali.
 \end{itemize}
-Se non è presente il template di cui necessiti prima di prendere una brutta decisione
-e potenzialmente perdere tempo parlane con il resto del team.
+Qualora non fosse presente il template desiderato è necessaria una discussione con il gruppo prima di procedere a crearne di nuovi.
 
 \subsection{Versionamento}
-Ogni documento che deve si sa verrà aggiornato nel tempo deve essere versionato anche
+Ogni documento che verrà aggiornato nel tempo deve essere versionato anche
 internamente (non sempre git basta), la versione è nel formato \texttt{X.Y.Z} dove
 \texttt{X}, \texttt{Y}, \texttt{Z} sono numeri interi e positivi:
 \begin{itemize}
     \item il numero al posto di \texttt{X} va incrementato solo se si tratta di una
-    modifica/verifica pre rilascio.
+    modifica/verifica pre-rilascio.
     \item il numero al posto di \texttt{Y} va incrementato solo se la modifica
     interessa la creazione, eliminazione o modifica totale di una sezione.
     \item il numero al posto di \texttt{Z} va incrementato solo se la modifica
@@ -50,12 +49,29 @@ internamente (non sempre git basta), la versione è nel formato \texttt{X.Y.Z} d
 \end{itemize}
 Ogni modifica che apporta un cambio di versione deve essere accompagnata da una
 opportuna nuova riga nel registro delle modifiche.
+\\
 
-\textbf{Se la modifica è solo una piccola correzione specialmente se grammaticale o di
-spelling non va riportata nel registro modifiche a quello ci pensa già git.}
+\noindent
+\textbf{Lo scatto di versione avviene solo su modifiche andate a buon fine e verificate}
+\\
 
+\noindent
+\textbf{Se la modifica è solo una piccola correzione, specialmente se grammaticale o di
+spelling, non va riportata nel registro modifiche.}
 
-\subsection{Verifica di un documento}
+\subsection{Richiedere la verifica di un documento}
+Per richiedere la verifica di un documento è necessario aprire una issue su GitHub con
+i seguenti parametri:
+\begin{itemize}
+    \item Il titolo della issue deve essere
+    \texttt{Nome Documento - Richiesta verifica}
+    \item Nella descrizione è opportuno spiegare in breve cosa è stato modificato/creato,
+    così da dare al verificatore contesto.
+    \item Fondamentale l'utilizzo della label \texttt{richiesta verifica} ed indicare
+    sempre tramite esse se si tratta di un verbale.
+\end{itemize}
+
+\subsection{Effettuare la verifica di un documento}
 La fase di verifica non è meramente un controllo di spelling e grammatica esso
 deve verificare anche che il contenuto sia completo e coerente al documento.
 
@@ -69,7 +85,7 @@ seguendo le seguenti regole:
     problema e eventuali puntatori alle righe interessate.
     \item  Come assignee invece va indicato l'ultimo redattore che ha toccato il file
     interessato.
-    \item Fondamentale l'utilizzo delle label soprattutto indicare se si tratta
-    di un bug o di un miglioramento e se il documento interessato è un verbale.
+    \item Fondamentale l'utilizzo delle label per indicare se si tratta
+    di un bug o di un miglioramento, e se il documento interessato è un verbale.
 \end{itemize}
 
