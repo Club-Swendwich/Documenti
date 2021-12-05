@@ -4,7 +4,7 @@
 
 \subsection{Attori}
 
-\subsection{Caricamento dataset}
+\subsection{UC1 - Caricamento dataset}
 \begin{figure}[h!]
     \centering
     % Sistema immagine inserendo tag UC e abbelliscila dc
@@ -12,25 +12,89 @@
     \caption{UC1 - Caricamento dataset}
 \end{figure}
 \begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il sistema è funzionante
-    \item \textbf{Postcondizioni}: Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento dei dati e della loro validità. 
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il sistema è funzionante
+    \item \textbf{Postcondizioni:} Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento dei dati e della loro validità. 
                                    I dati vengono caricati nel sistema
-    \item \textbf{Scenario principale}:
+    \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item L'utente seleziona il file da caricare
               \item L'utente carica il file
           \end{enumerate}
-    \item \textbf{Estensioni}:
+    \item \textbf{Estensioni:}
     \begin{itemize}
         \item   Nel caso in cui l'utente carichi un file in un formato non supportato
                 \begin{enumerate}
                     \item I dati non vengono caricati
-                    \item Viene visualizzato un messaggio di errore esplicativo [UC] % To Do: metti il link alla sezione   
+                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC - Errore formato file]{UC}] % To Do: metti il link alla sezione   
+                \end{enumerate}
+        \item   Nel caso in cui l'utente carichi un file non correttamente strutturato
+                \begin{enumerate}
+                    \item I dati non vengono caricati
+                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC - Errore struttura dataset]{UC}]
                 \end{enumerate}
         \item   Nel caso in cui i dati di una o più righe non siano validi
                 \begin{enumerate}
-                    \item Viene visualizzato un messaggio di errore esplicativo [UC] % To Do: metti il link alla sezione
+                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC - Errore validita riga]{UC}] % To Do: metti il link alla sezione
                 \end{enumerate}
     \end{itemize} 
+\end{itemize}
+
+
+% --------------------------------------------------------------------
+% SEZIONE ERRORI
+% --------------------------------------------------------------------
+
+\subsection{UC - Errore formato file}
+\label{sec:UC - Errore formato file}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} L'utente carica un file in un formato non supportato.
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item L'utente visualizza un messaggio di errore esplicativo
+              \item L'utente clicca "OK" per proseguire.
+          \end{enumerate}
+\end{itemize}
+
+\subsection{UC - Errore struttura dataset}
+\label{sec:UC - Errore struttura dataset}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato, 
+                                  ad esempio due o più colonne sono invertite oppure una o più colonne sono mancanti. 
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item L'utente visualizza un messaggio di errore esplicativo.
+              \item L'utente clicca "OK" per proseguire.
+          \end{enumerate} 
+\end{itemize}
+
+\subsection{UC - Errore validità riga nel dataset}
+\label{sec:UC - Errore validita riga}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma, una o più righe presentano
+                                  un dato non valido, ad esempio nella colonna relativa ai \textit{timestamp} il valore è negativo.  
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede o di ignorare la riga non valida, 
+                                   oppure di ricaricare il file.
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+        \item   L'utente sceglie di ignorare la riga
+                \begin{enumerate}
+                    \item L'utente visualizza un messaggio di errore esplicativo.
+                    \item L'utente clicca "IGNORA" per ignorare la riga non valida.
+                    \item Il file viene caricato escludendo la riga precedentemente ignorata.
+                \end{enumerate} 
+        \item   L'utente sceglie di ricaricare il file corretto.
+                \begin{enumerate}
+                    \item L'utente visualizza un messaggio di errore esplicativo.
+                    \item L'utente clicca "OK" per proseguire.
+                    \item Il file non viene caricato.
+                \end{enumerate} 
+    \end{itemize}
+    
+    
 \end{itemize}
