@@ -95,3 +95,83 @@
                 \end{enumerate} 
     \end{itemize}
 \end{itemize}
+
+% --------------------------------------------------------------------
+% SCELTA TIPO GRAFICO
+% --------------------------------------------------------------------
+
+\section{UC2 - Scelta tipologia grafico}
+\label{sec:UC2}
+\begin{figure}[h!]
+    \centering
+    % Controlla che UC abbia il numero corretto
+    \includegraphics[scale=0.50]{../../assets/Selezione_tipo_grafico.png}
+    \caption{UC2 - Scelta tipologia grafico}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente.
+    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione scelta.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona il tipo di grafico da visualizzare tra le tipologie disponibili.
+          \end{enumerate}
+    \item \textbf{Generalizzazioni}:
+    \begin{itemize}
+        \item L'utente seleziona una delle seguenti opzioni:
+                \begin{enumerate}
+                    \item \textit{Scatter Plot} \hyperref[sec:UC2.1]{UC2.1}.
+                    \item \textit{Parallel Coordinates} \hyperref[sec:UC2.2]{UC2.2}.
+                    \item \textit{Force-directed Graph} \hyperref[sec:UC2.3]{UC2.3}.
+                    \item \textit{Sankey Diagram} \hyperref[sec:UC2.4]{UC2.4}.
+                \end{enumerate}
+    \end{itemize} 
+\end{itemize}
+
+\subsection{UC2.1 - Selezionato Scatter Plot}
+\label{sec:UC2.1}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente [UC2].
+    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione \textit{Scatter Plot} scelta dall'utente con possibilità di selezionare il numero di dimensioni significative \hyperref[sec:UC2]{UC?} e personalizzare lo stile \hyperref[sec:UC2]{UC?}. %inserire il numero corretto dello stile e delle dimensioni
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona il grafico \textit{Scatter Plot} e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
+          \end{enumerate}
+\end{itemize}
+
+\subsection{UC2.2 - Selezionato Parallel Coordinates}
+\label{sec:UC2.2}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente [UC2].
+    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione \textit{Parallel Coordinates} scelta dall'utente con possibilità di selezionare il numero di dimensioni significative \hyperref[sec:UC2]{UC?} e personalizzare lo stile \hyperref[sec:UC2]{UC?}. %inserire il numero corretto dello stile e delle dimensioni
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona il grafico \textit{Parallel Coordinates} e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
+          \end{enumerate}
+\end{itemize}
+
+\subsection{UC2.3 - Selezionato Force-directed Graph}
+\label{sec:UC2.3}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente [UC2].
+    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione \textit{Force-directed Graph} scelta dall'utente con possibilità di selezionare il numero di dimensioni significative \hyperref[sec:UC2]{UC?} e personalizzare lo stile \hyperref[sec:UC2]{UC?}. %inserire il numero corretto dello stile e delle dimensioni
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona il grafico \textit{Force-directed Graph} e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
+          \end{enumerate}
+\end{itemize}
+
+\subsection{UC2.4 - Selezionato Sankey Diagram}
+\label{sec:UC2.4}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente [UC2].
+    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione \textit{Sankey Diagram} scelta dall'utente con possibilità di selezionare il numero di dimensioni significative \hyperref[sec:UC2]{UC?} e personalizzare lo stile \hyperref[sec:UC2]{UC?}. %inserire il numero corretto dello stile e delle dimensioni
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona il grafico \textit{Sankey Diagram} e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
+          \end{enumerate}
+\end{itemize}
