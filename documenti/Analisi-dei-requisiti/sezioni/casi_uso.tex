@@ -62,8 +62,8 @@
 \label{sec:UC - Errore struttura dataset}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato, 
-                                  ad esempio due o più colonne sono invertite oppure una o più colonne sono mancanti. 
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato  
+                                  (e.g. due o più colonne sono invertite oppure una o più colonne sono mancanti). 
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -71,15 +71,14 @@
               \item L'utente clicca "OK" per proseguire.
           \end{enumerate} 
 \end{itemize}
-
 \subsection{UC - Errore validità riga nel dataset}
 \label{sec:UC - Errore validita riga}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
     \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma, una o più righe presentano
-                                  un dato non valido, ad esempio nella colonna relativa ai \textit{timestamp} il valore è negativo.  
+                                  un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).  
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede o di ignorare la riga non valida, 
-                                   oppure di ricaricare il file.
+                                   oppure di continuare.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item   L'utente sceglie di ignorare la riga
@@ -88,13 +87,11 @@
                     \item L'utente clicca "IGNORA" per ignorare la riga non valida.
                     \item Il file viene caricato escludendo la riga precedentemente ignorata.
                 \end{enumerate} 
-        \item   L'utente sceglie di ricaricare il file corretto.
+        \item   L'utente sceglie di proseguire.
                 \begin{enumerate}
                     \item L'utente visualizza un messaggio di errore esplicativo.
                     \item L'utente clicca "OK" per proseguire.
                     \item Il file non viene caricato.
                 \end{enumerate} 
     \end{itemize}
-    
-    
 \end{itemize}
