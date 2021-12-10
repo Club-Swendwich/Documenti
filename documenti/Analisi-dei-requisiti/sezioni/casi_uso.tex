@@ -1,8 +1,14 @@
 
 \section{Casi d'uso}
 \subsection{Scopo}
-
+L'obbiettivo di questa sezione è quello di presentare e descrivere tutti i casi d'uso, individuati dal team, in riferimento alle funzionalità richieste nell'applicazione.
 \subsection{Attori}
+Non essendo richiesto nessun tipo di servizio di autenticazione o più in generale una distinzione gerarchica degli utenti, è presente un solo attore nella gerarchia ovvero: l'utente generico.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.50]{../../assets/Utente.png}
+    \caption{Gerarchia attori}
+\end{figure}
 
 \subsection{UC1 - Caricamento dataset}
 \begin{figure}[h!]
@@ -38,62 +44,6 @@
                     \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC - Errore validita riga]{UC}] % To Do: metti il link alla sezione
                 \end{enumerate}
     \end{itemize} 
-\end{itemize}
-
-
-% --------------------------------------------------------------------
-% SEZIONE ERRORI
-% --------------------------------------------------------------------
-
-\subsection{UC - Errore formato file}
-\label{sec:UC - Errore formato file}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file in un formato non supportato.
-    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item L'utente visualizza un messaggio di errore esplicativo
-              \item L'utente clicca "OK" per proseguire.
-          \end{enumerate}
-\end{itemize}
-
-\subsection{UC - Errore struttura dataset}
-\label{sec:UC - Errore struttura dataset}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato  
-                                  (e.g. due o più colonne sono invertite oppure una o più colonne sono mancanti). 
-    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
-    \item \textbf{Scenario principale:}
-          \begin{enumerate}
-              \item L'utente visualizza un messaggio di errore esplicativo.
-              \item L'utente clicca "OK" per proseguire.
-          \end{enumerate} 
-\end{itemize}
-\subsection{UC - Errore validità riga nel dataset}
-\label{sec:UC - Errore validita riga}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma, una o più righe presentano
-                                  un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).  
-    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede o di ignorare la riga non valida, 
-                                   oppure di continuare.
-    \item \textbf{Scenario principale:}
-    \begin{itemize}
-        \item   L'utente sceglie di ignorare la riga
-                \begin{enumerate}
-                    \item L'utente visualizza un messaggio di errore esplicativo.
-                    \item L'utente clicca "IGNORA" per ignorare la riga non valida.
-                    \item Il file viene caricato escludendo la riga precedentemente ignorata.
-                \end{enumerate} 
-        \item   L'utente sceglie di proseguire.
-                \begin{enumerate}
-                    \item L'utente visualizza un messaggio di errore esplicativo.
-                    \item L'utente clicca "OK" per proseguire.
-                    \item Il file non viene caricato.
-                \end{enumerate} 
-    \end{itemize}
 \end{itemize}
 
 % --------------------------------------------------------------------
@@ -200,4 +150,88 @@
               \item L'utente apre il menù a tendina contenete tutte le interpretazioni disponibili.
               \item L'utente seleziona la vista che vuole visualizzare.
           \end{enumerate}
+% --------------------------------------------------------------------
+% SEZIONE ERRORI
+% --------------------------------------------------------------------
+
+\subsection{UC - Errore formato file}
+\label{sec:UC - Errore formato file}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} L'utente carica un file in un formato non supportato.
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item L'utente visualizza un messaggio di errore esplicativo
+              \item L'utente clicca "OK" per proseguire.
+          \end{enumerate}
+\end{itemize}
+
+\subsection{UC - Errore struttura dataset}
+\label{sec:UC - Errore struttura dataset}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato  
+                                  (e.g. due o più colonne sono invertite oppure una o più colonne sono mancanti). 
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item L'utente visualizza un messaggio di errore esplicativo.
+              \item L'utente clicca "OK" per proseguire.
+          \end{enumerate} 
+\end{itemize}
+\subsection{UC - Errore validità riga nel dataset}
+\label{sec:UC - Errore validita riga}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma, una o più righe presentano
+                                  un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).  
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede o di ignorare la riga non valida, 
+                                   oppure di continuare.
+    \item \textbf{Scenario principale:}
+    \begin{itemize}
+        \item   L'utente sceglie di ignorare la riga
+                \begin{enumerate}
+                    \item L'utente visualizza un messaggio di errore esplicativo.
+                    \item L'utente clicca "IGNORA" per ignorare la riga non valida.
+                    \item Il file viene caricato escludendo la riga precedentemente ignorata.
+                \end{enumerate} 
+        \item   L'utente sceglie di proseguire.
+                \begin{enumerate}
+                    \item L'utente visualizza un messaggio di errore esplicativo.
+                    \item L'utente clicca "OK" per proseguire.
+                    \item Il file non viene caricato.
+                \end{enumerate} 
+    \end{itemize}
+\end{itemize}
+
+\subsection{UC8 - Visualizzazione di default dei grafici}
+\begin{figure}[h!]
+	\centering
+	% Sistema immagine inserendo tag UC e abbelliscila dc
+	\includegraphics[scale=0.80]{../../assets/visualizzazione_default.png}
+	\caption{UC8 - Visualizzazione di default dei grafici}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attore primario:} Utente.
+	\item \textbf{Precondizioni:} Il dataset è presente e caricato correttamente.
+	\item \textbf{Postcondizioni:} 
+	Vengono riportati i grafici alla visualizzazione di default.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item   L'utente sceglie di ripristinare le viste
+	\begin{enumerate}
+		\item L'utente clicca sul pulsante di ripristino
+		\item Viene visualizzato un messaggio di riconferma
+		\item L'utente clicca "OK" per confermare la scelta
+		\item I grafici vengono resettati alla vista di default
+	\end{enumerate}
+		\item   L'utente sceglie di annullare l'operazione
+	\begin{enumerate}
+		\item L'utente clicca sul pulsante di ripristino
+		\item Viene visualizzato un messaggio di riconferma
+		\item L'utente clicca "ANNULLA" per annullare l'operazione
+		\item Ritorno alla vista corrente senza modifiche apportate
+	\end{enumerate}	
+	\end{itemize}
 \end{itemize}
