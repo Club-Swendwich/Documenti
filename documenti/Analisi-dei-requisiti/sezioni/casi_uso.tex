@@ -180,3 +180,34 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
                 \end{enumerate} 
     \end{itemize}
 \end{itemize}
+
+\subsection{UC8 - Visualizzazione di default dei grafici}
+\begin{figure}[h!]
+	\centering
+	% Sistema immagine inserendo tag UC e abbelliscila dc
+	\includegraphics[scale=0.80]{../../assets/visualizzazione_default.png}
+	\caption{UC8 - Visualizzazione di default dei grafici}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Attore primario:} Utente.
+	\item \textbf{Precondizioni:} Il dataset è presente e caricato correttamente.
+	\item \textbf{Postcondizioni:} 
+	Vengono riportati i grafici alla visualizzazione di default.
+	\item \textbf{Scenario principale:}
+	\begin{itemize}
+		\item   L'utente sceglie di ripristinare le viste
+	\begin{enumerate}
+		\item L'utente clicca sul pulsante di ripristino
+		\item Viene visualizzato un messaggio di riconferma
+		\item L'utente clicca "OK" per confermare la scelta
+		\item I grafici vengono resettati alla vista di default
+	\end{enumerate}
+		\item   L'utente sceglie di annullare l'operazione
+	\begin{enumerate}
+		\item L'utente clicca sul pulsante di ripristino
+		\item Viene visualizzato un messaggio di riconferma
+		\item L'utente clicca "ANNULLA" per annullare l'operazione
+		\item Ritorno alla vista corrente senza modifiche apportate
+	\end{enumerate}	
+	\end{itemize}
+\end{itemize}
