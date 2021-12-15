@@ -371,9 +371,92 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \end{itemize}
 
 \subsubsection{UC7.3 - Personalizzazione Force-directed graph}
-\label{sec:UC7.3}
+\label{sec:UC7.3.1}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.90]{../../assets/personalizzazioneForce-directedGraph.drawio.png}
+	\caption{UC7 - Personalizzazione Force-directed graph}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+	\item \textbf{Precondizioni:} L'utente ha scelto il grafico Force-directed graph. \hyperref[sec:UC3.1]{UC3.1}.
+	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
+	\item \textbf{Scenario principale:}L'utente decide:
+	\begin{itemize}
+        \item Associazione delle dimensioni \hyperref[sec:UC7.3.1]{UC7.3.1}.
+        \item Ordine degli assi \hyperref[sec:UC7.3.2]{UC7.3.2}.
+        \item Personalizzazione dello stile \hyperref[sec:UC7.3.3]{UC7.3.3}.
+    \end{itemize}
+\end{itemize}
+\paragraph{UC7.3.1 - Scelta tipo di algoritmo di integrazione}
+\label{sec:UC7.3.1}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} L'utente ha selezionato Force-directed graph. \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha associato l'algoritmo di integrazione che desidera.
+	    \item \textbf{Scenario principale:} L'utente sceglie l'algoritmo di integrazione che desidera.
+    \end{itemize}
+\paragraph{UC7.3.2 - Scelta della funzione di forza}
+\label{sec:UC7.3.2}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} L'utente ha selezionato Force-directed graph. \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha deciso i parametri per la rappresentazione.
+	    \item \textbf{Scenario principale:} L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
+	    \item \textbf{Estensioni:} Nel caso i parametri non rientrino nei limiti fissati:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico.
+              \end{itemize}
+    \end{itemize}
+\paragraph{UC7.3.3 - Personalizzazione dello stile}
+\label{sec:UC7.3.3}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} L'utente ha selezionato Force-directed graph \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha selezionato tra le opzioni disponibili lo stile che preferisce.
+	    \item \textbf{Scenario principale:} L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, nel caso l'utente non li modifichi rimangono quelli di default.
+    \end{itemize}
+
+
 \subsubsection{UC7.4 - Personalizzazione Sankey diagram}
 \label{sec:UC7.4}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.90]{../../assets/personalizzazioneSankey.drawio.png}
+	\caption{UC7 - Personalizzazione Personalizzazione Sankey diagram}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+	\item \textbf{Precondizioni:} L'utente ha scelto il grafico Personalizzazione Sankey diagram. \hyperref[sec:UC2.4]{UC2.4}.
+	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
+	\item \textbf{Scenario principale:}L'utente decide:
+	\begin{itemize}
+        \item Ordinamento dei dati \hyperref[sec:UC7.4.1]{UC7.4.1}.
+        \item Personalizzazione dello stile \hyperref[sec:UC7.4.2]{UC7.4.2}.
+    \end{itemize}
+\end{itemize}
+\paragraph{UC7.4.1 - Ordinamento dei dati}
+\label{sec:UC7.4.1}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} L'utente ha selezionato Sankey diagram. \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha deciso i gruppi di dati da rappresentare.
+	    \item \textbf{Scenario principale:} L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
+	    \item \textbf{Estensioni:} Nel caso i parametri non rientrino nelle relazioni fissate:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico.
+              \end{itemize}
+    \end{itemize}
+\paragraph{UC7.4.2 - Personalizzazione dello stile}
+\label{sec:UC7.4.2}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} L'utente ha selezionato Sankey diagram \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha selezionato tra le opzioni disponibili lo stile che preferisce.
+	    \item \textbf{Scenario principale:} L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, nel caso l'utente non li modifichi rimangono quelli di default.
+    \end{itemize}
 
 
 \subsection{UC8 - Visualizzazione di default dei grafici}
