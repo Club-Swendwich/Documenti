@@ -465,7 +465,67 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 
 \newpage
 
+% --------------------------------------------------------------------
+% SEZIONE MOUSE HOVER
+% --------------------------------------------------------------------
+\subsection{UC8 - Mouse Hover}
+\label{sec:UC8}
+\begin{figure}[h!]
+    \centering
+    % Controlla che UC abbia il numero corretto
+    \includegraphics[scale=0.55]{../../assets/UC8-MouseHover.png}
+    \caption{UC8 - Mouse Hover}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha scelto quale tipologia di grafico visualizzare e ha selezionato una vista.
+    \item \textbf{Postcondizioni:} Informazioni utili relative all'elemento su cui il mouse sta eseguendo l'hover vengono mostrate all'utente.
+    \item \textbf{Scenario principale}: L'utente passando con il mouse sopra all'elemento d'interesse visualizza delle informazioni utili e evidenzia l'elemento in questione, tutto ciò dipende chiaramente su quale grafico l'utente sta eseguendo la funzione di hover.
+    \item \textbf{Generalizzazioni:} \begin{enumerate}
+                                        \item Hover su \textit{Scatter Plot} [\hyperref[sec:UC8.1]{UC8.1}]
+                                        \item Hover su \textit{Parallel coordinates} [\hyperref[sec:UC8.2]{UC8.2}]
+                                        \item Hover su \textit{Force-directed graph} [\hyperref[sec:UC8.3]{UC8.3}]
+                                        \item Hover su \textit{Sankey diagram} [\hyperref[sec:UC8.4]{UC8.4}]
+                                    \end{enumerate}
+\end{itemize}
 
+\subsubsection{UC8.1 - Hover su Scatter Plot}
+\label{sec:UC8.1}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico \textit{Scatter Plot} e ha selezionato una vista.
+    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse ad un punto sul grafico ottiene più informazioni relative a quel punto e lo evidenzia.
+    \item \textbf{Scenario principale}: L'utente passando sopra con il mouse ad un punto sul grafico, visualizza un'etichetta che contiene informazioni più complete relative a quel punto, come ad esempio: valore delle coordinate delle x, valore delle coordinate delle y ecc. Viene in oltre evidenziato il punto rispetto a tutti gli altri. 
+\end{itemize}
+
+\subsubsection{UC8.2 - Hover su Parallel Coordinates}
+\label{sec:UC8.2}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico \textit{Parallel Coordinates} e ha selezionato una vista.
+    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse a una linea o a un gruppo di linee ottiene maggiori informazioni a riguardo.
+    \item \textbf{Scenario principale}: L'utente passando sopra con il mouse a una linea o a un gruppo di linee sul grafico, evidenzia la linea o il gruppo intero e visualizza un'etichetta che contiene informazioni più complete relative a quella linea o a quel gruppo di linee.
+\end{itemize}
+
+\subsubsection{UC8.3 - Hover su Force-directed Graph}
+\label{sec:UC8.3}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico \textit{Force-directed Graph} e ha selezionato una vista.
+    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse a un nodo del grafo lo evidenzia ed ottiene maggiori informazioni a riguardo.
+    \item \textbf{Scenario principale}: L'utente passando sopra con il mouse a un nodo del grafo, evidenzia il nodo e visualizza un toolpit che mostra maggiori informazioni a riguardo.
+\end{itemize}
+
+\subsubsection{UC8.4 - Hover su Sankey Diagram}
+\label{sec:UC8.4}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico \textit{Sankey Diagram} e ha selezionato una vista.
+    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse ad elemento nel grafico lo evidenzia.
+    \item \textbf{Scenario principale}: L'utente passando sopra con il mouse a un nodo evidenzia il nodo e i collegamenti da lui entranti e uscenti, selezionando invece solo un collegamento esso viene semplicemente evidenziato. 
+\end{itemize}
+
+\newpage
 % --------------------------------------------------------------------
 % SEZIONE ERRORI
 % --------------------------------------------------------------------
