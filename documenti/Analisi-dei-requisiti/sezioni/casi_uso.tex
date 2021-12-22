@@ -444,21 +444,45 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % SEZIONE ZOOM INTERATTIVO
 % --------------------------------------------------------------------
 
-\subsection{UC7 - Zoom interattivo}
+\subsection{UC7 - Zoom con selezione}
 \label{sec:UC7}
 \begin{figure}[h!]
     \centering
-    % Controlla che UC abbia il numero corretto
-    \includegraphics[scale=0.55]{../../assets/zoom_interattivo.png}
-    \caption{UC7 - Zoom su sezione di grafico}
+    \includegraphics[scale=0.55]{../../assets/zoom_selezione.png}
+    \caption{UC7 - Zoom con selezione sul grafico}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. L'utente ha scelto quale tipologia di grafico visualizzare e ha selezionato una vista.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+    		\item \textit{Scatter Plot}.
+    \end{itemize}
     \item \textbf{Postcondizioni}: Viene mostrato uno zoom sulla sezione selezionata dal mouse.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
               \item L'utente seleziona con il mouse l'area all'interno del grafico che vuole ingrandire.
+              \item L'area selezionata viene ingrandita.
+          \end{enumerate}
+\end{itemize}
+
+\subsection{UC? - Zoom con scroll del mouse}
+\label{sec:UC?}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.55]{../../assets/zoom_mouse.png}
+    \caption{UC? - Zoom con lo scroll del mouse}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+          \item \textit{Force-directed Graph}.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Viene mostrato uno zoom dove si trova il puntatore del mouse.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente posiziona il puntatore del mouse nella zona di interesse.
+              \item L'utente scorre lo \textit{scroll} del mouse per ingrandire, o utilizza le \textit{gesture} per lo zoom nel \textit{trackpad}.
               \item L'area selezionata viene ingrandita.
           \end{enumerate}
 \end{itemize}
