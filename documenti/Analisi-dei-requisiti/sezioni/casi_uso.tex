@@ -562,19 +562,17 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC - Errore validità riga}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma, una o più righe presentano
-                                  un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).  
-    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede o di ignorare la riga non valida, 
-                                   oppure di continuare.
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma una o più righe presentano un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).  
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede se ignorare la riga non valida, oppure continuare.
     \item \textbf{Scenario principale:}
     \begin{itemize}
-        \item   L'utente sceglie di ignorare la riga
+        \item   L'utente sceglie di ignorare la riga:
                 \begin{enumerate}
                     \item L'utente visualizza un messaggio di errore esplicativo.
                     \item L'utente clicca "IGNORA" per ignorare la riga non valida.
                     \item Il file viene caricato escludendo la riga precedentemente ignorata.
                 \end{enumerate} 
-        \item   L'utente sceglie di proseguire.
+        \item   L'utente sceglie di proseguire:
                 \begin{enumerate}
                     \item L'utente visualizza un messaggio di errore esplicativo.
                     \item L'utente clicca "OK" per proseguire.
@@ -587,7 +585,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC - Errore di personalizzazione}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente associa non correttamente una dimensione o più, a uno o più assi nel grafico; oppure l'utente inserisce dei parametri relativi alla funzione di forza non corretti; oppure l'utente sceglie dei parametri relativi all'ordinamento dei dati non corretti.
+    \item \textbf{Precondizioni:}
+    		\begin{itemize} 
+    			\item L'utente associa non correttamente una o più dimensioni ad uno o più assi nel grafico.
+    			\item L'utente inserisce dei parametri relativi alla funzione di forza non corretti.
+    			\item L'utente sceglie dei parametri relativi all'ordinamento dei dati non corretti.
+    		\end{itemize}
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio d'errore esplicativo relativo alla condizione che ha causato l'errore, e le modifiche da lui apportate non vengono eseguite.
     \item \textbf{Scenario principale:}  
     \begin{itemize}
