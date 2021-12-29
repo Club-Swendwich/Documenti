@@ -628,16 +628,43 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
     \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. L'utente ha scelto una tipologia di grafico e ha creato una propria vista personalizzata.
-    \item \textbf{Postcondizioni}: La vista viene salvata all'interno di un file \textit{.csv}.
+    \item \textbf{Postcondizioni}: La vista viene salvata all'interno di un file \textit{.json}.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
               \item L'utente seleziona il pulsante di salvataggio della vista.
-              \item Il file viene scaricato in locale in formato \textit{.csv}.
+              \item Il file viene scaricato in locale in formato \textit{.json}.
           \end{enumerate}
 \end{itemize}
 
 \newpage
 
+\subsection{UC11 - Caricamento vista}
+\label{sec:UC11}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.55]{../../assets/caricamento_vista.png}
+    \caption{UC10 - Salvataggio della vista su file}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente.
+    \item \textbf{Postcondizioni}: È selezionabile la nuova vista nel menù viste descritto da UC3.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente preme il pulsante "carica vista".
+              \item L'utente seleziona il file \textit{.json} contenente la vista.
+              \item L'applicativo rende disponibile la vista appena caricata.
+          \end{enumerate}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item Nel caso il json contenente la vista non sia ben formato: \begin{enumerate}
+            \item La vista non viene caricata.
+            \item Viene visualizzato un messaggio d'errore.
+        \end{enumerate}
+    \end{itemize}
+\end{itemize}
+
+\newpage
 % --------------------------------------------------------------------
 % SEZIONE ERRORI
 % --------------------------------------------------------------------
@@ -698,13 +725,29 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
     \item \textbf{Precondizioni:}
-    		\begin{itemize} 
+    		\begin{itemize}
     			\item L'utente associa non correttamente una o più dimensioni ad uno o più assi nel grafico.
     			\item L'utente inserisce dei parametri relativi alla funzione di forza non corretti.
     			\item L'utente sceglie dei parametri relativi all'ordinamento dei dati non corretti.
     		\end{itemize}
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio d'errore esplicativo relativo alla condizione che ha causato l'errore, e le modifiche da lui apportate non vengono eseguite.
-    \item \textbf{Scenario principale:}  
+    \item \textbf{Scenario principale:}
+    \begin{enumerate}
+        \item L'utente visualizza un messaggio di errore esplicativo.
+        \item L'utente clicca "OK" per proseguire.
+    \end{enumerate}
+\end{itemize}
+
+\subsection{UC - Errore caricamento vista}
+\label{sec:UC - Errore caricamento vista}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:}
+    		\begin{itemize}
+    			\item L'utente carica un file vista non ben formato.
+    		\end{itemize}
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio d'errore esplicativo relativo alla condizione che ha causato l'errore, non viene caricata la vista.
+    \item \textbf{Scenario principale:}
     \begin{enumerate}
         \item L'utente visualizza un messaggio di errore esplicativo.
         \item L'utente clicca "OK" per proseguire.
