@@ -144,7 +144,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \centering
     % Controlla che UC abbia il numero corretto
     \includegraphics[scale=0.55]{../../assets/scelta_vista.png}
-    \caption{UC6 - Scelta della vista dei dati da visualizzare}
+    \caption{UC3 - Scelta della vista dei dati da visualizzare}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
@@ -484,17 +484,19 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. L'utente ha scelto la seguente tipologia di grafico:
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
     \begin{itemize}
     		\item \textit{Scatter Plot}.
     \end{itemize}
-    \item \textbf{Postcondizioni}: Viene mostrato uno zoom sulla sezione selezionata dal mouse.
+    \item \textbf{Postcondizioni}: Viene mostrato uno zoom della sezione selezionata dal mouse.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
               \item L'utente seleziona con il mouse l'area all'interno del grafico che vuole ingrandire.
               \item L'area selezionata viene ingrandita.
           \end{enumerate}
 \end{itemize}
+
+\newpage
 
 \subsection{UC7.1 - Zoom con scroll del mouse}
 \label{sec:UC7.1}
@@ -505,15 +507,15 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. L'utente ha scelto la seguente tipologia di grafico:
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
     \begin{itemize}
           \item \textit{Force-directed Graph}.
     \end{itemize}
     \item \textbf{Postcondizioni}: Viene mostrato uno zoom dove si trova il puntatore del mouse.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
-              \item L'utente posiziona il puntatore del mouse nella zona di interesse.
-              \item L'utente scorre lo \textit{scroll} del mouse per ingrandire, o utilizza le \textit{gesture} per lo zoom nel \textit{trackpad}.
+              \item L'utente posiziona il puntatore del mouse sulla zona di interesse.
+              \item Per zoomare, l'utente esegue lo \textit{scroll} del mouse o utilizza le \textit{gesture} per lo zoom del \textit{trackpad}.
               \item L'area selezionata viene ingrandita.
           \end{enumerate}
 \end{itemize}
