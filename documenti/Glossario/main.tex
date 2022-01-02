@@ -1,0 +1,18 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{package}
+\usepackage{graphicx}
+
+\input{comandi.tex}
+
+\begin{document}
+
+\FirstPage{}
+
+\newpage
+\include{./sezioni/registro_modifiche.tex}
+\renewcommand{\contentsname}{Indice}
+\tableofcontents
+\include{./sezioni/contenuto.tex}
+
+\end{document}

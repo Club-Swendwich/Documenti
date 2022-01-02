@@ -612,10 +612,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \newpage
 
 % --------------------------------------------------------------------
-% SEZIONE UC9 - CREAZIONE NUOVA VISTA DA FARE
+% SEZIONE UC9 - CREAZIONE NUOVA VISTA
 % --------------------------------------------------------------------
+\subsection{UC9 - Creazione nuova vista}
 
 
+\newpage
 % --------------------------------------------------------------------
 % SEZIONE SALVATAGGIO VISTA SU FILE
 % --------------------------------------------------------------------
@@ -661,7 +663,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item Nel caso il json contenente la vista non sia ben formato: \begin{enumerate}
             \item La vista non viene caricata.
-            \item Viene visualizzato un messaggio d'errore.
+            \item Viene visualizzato un messaggio d'errore. [\hyperref[sec:UC - Errore caricamento vista]{UC?}]
         \end{enumerate}
     \end{itemize}
 \end{itemize}
@@ -744,10 +746,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC - Errore caricamento vista}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:}
-    		\begin{itemize}
-    			\item L'utente carica un file vista non ben formato.
-    		\end{itemize}
+    \item \textbf{Precondizioni:} L'utente carica un file vista non ben formato.
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio d'errore esplicativo relativo alla condizione che ha causato l'errore, non viene caricata la vista.
     \item \textbf{Scenario principale:}
     \begin{enumerate}
