@@ -196,14 +196,14 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \newpage
 
 % --------------------------------------------------------------------
-% SEZIONE PERSONALIZZAZIONE VISIVA DEI GRAFICI
+% SEZIONE PERSONALIZZAZIONE DEI GRAFICI
 % --------------------------------------------------------------------
 
-\subsection{UC5 - Personalizzazione visiva dei grafici}
+\subsection{UC5 - Personalizzazione dei grafici}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.55]{../../assets/personalizzazioneVisivaGrafici.drawio.png}
-	\caption{UC5 - Personalizzazione visiva dei grafici}
+	\caption{UC5 - Personalizzazione dei grafici}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attore primario:} Utente.
@@ -613,6 +613,230 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % SEZIONE UC9 - CREAZIONE NUOVA VISTA
 % --------------------------------------------------------------------
 \subsection{UC9 - Creazione nuova vista}
+\label{sec:UC9}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.55]{../../assets/creazione_vista.png}
+    \caption{UC9 - Creazione di una nuova vista}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente.
+    \item \textbf{Postcondizioni}: L'utente ha creato una nuova vista scegliendo quali colonne associare agli assi e quali righe visualizzare, oppure ha filtrato determinate celle da visualizzare.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente clicca il pulsante di creazione di una nuova vista.
+              \item Il sistema visualizza la schermata di creazione.
+              \item L'utente sceglie se selezionare tutte le colonne e righe del dataset o se selezionare solo determinate celle [\hyperref[sec:UC9.1]{UC9.1}].
+              \item L'utente inserisce le informazioni richieste dalla schermata.
+          \end{enumerate}
+  \item \textbf{Generalizzazioni:} \begin{enumerate}
+                                        \item Nuova vista su \textit{Scatter Plot}		 
+[\hyperref[sec:UC9.2]{UC9.2}]
+                                        \item Nuova vista su \textit{Parallel coordinates} [\hyperref[sec:UC9.3]{UC9.3}]
+                                        \item Nuova vista su \textit{Force-directed graph} [\hyperref[sec:UC9.4]{UC9.4}]
+                                        \item Nuova vista su \textit{Sankey diagram} [\hyperref[sec:UC9.5]{UC9.5}]
+                                    \end{enumerate}
+\end{itemize}
+
+
+
+\subsubsection{UC9.1 - Scelta delle colonne/righe/celle}
+\label{sec:UC9.1}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista''.
+    \item \textbf{Postcondizioni:} L'utente ha scelto quali righe e colonne utilizzare filtrando così le celle del dataset caricato.
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+		\item L'utente decide di creare una nuova vista.
+		\item L'utente sceglie quali colonne, righe o multiple celle visualizzare.
+	\end{enumerate}
+	\item \textbf{Estensioni:} Nel caso in cui l'utente non abbia selezionato un numero sufficiente di celle o non ne abbia selezionata alcuna:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di scelta celle insufficienti \hyperref[sec:UC - Errore-celle-insufficienti]{UC?}.
+              \end{itemize}
+\end{itemize}
+
+
+
+\subsubsection{UC9.2 - Nuova vista su Scatter Plot}
+\label{sec:UC9.2}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{../../assets/creazionevista_scatter_plot.png}
+	\caption{UC9.2 - Nuova vista su Scatter Plot}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista'' scegliendo quali celle/righe/colonne visualizzare (\hyperref[sec:UC9.1]{UC9.1}) e ha scelto il grafico Scatter Plot.
+    \item \textbf{Postcondizioni:} Il grafico viene mostrato secondo le scelte selezionate dall'utente.
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+		\item L'utente decide di creare una nuova vista per il grafico Scatter Plot.
+		\item L'utente può dunque associare le dimensioni desiderate agli assi \hyperref[sec:UC9.2.1]{UC9.2.1}.
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC9.2.1 - Associazione delle dimensioni agli assi}
+\label{sec:UC9.2.1}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC9.2]{UC9.2}.
+	    \item \textbf{Postcondizioni:} L'utente ha associato le dimensioni disponibili con gli assi del grafico.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente sceglie quali colonne associare agli assi del grafico.
+		\end{enumerate}
+	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente gli assi del grafico:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+              \end{itemize}
+    \end{itemize}
+
+
+
+\subsubsection{UC9.3 - Nuova vista su Parallel Coordinates}
+\label{sec:UC9.3}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{../../assets/creazionevista_parallel_coordinates.png}
+	\caption{UC9.3 - Nuova vista su Parallel Coordinates}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista'' scegliendo quali celle/righe/colonne visualizzare (\hyperref[sec:UC9.1]{UC9.1}) e ha scelto il grafico Parallel Coordinates.
+    \item \textbf{Postcondizioni:} Il grafico viene mostrato secondo le scelte selezionate dall'utente.
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+		\item L'utente decide di creare una nuova vista per il grafico Parallel Coordinates.
+		\item L'utente può associare le dimensioni desiderate agli assi \hyperref[sec:UC9.3.1]{UC9.3.1}.
+		\item L'utente può decidere ordine e numero degli assi \hyperref[sec:UC9.3.2]{UC9.3.2}.
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC9.3.1 - Associazione delle dimensioni agli assi}
+\label{sec:UC9.3.1}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC9.3]{UC9.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha associato le dimensioni disponibili con gli assi del grafico.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente sceglie quali colonne associare agli assi del grafico.
+		\end{enumerate}
+	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente gli assi del grafico:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+              \end{itemize}
+    \end{itemize}
+    
+\paragraph{UC9.3.2 - Ordine e numero degli assi}
+\label{sec:UC9.3.2}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC9.3]{UC9.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha deciso un ordine degli assi e il loro numero.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente sceglie ordine e numero degli assi.
+		\end{enumerate}
+	    \item \textbf{Estensioni:} Nel caso l'utente abbia creato nuovi assi ma non abbia associato nessuna dimensione ad essi:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+              \end{itemize}
+    \end{itemize}
+
+
+
+\subsubsection{UC9.4 - Nuova vista su Force-directed Graph}
+\label{sec:UC9.4}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{../../assets/creazionevista_force.png}
+	\caption{UC9.4 - Nuova vista su Force-directed Graph}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista'' scegliendo quali celle/righe/colonne visualizzare (\hyperref[sec:UC9.1]{UC9.1}) e ha scelto il grafico Force-directed Graph.
+    \item \textbf{Postcondizioni:} Il grafico viene mostrato secondo le scelte selezionate dall'utente.
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+		\item L'utente decide di creare una nuova vista per il grafico Force-directed Graph.
+		\item L'utente può decidere un algoritmo di integrazione \hyperref[sec:UC9.4.1]{UC9.4.1}.
+		\item L'utente può decidere la funzione di forza \hyperref[sec:UC9.4.2]{UC9.4.2}.
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC9.4.1 - Scelta algoritmo di integrazione}
+\label{sec:UC9.4.1}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC9.4]{UC9.4}.
+	    \item \textbf{Postcondizioni:} L'utente ha associato l'algoritmo di integrazione che desidera.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente sceglie l'algoritmo di integrazione.
+		\end{enumerate}
+    \end{itemize}
+    
+\paragraph{UC9.4.2 - Scelta funzione di forza}
+\label{sec:UC9.4.2}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC9.4]{UC9.4}.
+	    \item \textbf{Postcondizioni:} L'utente ha deciso i parametri per la rappresentazione.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
+		\end{enumerate}
+	    \item \textbf{Estensioni:} Nel caso l'utente abbia selezionato dei parametri che non rientrino nei limiti fissati:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+              \end{itemize}
+    \end{itemize}
+
+
+
+\subsubsection{UC9.5 - Nuova vista su Sankey Diagram}
+\label{sec:UC9.5}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.55]{../../assets/creazionevista_sankey.png}
+	\caption{UC9.5 - Nuova vista su Sankey Diagram}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente.
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista'' scegliendo quali celle/righe/colonne visualizzare (\hyperref[sec:UC9.1]{UC9.1}) e ha scelto il grafico Sankey Diagram.
+    \item \textbf{Postcondizioni:} Il grafico viene mostrato secondo le scelte selezionate dall'utente.
+    \item \textbf{Scenario principale}:
+    \begin{enumerate}
+		\item L'utente decide di creare una nuova vista per il grafico Sankey Diagram.
+		\item L'utente può decidere un ordinamento dei dati \hyperref[sec:UC9.5.1]{UC9.5.1}.
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{UC9.5.1 - Scelta ordinamento dei dati}
+\label{sec:UC9.5.1}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC9.5]{UC9.5}.
+	    \item \textbf{Postcondizioni:} L'utente ha stabilito le dimensioni da rappresentare.
+	    \item \textbf{Scenario principale:}
+	    \begin{enumerate}
+	    		\item L'utente sceglie l'ordinamento dei dati.
+		\end{enumerate}
+		\item \textbf{Estensioni:} Nel caso l'utente abbia selezionato dei parametri che non rientrino nelle relazioni:
+              \begin{itemize}
+                  \item Non viene visualizzato nessun grafico.
+                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+              \end{itemize}
+    \end{itemize}
 
 
 \newpage
@@ -752,3 +976,18 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item L'utente clicca "OK" per proseguire.
     \end{enumerate}
 \end{itemize}
+
+\subsection{UC - Errore scelta celle insufficienti}
+\label{sec:UC - Errore-celle-insufficienti}
+\begin{itemize}
+    \item \textbf{Attore primario:} Utente
+    \item \textbf{Precondizioni:} Il dataset è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista'' e ha inserito le colonne/righe/celle che vuole utilizzare (\hyperref[sec:UC9.1]{UC9.1}).
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore per celle insufficienti. 
+    \item \textbf{Scenario principale:}
+          \begin{enumerate}
+              \item L'utente ha selezionato un numero di celle insufficienti o nessuna.
+              \item Viene visualizzato un messaggio di errore.
+              \item L'utente clicca "OK" per proseguire.
+          \end{enumerate} 
+\end{itemize}
+
