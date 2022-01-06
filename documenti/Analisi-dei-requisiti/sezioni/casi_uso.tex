@@ -880,12 +880,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.55]{../../assets/caricamento_vista.png}
-    \caption{UC13 - Salvataggio della vista su file}
+    \caption{UC13 - Caricamento della vista da file}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
     \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente.
-    \item \textbf{Postcondizioni}: È selezionabile la nuova vista nel menù viste descritto da UC3.
+    \item \textbf{Postcondizioni}: È selezionabile la nuova vista nel menù viste descritto da \hyperref[sec:UC3]{UC3}.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
               \item L'utente preme il pulsante "carica vista".
@@ -894,9 +894,10 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
           \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item Nel caso il json contenente la vista non sia ben formato: \begin{enumerate}
+        \item Nel caso il \textit{.json} contenente la vista non sia ben formato: 
+        \begin{enumerate}
             \item La vista non viene caricata.
-            \item Viene visualizzato un messaggio d'errore. [\hyperref[sec:UC - Errore caricamento vista]{UC?}]
+            \item Viene visualizzato un messaggio d'errore. [\hyperref[sec:UC18 - Errore caricamento vista]{UC18}]
         \end{enumerate}
     \end{itemize}
 \end{itemize}
