@@ -139,7 +139,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 
 
 \subsection{UC3 - Selezione Vista}
-\label{sec:UC6}
+\label{sec:UC3}
 \begin{figure}[h!]
     \centering
     % Controlla che UC abbia il numero corretto
@@ -613,8 +613,28 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % --------------------------------------------------------------------
 % SEZIONE UC10 - DRAG DI UN NODO - FORCE DIRECTED
 % --------------------------------------------------------------------
+\subsection{UC10 - Drag di un nodo}
+\label{sec:UC10}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.60]{../../assets/drag_nodo.png}
+    \caption{UC10 - Drag di un nodo nel grafico Force-directed Graph}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il dataset è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+    		\item \textit{Force-directed Graph}.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Il nodo viene trascinato secondo il movimento del mouse dell'utente.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona con il mouse il nodo da trascinare e lo clicca.
+              \item Tenendo il nodo cliccato lo trascina a suo piacimento.
+          \end{enumerate}
+\end{itemize}
 
-
+\newpage
 
 % --------------------------------------------------------------------
 % SEZIONE UC11 - CREAZIONE NUOVA VISTA
@@ -646,7 +666,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
                                     \end{enumerate}
 \end{itemize}
 
-
+%Scelta colonne
 
 \subsubsection{UC11.1 - Scelta delle colonne/righe/celle}
 \label{sec:UC11.1}
@@ -666,7 +686,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \end{itemize}
 \end{itemize}
 
-
+%Scatter Plot
 
 \subsubsection{UC11.2 - Nuova vista su Scatter Plot}
 \label{sec:UC11.2}
@@ -703,7 +723,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \end{itemize}
     \end{itemize}
 
-
+%Parallel Coordinates
 
 \subsubsection{UC11.3 - Nuova vista su Parallel Coordinates}
 \label{sec:UC11.3}
@@ -758,7 +778,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \end{itemize}
     \end{itemize}
 
-
+%Force-directed
 
 \subsubsection{UC11.4 - Nuova vista su Force-directed Graph}
 \label{sec:UC11.4}
@@ -808,7 +828,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \end{itemize}
     \end{itemize}
 
-
+%Sankey
 
 \subsubsection{UC11.5 - Nuova vista su Sankey Diagram}
 \label{sec:UC11.5}
