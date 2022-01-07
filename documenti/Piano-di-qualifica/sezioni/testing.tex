@@ -1,0 +1,68 @@
+\section{Test}
+I test sono fondamentali per un acurata e mirata verifica del prodotto. Esistono vari tipi diversi di test.
+Il gruppo ha deciso di peseguire la correttezza continua del prodotto, il processo di verifica avverrà quindi in parallelo
+con il processo di sviluppo. Per evitare che lo sviluppo rallenti troppo è quinid necessario che la integrazione dei test sia unitaria, continua,
+veloci e automatici con l'uso di vari software.
+%
+% POTREMMO PENSARE DI FARE UN GRAFICO A MO' https://www.math.unipd.it/~tullio/IS-1/2020/Dispense/L14.pdf slide 15
+%
+\subsection{Test di unità}
+I test di unità sono necessarie per controllare singole unità di software, più specifico testare il minimo componente del nostro
+programma o metodo.
+\subsection{Test di integrazione}
+Quando due o più unità testate vengono aggregate in una struttura più grande, rappresentano l'estensione del test di unità
+Questi moduli testati assieme formano i testi di integrazione
+\subsection{Test di sistema}
+I test di sistema sono test olistici che prendono in consideazione l'insieme dei test, per comprendere la seguente
+tabella le sigle utilizzate sono:
+\begin{itemize}
+    \item \textbf{I}: test implementato
+    \item \textbf{NI}: test non implementato
+\end{itemize}
+\newpage
+
+%Attenzione! TS2F2 tipo non sono congruenti
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.68\linewidth}p{0.12\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}{\textbf{Stato}}\\
+    \rowcolor[RGB]{233, 245, 206}
+    TS1F1 &
+    L'utente deve poter caricare dei dati nel sistema tramite file. 
+    Se tali operazioni non sono eseguite
+    correttamente il caricamento fallisce. Verificare che l'utente possa:
+    \begin{itemize}
+        \item Visualizzare schermata inserimento dei dati
+        \item Inserire dati attraverso portabile
+        \item Il file deve essere corretto
+        \item L'interrogazione sarà effettuata correttamente
+        \item Visualizzare un messaggio di conferma di esito della operazione
+        \item In caso di operazione fallita l'utente deve essere in grado di ri-effettuare l'operazione
+    \end{itemize}
+    & NI\\ 
+    \rowcolor[RGB]{216, 235, 171}
+    TS2F2 &
+    L'utente nella pagina principale è in grado di:
+    \begin{itemize}
+        \item Localizzare le viste poroposte dal prodotto
+        \item Localizzare i widget 
+    \end{itemize}
+    & NI\\
+    \rowcolor[RGB]{233, 245, 206}
+    TS1F3 &
+    Dobbiamo verificare ch i widget siano:
+    \begin{itemize}
+        \item Facilmente localizzabili dall'utente
+        \item Che siano utili all'utente
+    \end{itemize}
+    & NI\\
+    \rowcolor[RGB]{216, 235, 171}
+    TS2F2 &
+    L'utente deve poter essere in grado di selezionare:
+    \begin{itemize}
+        \item Le diverse tipologie di grafico a lui disponibile, elencate nell'Analisi dei requisiti
+        \item Le dimensioni e le ripesttive associazioni con gli assi dei grafici in Visualizzarte
+        \item Le dimensioni e le loro associazioni siano salvate nel sistema
+    \end{itemize}
+    & NI\\
+\end{longtable}	

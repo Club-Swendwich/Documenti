@@ -1,0 +1,156 @@
+\section{Qualità di prodotto}
+Dallo standard ISO/IEC 9126, il gruppo ha identificato la qualità che vuole applicare all'intero progetto.
+\subsection{Documenti}
+I documenti oltre a essere grammaticamente corretti devono pure essere facilmente fruibili, infatti devono 
+poter essere letti da chiunque.
+\subsubsection{Metriche}
+\begin{itemize}
+    \item MPD1 - Indice Gulpease
+    \item MPD2 - Errori ortografici
+\end{itemize}
+\subsubsection{Valori ammissibili}
+{\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
+    \rowcolor[RGB]{216, 235, 171}
+    MPD1 & $ \geq 60$ & $ \geq 80$\\
+    \rowcolor[RGB]{233, 245, 206}
+    MPD2 & 100\% corretto & 100\% corretto.\\ 
+    \caption{Metriche inerenti alla correttezza dei documenti}
+\end{longtable}	
+}
+\subsection{Software}
+la qualità del prodotto è data da diversi punti:
+\subsubsection{Adeguatezza funzionale}
+Capacità del prodotto di soddisfare tutte le funzioni presenti nell'analisi dei requisiti. In particolare gli obbiettivi sono:
+\begin{itemize}
+    \item \textbf{Completezza}: Il prodotto dovrà adempiere a tutti i requisiti funzionali
+    \item \textbf{Correttezza}: Il prodotto deve adempiere ai requisiti superando una treshold di test definiti in questo documento
+\end{itemize}    
+\subsubsection{Metrica}
+\begin{itemize}
+    \item MPD3 - Copertura dei requisiti.
+\end{itemize}
+\subsubsection{Valori ammissibili}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
+    \rowcolor[RGB]{233, 245, 206}
+    MPD3 & 100\% requisiti obbligatori & 100\% di tutti i requisiti\\ 
+    \caption{Metriche inerenti alla correttezza dei documenti}
+\end{longtable}	
+\subsubsection{Efficenza prestazionale}
+L'Efficenza è la capacità di portare a termine un lavoro con il minimo utilizzo di tempo e energia. Esso dovrà essere efficente:
+\begin{itemize}
+    \item \textbf{Nel tempo}: I grafici dovranno essere renderizzati in un tempo limite
+    \item \textbf{Nelle altre risorse}: Il plotting e rendering dei grafici non deve essere troppo intensivo sulle risorse del client.
+\end{itemize}    
+\subsubsection{Metrica}
+\begin{itemize}
+    \item MPD4 - Copertura dei requisiti.
+\end{itemize}
+\subsubsection{Valori ammissibili}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
+    \rowcolor[RGB]{233, 245, 206}
+    MPD4 & 3 Secondi & 2 Secondi\\ 
+    \caption{Metriche inerenti alla Efficenza prestazionale}
+\end{longtable}	
+%\subsubsection{Compatibilità}
+%\begin{itemize}
+%    \item Coesistenza
+%    \item Interoperabilità
+%\end{itemize}  
+\subsubsection{Usabilità}
+Il prodotto deve essere comprensibile a colpo d'occhio e UX deve essere piacevole.
+\begin{itemize}
+    % \item Evidenza di appropriatezza
+    \item \textbf{Apprendibilità}: Deve essere facile apprendere le funzioni basilari del prodotto
+    \item \textbf{Operabilità}: Le funzioni del prodotto devono rappresentare le aspettative dell'utente
+    \item \textbf{Protezione da Errori}: L'user deve essere protetto dalla possibilità di rimanere bloccato
+    \item \textbf{User experience}: L'user experience deve essere piacevole
+    \item \textbf{Accessibilità}: Il prodotto deve essere di facile visione e utilizzo
+\end{itemize}  
+\subsubsection{Metrica}
+\begin{itemize}
+    \item MPD5 - Facilità utilizzo.
+    \item MPD6 - Facilità apprendimento funzione.
+    \item MPD7 - Livello complessità UX. %Qui si usa Average Cyclomatic Complexity, più ricerca necessaria
+\end{itemize}
+\subsubsection{Valori ammissibili}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
+    \rowcolor[RGB]{216, 235, 171}
+    MPD5 & 3 Secondi & 2 Secondi\\ 
+    \rowcolor[RGB]{233, 245, 206}
+    MPD6 & 3 Secondi & 2 Secondi\\
+    \rowcolor[RGB]{216, 235, 171}
+    MPD7 & 3 Secondi & 2 Secondi\\ 
+    \caption{Metriche inerenti alla usabilità}
+\end{longtable}	
+%\subsubsection{Affidabilità}
+%\begin{itemize}
+%    \item Maturità
+%    \item Disponibilità
+%    \item Tolleranza ai guasti
+%    \item Riparabilità
+%\end{itemize}
+%\subsubsection{Sicurezza}
+%\begin{itemize}
+%    \item Confidenzialità
+%    \item Integrità
+%    \item Non-ripiudiabilità
+%   \item Tracciabilità
+%    \item Autenticità
+%\end{itemize}
+\subsubsection{Manutenibilità}
+Un prodotto, per avere la capacità di essere corretto o espanso nel future, deve essere strutturato in una maniera tale che non si rischi di compromettere
+l'intero progetto. Le caratteristiche del prodotto devono quindi essere:
+\begin{itemize}
+    \item \textbf{Modularità}: Il prodotto deve essere modulare
+    %\item \textbf{Riusabilità}: 
+    \item \textbf{Analizzabilità}: L'individuazione degli errori deve essere semplice
+    \item \textbf{Modificabilità}: La aggiunta e/o rimozione di parti deve essere permessa, inoltre la modifica deve essere più semplice possibile
+    \item \textbf{Verificabilità}: I test sulle modifiche devono essere facili da eseguire
+\end{itemize}
+\subsubsection{Metrica}
+\begin{itemize}
+    \item MPD8 - Comprensione del codice.
+\end{itemize}
+\subsubsection{Valori ammissibili}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
+    \rowcolor[RGB]{233, 245, 206}
+    MPD8 & 60-100\% & 80-100\%\\ 
+    \caption{Metriche inerenti alla comprensibilità del codice}
+\end{longtable}	
+\subsubsection{Portabilità}
+E' la capacità di poter funzionare in diversi ambienti. Per essere portabile il prodotto dovrà
+avere queste caratteristiche:
+\begin{itemize}
+    \item \textbf{Adattabilità}: Il software dovrà essere utilizzabile in diversi browser
+    %\item \textbf{Installabilità}:
+    \item \textbf{Rimpiazzabilità}: Il software deve poter sostituire un prodotto con lo stesso fine e che viene eseguito sullo stesso browser.
+\end{itemize}
+\subsubsection{Metrica}
+\begin{itemize}
+    \item MPD9 - Versioni browser supportate.
+\end{itemize}
+\subsubsection{Valori ammissibili}
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
+    \rowcolor[RGB]{233, 245, 206}
+    MPD9 & 60-100\% & 80-100\%\\ 
+    \caption{Metriche inerenti alla Portabilità del progetto}
+\end{longtable}	
+\newpage
