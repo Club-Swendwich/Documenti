@@ -701,6 +701,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{enumerate}
 		\item L'utente decide di creare una nuova vista.
 		\item L'utente sceglie quali colonne, righe o multiple celle visualizzare.
+		\item L'utente può anche scegliere di selezionarle tutte.
 	\end{enumerate}
 	\item \textbf{Estensioni:} Nel caso in cui l'utente non abbia selezionato un numero sufficiente di celle o non ne abbia selezionata alcuna:
               \begin{itemize}
@@ -709,6 +710,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \end{itemize}
 \end{itemize}
 
+\newpage
 %Scatter Plot
 
 \subsubsection{UC11.2 - Nuova vista su Scatter Plot}
@@ -725,7 +727,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Scenario principale}:
     \begin{enumerate}
 		\item L'utente decide di creare una nuova vista per il grafico Scatter Plot.
-		\item L'utente può dunque associare le dimensioni desiderate agli assi \hyperref[sec:UC11.2.1]{UC11.2.1}.
+		\item L'utente può dunque associare le dimensioni desiderate agli assidel grafico. \hyperref[sec:UC11.2.1]{UC11.2.1}.
 	\end{enumerate}
 \end{itemize}
 
@@ -739,13 +741,14 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	    \begin{enumerate}
 	    		\item L'utente sceglie quali colonne associare agli assi del grafico.
 		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente gli assi del grafico:
+	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente le dimensioni agli assi del grafico:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
                   \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
               \end{itemize}
     \end{itemize}
 
+\newpage
 %Parallel Coordinates
 
 \subsubsection{UC11.3 - Nuova vista su Parallel Coordinates}
@@ -764,6 +767,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 		\item L'utente decide di creare una nuova vista per il grafico Parallel Coordinates.
 		\item L'utente può associare le dimensioni desiderate agli assi \hyperref[sec:UC11.3.1]{UC11.3.1}.
 		\item L'utente può decidere ordine e numero degli assi \hyperref[sec:UC11.3.2]{UC11.3.2}.
+		\item L'utente può decidere lo \textit{scaling} dei dati \hyperref[sec:UC11.3.3]{UC11.3.3}.
 	\end{enumerate}
 \end{itemize}
 
@@ -772,7 +776,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC11.3]{UC11.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha associato le dimensioni disponibili con gli assi del grafico.
+	    \item \textbf{Postcondizioni:} L'utente ha associato le dimensioni disponibili agli assi del grafico.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
 	    		\item L'utente sceglie quali colonne associare agli assi del grafico.
@@ -789,7 +793,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC11.3]{UC11.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha deciso un ordine degli assi e il loro numero.
+	    \item \textbf{Postcondizioni:} L'utente ha modificato l'ordine verticale degli assi e il numero.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
 	    		\item L'utente sceglie ordine e numero degli assi.
@@ -800,7 +804,20 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
                   \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
               \end{itemize}
     \end{itemize}
+    
+\paragraph{UC11.3.3 - Scaling dei dati}
+\label{sec:UC11.3.3}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC11.3]{UC11.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha ridimensionato i dati in una nuova scala comune tra le variabili o viceversa.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente sceglie lo \textit{scaling} dei dati.
+		\end{enumerate}
+    \end{itemize}
 
+\newpage
 %Force-directed
 
 \subsubsection{UC11.4 - Nuova vista su Force-directed Graph}
@@ -839,7 +856,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC11.4]{UC11.4}.
-	    \item \textbf{Postcondizioni:} L'utente ha deciso i parametri per la rappresentazione.
+	    \item \textbf{Postcondizioni:} L'utente ha deciso la funzione di forza tra i nodi.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
 	    		\item L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
@@ -851,6 +868,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \end{itemize}
     \end{itemize}
 
+\newpage
 %Sankey
 
 \subsubsection{UC11.5 - Nuova vista su Sankey Diagram}
@@ -881,7 +899,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	    \begin{enumerate}
 	    		\item L'utente sceglie l'ordinamento dei dati.
 		\end{enumerate}
-		\item \textbf{Estensioni:} Nel caso l'utente abbia selezionato dei parametri che non rientrino nelle relazioni:
+		\item \textbf{Estensioni:} Se non viene selezionata almeno un'origine nei dati:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
                   \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
