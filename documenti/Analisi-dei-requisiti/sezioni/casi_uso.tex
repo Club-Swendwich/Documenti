@@ -163,6 +163,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % --------------------------------------------------------------------
 
 \subsection{UC4 - Visualizzazione di default dei grafici}
+\label{sec:UC4}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.60]{../../assets/visualizzazione_default.png}
@@ -172,25 +173,29 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
 	\item \textbf{Attore primario:} Utente.
 	\item \textbf{Precondizioni:} Il dataset è presente e caricato correttamente.
-	\item \textbf{Postcondizioni:} 
-	Vengono riportati i grafici alla visualizzazione di default.
+	\item \textbf{Postcondizioni:} Viene mostrato il messaggio relativo al ripristino delle impostazioni di default \hyperref[sec:UC4.1]{UC4.1}.
 	\item \textbf{Scenario principale:}
 	\begin{itemize}
-		\item   L'utente sceglie di ripristinare le viste
-	\begin{enumerate}
-		\item L'utente clicca sul pulsante di ripristino
-		\item Viene visualizzato un messaggio di riconferma
-		\item L'utente clicca "OK" per confermare la scelta
-		\item I grafici vengono resettati alla vista di default
-	\end{enumerate}
-		\item   L'utente sceglie di annullare l'operazione
-	\begin{enumerate}
-		\item L'utente clicca sul pulsante di ripristino
-		\item Viene visualizzato un messaggio di riconferma
-		\item L'utente clicca "ANNULLA" per annullare l'operazione
-		\item Ritorno alla vista corrente senza modifiche apportate
-	\end{enumerate}	
+		\item L'utente clicca sul pulsante ``Visualizzazione di default''.
+		\item L'utente visualizza un messaggio di scelta.
 	\end{itemize}
+\end{itemize}
+
+\subsubsection{UC4.1 - Visualizzazione messaggio di conferma scelta}
+\label{sec:UC4.1}
+\begin{itemize}
+	\item \textbf{Attore primario:} Utente.
+	\item \textbf{Precondizioni:} Il dataset è presente e caricato correttamente. L'utente ha cliccato il pulsante per il ripristino delle impostazioni di default \hyperref[sec:UC4]{UC4}.
+	\item \textbf{Postcondizioni:} Viene ripristinato il grafico con le impostazioni di default, oppure l'operazione viene annullata.
+	\item \textbf{Scenario principale:}
+		\begin{enumerate}
+		\item Viene visualizzato un messaggio di conferma per tornare alla visualizzazione di default del grafico.
+		\item L'utente sceglie una delle due opzioni:
+			\begin{itemize}
+				\item L'utente vuole ripristinare le impostazioni di default e clicca ``Ok''
+				\item L'utente vuole annullare l'operazione e clicca ``Annulla''
+			\end{itemize}
+		\end{enumerate}
 \end{itemize}
 
 \newpage
