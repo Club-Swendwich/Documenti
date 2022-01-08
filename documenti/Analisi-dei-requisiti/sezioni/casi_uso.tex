@@ -207,12 +207,13 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} L'utente ha scelto uno dei grafici a disposizione nell'interfaccia [UC2].
+	\item \textbf{Precondizioni:} L'utente ha scelto uno dei grafici a disposizione nell'interfaccia \hyperref[sec:UC2]{UC2}.
 	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
-    		\item L'utente seleziona il tipo di grafico e i colori che desidera e, per ogni elemento cambiato, i valori di default del grafico
-    vengono cambiati. Nel caso si scelga di tornare alla vista di default, le modifiche eseguite torneranno ai valori standard.
+		\item Per ogni grafico l'utente ha a disposizione delle modifiche specifiche su: dimensione, ordinamento e numero degli assi, scelta della funzione di forza, dell'algoritmo di integrazione, e ordinamento dei dati.
+    		\item L'utente modifica anche lo stile del grafico.
+    		\item Nel caso si scelga di tornare alla vista di default, le modifiche eseguite torneranno ai valori standard.
     \end{enumerate}
     \item \textbf{Generalizzazioni}:
     \begin{itemize}
@@ -250,7 +251,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC5.1.1}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato lo scatter plot \hyperref[sec:UC2.1]{UC2.1}.
+        \item \textbf{Precondizioni:} L'utente ha selezionato il grafico \textit{Scatter Plot} \hyperref[sec:UC2.1]{UC2.1}.
 	    \item \textbf{Postcondizioni:} L'utente ha associato le dimensioni disponibili con gli assi del grafico.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
@@ -266,11 +267,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC5.1.2}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato lo scatter plot \hyperref[sec:UC2.1]{UC2.1}.
-	    \item \textbf{Postcondizioni:} L'utente ha selezionato tra le opzioni disponibili lo stile che preferisce.
+        \item \textbf{Precondizioni:} L'utente ha selezionato il grafico \textit{Scatter Plot} \hyperref[sec:UC2.1]{UC2.1}.
+	    \item \textbf{Postcondizioni:} L'utente ha associato nuovi colori ai punti.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, nel caso l'utente non li modifichi rimangono quelli di default.
+	    		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico.
+	    		\item Nel caso l'utente non li modifichi rimangono quelli di default.
 		\end{enumerate}
     \end{itemize}
 
@@ -284,13 +286,14 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} L'utente ha scelto il grafico Parallel coordinates. \hyperref[sec:UC2.1]{UC2.1}.
+	\item \textbf{Precondizioni:} L'utente ha scelto il grafico \textit{Parallel coordinates} \hyperref[sec:UC2.2]{UC2.2}.
 	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
 	\item \textbf{Scenario principale:} L'utente decide:
 	\begin{enumerate}
         \item Associazione delle dimensioni \hyperref[sec:UC5.2.1]{UC5.2.1}.
         \item Ordine degli assi \hyperref[sec:UC5.2.2]{UC5.2.2}.
-        \item Personalizzazione dello stile \hyperref[sec:UC5.2.3]{UC5.2.3}.
+        \item \textit{Scaling} dei dati \hyperref[sec:UC5.2.3]{UC5.2.3}.
+        \item Personalizzazione dello stile \hyperref[sec:UC5.2.4]{UC5.2.4}.
     \end{enumerate}
 \end{itemize}
 
@@ -298,7 +301,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC5.2.1}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato Parallel coordinates. \hyperref[sec:UC2.2]{UC2.2}.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Parallel coordinates} \hyperref[sec:UC2.2]{UC2.2}.
 	    \item \textbf{Postcondizioni:} L'utente ha associato le dimensioni disponibili con gli assi del grafico.
 	    \item \textbf{Scenario principale:}
 	    \begin{enumerate}
@@ -307,15 +310,15 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente le dimensioni agli assi del grafico:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
               \end{itemize}
     \end{itemize}
 \paragraph{UC5.2.2 - Ordine e numero degli assi}
 \label{sec:UC5.2.2}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato Parallel coordinates. \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha deciso un ordine degli assi e il loro numero.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Parallel coordinates} \hyperref[sec:UC2.2]{UC2.2}.
+	    \item \textbf{Postcondizioni:} L'utente ha modificato l'ordine verticale degli assi e il numero, il grafico quindi riduce o aumenta gli intrecci paralleli.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
 	    		\item L'utente sceglie ordine e numero degli assi.
@@ -323,35 +326,48 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	    \item \textbf{Estensioni:} Nel caso l'utente abbia creato nuovi assi ma non abbia associato nessuna dimensione ad essi:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico.
+                  \item Viene visualizzato un errore di personalizzazione grafico.
               \end{itemize}
     \end{itemize}
-
-\paragraph{UC5.2.3 - Personalizzazione dello stile}
+    
+\paragraph{UC5.2.3 - Scaling dei dati}
 \label{sec:UC5.2.3}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato Parallel coordinates \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha selezionato tra le opzioni disponibili lo stile che preferisce.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Parallel coordinates} \hyperref[sec:UC2.2]{UC2.2}.
+	    \item \textbf{Postcondizioni:} L'utente ha ridimensionato i dati in una nuova scala comune tra le variabili o viceversa.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, nel caso l'utente non li modifichi rimangono quelli di default.
+	    		\item L'utente sceglie lo \textit{scaling} dei dati.
+		\end{enumerate}
+    \end{itemize}
+
+\paragraph{UC5.2.4 - Personalizzazione dello stile}
+\label{sec:UC5.2.4}
+    \begin{itemize}
+        \item \textbf{Attore primario:} Utente.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Parallel coordinates} \hyperref[sec:UC2.2]{UC2.2}.
+	    \item \textbf{Postcondizioni:} L'utente ha evidenziato uno specifico gruppo di linee di interesse modificandone i colori.
+	    \item \textbf{Scenario principale:} 
+	    \begin{enumerate}
+	    		\item L'utente visualizza le opzioni di colori per la personalizzazione
+	    		\item Nel caso l'utente non li modifichi rimangono quelli di default.
 		\end{enumerate}
     \end{itemize}
 
 
 % FORCE-DIRECTED GRAPH 
 \newpage
-\subsubsection{UC5.3 - Personalizzazione Force-directed graph}
+\subsubsection{UC5.3 - Personalizzazione Force-directed Graph}
 \label{sec:UC5.3}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.60]{../../assets/personalizzazioneForce-directedGraph.png}
-	\caption{UC5.3 - Personalizzazione Force-directed graph}
+	\caption{UC5.3 - Personalizzazione Force-directed Graph}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} L'utente ha scelto il grafico Force-directed graph. \hyperref[sec:UC2.3]{UC2.3}.
+	\item \textbf{Precondizioni:} L'utente ha scelto il grafico \textit{Force-directed graph} \hyperref[sec:UC2.3]{UC2.3}.
 	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
 	\item \textbf{Scenario principale:}L'utente decide:
 	\begin{enumerate}
@@ -364,8 +380,8 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC5.3.1}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato Force-directed graph. \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha associato l'algoritmo d'integrazione che desidera.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Force-directed graph} \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha scelto l'algoritmo d'integrazione che desidera.
 	    \item \textbf{Scenario principale:}
 	    \begin{enumerate}
 	    		\item L'utente sceglie l'algoritmo d'integrazione che desidera.
@@ -375,8 +391,8 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC5.3.2}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato Force-directed graph. \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha deciso i parametri per la rappresentazione.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Force-directed graph} \hyperref[sec:UC2.3]{UC2.3}.
+	    \item \textbf{Postcondizioni:} L'utente ha deciso la funzione di forza per i nodi.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
 	    		\item L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
@@ -384,7 +400,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	    \item \textbf{Estensioni:} Nel caso i parametri non rientrino nei limiti fissati:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
               \end{itemize}
     \end{itemize}
 \paragraph{UC5.3.3 - Personalizzazione dello stile}
@@ -392,15 +408,16 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} L'utente ha selezionato Force-directed graph \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha selezionato tra le opzioni disponibili lo stile che preferisce.
+	    \item \textbf{Postcondizioni:} L'utente ha selezionato il colore per i \textit{cluster} dei nodi.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, nel caso l'utente non li modifichi rimangono quelli di default.
+	    		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico.
+	    		\item Nel caso l'utente non li modifichi rimangono quelli di default.
 		\end{enumerate}
     \end{itemize}
 
 % SANKEY DIAGRAM
-\subsubsection{UC5.4 - Personalizzazione Sankey diagram}
+\subsubsection{UC5.4 - Personalizzazione Sankey Diagram}
 \label{sec:UC5.4}
 \begin{figure}[h!]
 	\centering
@@ -409,7 +426,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} L'utente ha scelto il grafico Personalizzazione Sankey diagram. \hyperref[sec:UC2.4]{UC2.4}.
+	\item \textbf{Precondizioni:} L'utente ha scelto il grafico \textit{Sankey Diagram} \hyperref[sec:UC2.4]{UC2.4}.
 	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
 	\item \textbf{Scenario principale:}L'utente decide:
 	\begin{enumerate}
@@ -421,27 +438,28 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC5.4.1}
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato Sankey diagram. \hyperref[sec:UC2.3]{UC2.3}.
+        \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Sankey Diagram}. \hyperref[sec:UC2.4]{UC2.4}.
 	    \item \textbf{Postcondizioni:} L'utente ha deciso le dimensioni da rappresentare.
 	    \item \textbf{Scenario principale:}
 	    \begin{enumerate}
 	    		\item L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
 		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso i parametri non rientrino nelle relazioni fissate:
+	    \item \textbf{Estensioni:} Se non viene selezionata almeno un'origine tra i dati:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
+                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC - Errore di personalizzazione]{UC?}.
               \end{itemize}
     \end{itemize}
 \paragraph{UC5.4.2 - Personalizzazione dello stile}
 \label{sec:UC5.4.2}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
-    \item \textbf{Precondizioni:} L'utente ha selezionato Sankey diagram \hyperref[sec:UC2.3]{UC2.3}.
-	\item \textbf{Postcondizioni:} L'utente ha selezionato tra le opzioni disponibili lo stile che preferisce.
+    \item \textbf{Precondizioni:} L'utente ha selezionato \textit{Sankey Diagram} \hyperref[sec:UC2.4]{UC2.4}.
+	\item \textbf{Postcondizioni:} L'utente ha selezionato i colori per le fasce del grafico.
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
-		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, nel caso l'utente non li modifichi rimangono quelli di default.
+		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico.
+		\item Nel caso l'utente non li modifichi rimangono quelli di default.
 	\end{enumerate}
 \end{itemize}
 
