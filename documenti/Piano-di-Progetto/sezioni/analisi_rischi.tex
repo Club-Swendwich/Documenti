@@ -1,70 +1,109 @@
+
 \section{Analisi dei Rischi}
-Questa attività richiede una attenta analisi di tutte le parti della creazione del progetto,
-per poi classificare i possibili rischi in base alla loro entità e elencando possibili soluzioni o 
-metodi per mitigarne gli effetti.
-Segue una tabella realizata con in mente le fasi di:
-\begin{itemize}
-    \item \textbf{Identificazione}: Fase in cui si possono identificare possibile problematiche che possono comportare rischi immediati o futuri.
-    \item \textbf{Analisi}: Fase di studio degli errori e valutazione della loro gravità e conseguente impatto sul progetto.
-    \item \textbf{Controllo}: La metodologia con cui si evita la verificazione dei rischi precedentemente individuati
-    \item \textbf{Monitoraggio}: Durante il progetto viene continuamente eseguita una: 
-            \begin{itemize}
-                \item Rilevazione di nuovi tipi di rischio
-                \item Aggiornamento dei rischi già rilevati
-            \end{itemize}
-\end{itemize}
-I rischi sono raggruppati in diverse categorie:
-\begin{itemize}
-    \item \textbf{Tecnologie scelte}: Rappresentati con la lettera \textbf{T}
-    \item \textbf{Rapporti interpersonali}: Rappresentati con la lettera \textbf{I}
-    \item \textbf{Tecnologie scelte}: Organizzazione del lavoro \textbf{O} 
-\end{itemize}
-I rischi vengono quindi classificati con la formula:
+Di seguito sono riportate le tabelle relative ai potenziali rischi che potrebbero occorrere durante lo sviluppo
+del progetto. I rischi sono suddivisi per categoria a seconda della tipologia del problema che si può verificare e
+sono indicati tramite codici univoci così generati:
+
 \begin{center}
-    \textbf{R\{Iniziale categoria\}\{Numero progressivo\}}
-\end{center} 
-\newpage
-\subsection{Rischi relativi alle tecnologie}
-{\renewcommand{\arraystretch}{1.5} \small
-\begin{tabular}{p{0.15\linewidth}p{0.30\linewidth}p{0.30\linewidth}p{0.15\linewidth}}
+    \textbf{R[Categoria][Numero progressivo]}
+\end{center}
+
+I rischi rientrano nelle seguenti categorie:
+\begin{itemize}
+    \item \textbf{Tecnologie di lavoro e di produzione software:} T;
+    \item \textbf{Rapporti interpersonali:} I;
+    \item \textbf{Organizzazione del lavoro:} O;
+    \item \textbf{Costi e tempi:} C;
+\end{itemize}
+
+\subsection{Rischi relativi alle tecnologie di lavoro e di produzione di software: "T"}
+
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ >{\centering}p{0.20\linewidth} | >{\centering}p{0.35\linewidth} | >{\centering}p{0.30\linewidth} | >{\centering}p{0.18\linewidth} }
 	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Descrizione}} & \textcolor{white}
-	{\textbf{Identificazione}} & \textcolor{white}{\textbf{Grado}}\\
-
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}
+	{\textbf{Descrizione}} & \textcolor{white}{\textbf{Identificazione}} & \textcolor{white}{\textbf{Grado}}\tabularnewline
 	\rowcolor[RGB]{216, 235, 171}
-	\textbf{RT1} \newline Competenze 
-    & 
-    I membri del gruppo hanno una scarsa esperienza del campo del software developement e non hanno l'esperienza
-    necessaria per affrontarlo con confidenza 
-    & 
-    Ciascun membro deve comunicare le difficoltà che riscontrano, nel caso che un collega sia più competente nel campo
-    & 
-    Pericolosità: \newline
-    \textbf{Elevata} \newline
-    Occorrenza: \newline
-    \textbf{Elevata} 
-    \\
-    \rowcolor[RGB]{233, 245, 206} %Qui sotto è un macello, qualcuno che sa quello che fa ripari la multicolumn con il width sbagliato
-	\multicolumn{4}{p{0.98\linewidth}}{\textbf{Piano di contingenza}: I punti qualdove si abbia difficoltà vengono colmati da compagni che
-    potrebbero averne una migliore comprensione.}	
-    \\
-
+	RT1 \par Apprendimento di nuove tecnologie 
+    & Le tecnologie utilizzate per lo sviluppo del progetto dispongono di una vasta documentazione.
+    L'apprendimento delle nozioni interessate può rivelarsi complicato e causare ritardi nel processo di sviluppo. 
+    & Ogni membro del gruppo deve evidenziare con trasparenza le possibili difficoltà incontrate. 
+    & Pericolosità: \par \textbf{Elevata} \par Occorrenza: \par \textbf{Media}\tabularnewline
+	\rowcolor[RGB]{233, 245, 206}
+    \multicolumn{4}{p{1.11\linewidth}}{\textbf{Piano di Contingenza:} In caso di assigment troppo complessi per il singolo, verrà eseguita una redistribuzione del carico di lavoro. } \tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+    RT2 \par Scarsa esperienza 
+	& Il gruppo non ha mai affrontato esperienze di simile complessità, questo può portare a rallentamenti e all'insorgere di problemi operativi.
+    & Il Responsabile ha il compito di controllare che lo sviluppo avvenga senza rallentamenti, analizzando con i membri del gruppo interessati la sorgente del problema.
+    & Pericolosità: \par \textbf{Elevata} \par Occorrenza: \par \textbf{Elevata}\tabularnewline
+    \rowcolor[RGB]{233, 245, 206}
+    \multicolumn{4}{p{1.11\linewidth}}{\textbf{Piano di Contingenza:} Nei casi di difficoltà maggiore, il lavoro verrà attribuito a più componenti del gruppo per favorire la collaborazione.  } \tabularnewline
     \rowcolor[RGB]{216, 235, 171}
-	\textbf{RT2} \newline Utilizzo di tecnologie
-    & 
-    I membri del gruppo hanno una scarsa esperienza nell'utilizzo delle librerie fornite e delle metodologie imposte
-    & 
-    Ciascun membro deve comunicare le difficoltà che riscontrano, nel caso che un collega sia più competente nel campo
-    & 
-    Pericolosità: \newline
-    \textbf{Elevata} \newline
-    Occorrenza: \newline
-    \textbf{Elevata} 
-    \\
-    \rowcolor[RGB]{233, 245, 206} %Qui sotto è un macello, qualcuno che sa quello che fa ripari la multicolumn con il width sbagliato
-	\multicolumn{4}{p{0.98\linewidth}}{\textbf{Piano di contingenza}: I punti qualdove si abbia difficoltà vengono colmati da compagni che
-    potrebbero averne una migliore comprensione.}	
-    \\
+    RT3 \par Strumenti Software 
+	& Il malfunzionamento degli strumenti software adottati dal gruppo possono causare rallentamenti o perdita di dati.
+    & Chiunque noti qualunque tipo di anomalia ha il compito di avvisare il resto del team. 
+    & Pericolosità: \par \textbf{Media} \par Occorrenza: \par \textbf{Bassa}\tabularnewline
+    \rowcolor[RGB]{233, 245, 206}
+    \multicolumn{4}{p{1.11\linewidth}}{\textbf{Piano di Contingenza:} Utilizzare frequentemente strumenti di backup per salvaguardare i progressi durante lo sviluppo del progetto.  } \tabularnewline
+    \rowcolor[RGB]{216, 235, 171}
+    RT4 \par Guasto hardware
+	& In caso di problemi legati ai dispositivi personali dei componenti del gruppo, si possono manifestare disagi e non operatività.
+    & È compito di ogni elemento del team di avvisare il Responsabile riguardo i problemi riscontrati.
+    & Pericolosità: \par \textbf{Bassa} \par Occorrenza: \par \textbf{Bassa}\tabularnewline
+    \rowcolor[RGB]{233, 245, 206}
+    \multicolumn{4}{p{1.11\linewidth}}{\textbf{Piano di Contingenza:} Il team deve rispettare l'utilizzo degli strumenti prestabiliti per ridurre al minimo la possibilità di perdere dati.    } \tabularnewline
+	
 \end{tabular}	
-\newpage
-\subsection{Rischi relativi ai rapporti interpersonali}
+}
+
+\subsection{Rischi relativi ai rapporti interpersonali: "I"}
+-
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ >{\centering}p{0.15\linewidth}  >{\centering}p{0.30\linewidth}  >{\centering}p{0.30\linewidth}  >{\centering}p{0.25\linewidth} }
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}
+	{\textbf{Descrizione}} & \textcolor{white}{\textbf{Identificazione}} & \textcolor{white}{\textbf{Grado}}\tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+	RX1 & Descrizione & Identificazione & Grado\tabularnewline
+	\rowcolor[RGB]{233, 245, 206}
+	RX2 & Descrizione & Identificazione & Grado\tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+	RX3 & Descrizione & Identificazione & Grado\tabularnewline
+	
+\end{tabular}	
+}
+
+\subsection{Rischi relativi all'organizzazione del lavoro: "O"}
+
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ >{\centering}p{0.15\linewidth}  >{\centering}p{0.30\linewidth}  >{\centering}p{0.30\linewidth}  >{\centering}p{0.25\linewidth} }
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}
+	{\textbf{Descrizione}} & \textcolor{white}{\textbf{Identificazione}} & \textcolor{white}{\textbf{Grado}}\tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+	RX1 & Descrizione & Identificazione & Grado\tabularnewline
+	\rowcolor[RGB]{233, 245, 206}
+	RX2 & Descrizione & Identificazione & Grado\tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+	RX3 & Descrizione & Identificazione & Grado\tabularnewline
+	
+\end{tabular}	
+}
+
+\subsection{Rischi relativi ai costi e ai tempi: "C"}
+
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{ >{\centering}p{0.15\linewidth}  >{\centering}p{0.30\linewidth}  >{\centering}p{0.30\linewidth}  >{\centering}p{0.25\linewidth} }
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}
+	{\textbf{Descrizione}} & \textcolor{white}{\textbf{Identificazione}} & \textcolor{white}{\textbf{Grado}}\tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+	RX1 & Descrizione & Identificazione & Grado\tabularnewline
+	\rowcolor[RGB]{233, 245, 206}
+	RX2 & Descrizione & Identificazione & Grado\tabularnewline
+	\rowcolor[RGB]{216, 235, 171}
+	RX3 & Descrizione & Identificazione & Grado\tabularnewline
+	
+\end{tabular}	
+}
+
