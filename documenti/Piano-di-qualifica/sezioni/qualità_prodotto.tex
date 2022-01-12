@@ -32,6 +32,7 @@ In particolare gli obbiettivi sono:
 \subsubsection{Metrica}
 \begin{itemize}
     \item MPD3 - Copertura dei requisiti.
+    \item MPD4 - Copertura dei test.
 \end{itemize}
 \subsubsection{Valori ammissibili}
 \renewcommand{\arraystretch}{1.5}
@@ -40,6 +41,8 @@ In particolare gli obbiettivi sono:
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
     \rowcolor[RGB]{233, 245, 206}
     MPD3 & 100\% requisiti obbligatori & 100\% di tutti i requisiti\\ 
+    \rowcolor[RGB]{216, 235, 171} 
+    MPD4 & 80\% Test passati & 100\% Test passati\\ 
     \caption{Metriche inerenti alla correttezza dei documenti}
 \end{longtable}	
 \subsubsection{Efficenza prestazionale}
@@ -50,15 +53,15 @@ L'Efficenza è la capacità di portare a termine un lavoro con il minimo utilizz
 \end{itemize}    
 \subsubsection{Metrica}
 \begin{itemize}
-    \item MPD4 - Copertura dei requisiti.
+    \item MPD5 - Copertura dei requisiti.
 \end{itemize}
 \subsubsection{Valori ammissibili}
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{p{0.12\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
-    \rowcolor[RGB]{233, 245, 206}
-    MPD4 & 3 Secondi & 2 Secondi\\ 
+        \rowcolor[RGB]{216, 235, 171}
+    MPD5 & 3 Secondi & 2 Secondi\\ 
     \caption{Metriche inerenti alla Efficenza prestazionale}
 \end{longtable}	
 %\subsubsection{Compatibilità}
@@ -78,9 +81,9 @@ Il prodotto deve essere comprensibile a colpo d'occhio e UX deve essere piacevol
 \end{itemize}  
 \subsubsection{Metrica}
 \begin{itemize}
-    \item MPD5 - Facilità utilizzo.
-    \item MPD6 - Facilità apprendimento funzione.
-    \item MPD7 - Livello complessità UX. %Qui si usa Average Cyclomatic Complexity, più ricerca necessaria
+    \item MPD6 - Facilità utilizzo.
+    \item MPD7 - Facilità apprendimento funzione.
+    \item MPD8 - Livello complessità UX. %Qui si usa Average Cyclomatic Complexity, più ricerca necessaria
 \end{itemize}
 \subsubsection{Valori ammissibili}
 \renewcommand{\arraystretch}{1.5}
@@ -88,11 +91,11 @@ Il prodotto deve essere comprensibile a colpo d'occhio e UX deve essere piacevol
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
     \rowcolor[RGB]{216, 235, 171}
-    MPD5 & 3 Secondi & 2 Secondi\\ 
+    MPD6 & 3 Secondi & 2 Secondi\\ 
     \rowcolor[RGB]{233, 245, 206}
-    MPD6 & 3 Secondi & 2 Secondi\\
+    MPD7 & 3 Secondi & 2 Secondi\\
     \rowcolor[RGB]{216, 235, 171}
-    MPD7 & 3 Secondi & 2 Secondi\\ 
+    MPD8 & 3 Secondi & 2 Secondi\\ 
     \caption{Metriche inerenti alla usabilità}
 \end{longtable}	
 %\subsubsection{Affidabilità}
@@ -122,7 +125,7 @@ l'intero progetto. Le caratteristiche del prodotto devono quindi essere:
 \end{itemize}
 \subsubsection{Metrica}
 \begin{itemize}
-    \item MPD8 - Comprensione del codice.
+    \item MPD9 - Comprensione del codice.
 \end{itemize}
 \subsubsection{Valori ammissibili}
 \renewcommand{\arraystretch}{1.5}
@@ -130,7 +133,7 @@ l'intero progetto. Le caratteristiche del prodotto devono quindi essere:
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
     \rowcolor[RGB]{233, 245, 206}
-    MPD8 & 60-100\% & 80-100\%\\ 
+    MPD9 & 60-100\% & 80-100\%\\ 
     \caption{Metriche inerenti alla comprensibilità del codice}
 \end{longtable}	
 \subsubsection{Portabilità}
@@ -144,7 +147,7 @@ Per essere portabile il prodotto dovrà avere queste caratteristiche:
 \end{itemize}
 \subsubsection{Metrica}
 \begin{itemize}
-    \item MPD9 - Versioni browser supportate.
+    \item MPD10 - Versioni browser supportate.
 \end{itemize}
 \subsubsection{Valori ammissibili}
 \renewcommand{\arraystretch}{1.5}
@@ -152,7 +155,6 @@ Per essere portabile il prodotto dovrà avere queste caratteristiche:
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore accettabile}} & \textcolor{white}{\textbf{Valore ottimale}}\\
     \rowcolor[RGB]{233, 245, 206}
-    MPD9 & 60-100\% & 80-100\%\\ 
+    MPD10 & 60-100\% & 80-100\%\\ 
     \caption{Metriche inerenti alla Portabilità del progetto}
 \end{longtable}	
-\newpage
