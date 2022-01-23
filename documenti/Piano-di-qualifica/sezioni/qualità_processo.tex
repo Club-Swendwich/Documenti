@@ -17,106 +17,226 @@ qualità dei processi anche in un modello di sviluppo \textit{Agile}.\\
 sezione xx.xx. \\
 \\
 \noindent
-Oltre alle metriche definite dallo standard \textbf{ISO/IEC 12207:1995}, il 
-gruppo \textit{Club Swendwich} ha individuato alcune ulteriori metriche
-di processo utili alla quantificazione degli obiettivi di qualità.\\
-\noindent
-- Le \textbf{metriche di progetto} sono approfondite nel documento \textit{"Norme di Progetto"},
-sezione xx.xx.
+Nelle successive sottosezioni del documento si sono scelte alcune attività ritenute di valore all'interno
+delle macrocategorie dello standard \textbf{ISO/IEC 12207:1995}, esse vengono quindi analizzate
+secondo le \textbf{metriche di progetto} adeguate, descritte nel documento \textit{"Norme di Progetto"},
+nella sezione xx.xx, in modo tale da poter quantificare il raggiungimento degli obiettivi
+di qualità.
+
+\newpage
 
 \subsection{Processi primari}
-\subsubsection{Fornitura}
-Il seguente processo si occupa di:
-\begin{itemize}
-    \item risorse disponibili;
-    \item scelta delle procedure.
-\end{itemize}
-\paragraph{2.2.1.1 - Metriche utilizzate}
-{\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
-	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore Ottimale}} & \textcolor{white}{\textbf{Valore Accettato}}\\
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}m{0.23\linewidth}|m{0.43\linewidth}|m{0.26\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.23\linewidth}|}{\textcolor{white}{\textbf{Processo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.43\linewidth}|}{\textcolor{white}{\textbf{Descrizione}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.26\linewidth}|}{\textcolor{white}{\textbf{Metrica di processo}}}\\
     \rowcolor[RGB]{216, 235, 171}
-    SV & 0\% & 5\%\\
+        \textbf{Fornitura} 
+        & Il processo ha lo scopo di identificare procedure e risorse atte a soddisfare i requisiti di progetto 
+        & MPC1, MPC2, MPC3, MPC4, MPC5, MPC6, MPC7 \\
+    \rowcolor[RGB]{233, 245, 206}
+        \textbf{Sviluppo} 
+        & Il processo si occupa delle attività per la realizzazione del prodotto 
+        & MPC8, MPC9 \\
+    \end{tabular}
+    \caption{Processi primari e metriche utilizzate}
+\end{table}
+
+\subsubsection{Valori di riferimento}
+
+{\renewcommand{\arraystretch}{1.5}
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}m{0.20\linewidth}m{0.10\linewidth}m{0.20\linewidth}m{0.20\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Metrica}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.10\linewidth}}{\textcolor{white}{\textbf{Codice}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore ottimale}}}
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore accettabile}}}\\
+    
+    \rowcolor[RGB]{47, 106, 73}
+    \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Fornitura}}}\\
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Schedule Variance \\ (SV)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Budget Variance \\ (BV)} 
+        & \centering \textbf{MCP2} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Estimated at Completion \\ (EAC)} 
+        & \centering \textbf{MCP3} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Planned Value \\ (PV)} 
+        & \centering \textbf{MCP4} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Actual Cost \\ (AC)} 
+        & \centering \textbf{MCP5} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Estimate to Complete \\ (ETC)} 
+        & \centering \textbf{MCP6} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Earned Value \\ (EV)} 
+        & \centering \textbf{MCP7} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+
+        \rowcolor[RGB]{47, 106, 73}
+        \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Sviluppo}}}\\    
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Requirements stability index \\ (RSI)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Satisfied obligatory requirements \\ (SOR) } 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
 \end{longtable}
 
-\subsubsection{Sviluppo}
-Il seguente processo si occupa di:
-\begin{itemize}
-    \item attività ;
-    \item scelta delle procedure.
-\end{itemize}
-\paragraph{2.2.2.1 - Metriche utilizzate}
-{\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
-	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore Ottimale}} & \textcolor{white}{\textbf{Valore Accettato}}\\
-    \rowcolor[RGB]{216, 235, 171}
-    SV & 0\% & 5\%\\
-\end{longtable}
+%---------------------------------------------------------------------------------
 
+\newpage
 \subsection{Processi organizzativi}
 
-\subsubsection{Gestione delle risorse umane}
-Il seguente processo si occupa di definire:
-\begin{itemize}
-    \item risorse disponibili;
-    \item scelta delle procedure.
-\end{itemize}
-\paragraph{2.2.1.1 - Metriche utilizzate}
-{\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
-	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore Ottimale}} & \textcolor{white}{\textbf{Valore Accettato}}\\
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}m{0.23\linewidth}|m{0.43\linewidth}|m{0.26\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.23\linewidth}|}{\textcolor{white}{\textbf{Processo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.43\linewidth}|}{\textcolor{white}{\textbf{Descrizione}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.26\linewidth}|}{\textcolor{white}{\textbf{Metrica di processo}}}\\
     \rowcolor[RGB]{216, 235, 171}
-    SV & 0\% & 5\%\\
+        \textbf{Gestione delle risorse umane} 
+        & Il processo ha lo scopo di identificare procedure e risorse atte a soddisfare i requisiti di progetto 
+        & MPC1, MPC2, MPC3, MPC4, MPC5, MPC6, MPC7 \\
+    \end{tabular}
+    \caption{Processi organizzativi e metriche utilizzate}
+\end{table}
+
+\subsubsection{Valori di riferimento}
+
+{\renewcommand{\arraystretch}{1.5}
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}m{0.20\linewidth}m{0.10\linewidth}m{0.20\linewidth}m{0.20\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Metrica}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.10\linewidth}}{\textcolor{white}{\textbf{Codice}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore ottimale}}}
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore accettabile}}}\\
+    
+    \rowcolor[RGB]{47, 106, 73}
+    \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Gestione delle risorse umane}}}\\
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Non-calculated Risk \\ (NCR)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Budget Variance \\ (BV)} 
+        & \centering \textbf{MCP2} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
 \end{longtable}
 
+%--------------------------------------------------------------------------
+
+\newpage
 \subsection{Processi di supporto}
 
-\subsubsection{Verifica}
-Il seguente processo si occupa di definire:
-\begin{itemize}
-    \item risorse disponibili;
-    \item scelta delle procedure.
-\end{itemize}
-\paragraph{2.2.1.1 - Metriche utilizzate}
-{\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
-	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore Ottimale}} & \textcolor{white}{\textbf{Valore Accettato}}\\
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}m{0.23\linewidth}|m{0.43\linewidth}|m{0.26\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.23\linewidth}|}{\textcolor{white}{\textbf{Processo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.43\linewidth}|}{\textcolor{white}{\textbf{Descrizione}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.26\linewidth}|}{\textcolor{white}{\textbf{Metrica di processo}}}\\
     \rowcolor[RGB]{216, 235, 171}
-    SV & 0\% & 5\%\\
-\end{longtable}
+        \textbf{Documentazione} 
+        & Il processo ha lo scopo di identificare procedure e risorse atte a soddisfare i requisiti di progetto 
+        & MPC1, MPC2, MPC3, MPC4, MPC5, MPC6, MPC7 \\
+    \rowcolor[RGB]{233, 245, 206}
+        \textbf{Verifica} 
+        & Il processo si occupa delle attività per la realizzazione del prodotto 
+        & MPC8, MPC9 \\
+    \rowcolor[RGB]{216, 235, 171}
+        \textbf{Assicurazione della qualità} 
+        & Il processo ha lo scopo di identificare procedure e risorse atte a soddisfare i requisiti di progetto 
+        & MPC1, MPC2, MPC3, MPC4, MPC5, MPC6, MPC7 \\
+    \end{tabular}
+    \caption{Processi di supporto e metriche utilizzate}
+\end{table}
 
-\subsubsection{Documentazione}
-Il seguente processo si occupa di definire:
-\begin{itemize}
-    \item risorse disponibili;
-    \item scelta delle procedure.
-\end{itemize}
-\paragraph{2.2.1.1 - Metriche utilizzate}
-{\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
-	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore Ottimale}} & \textcolor{white}{\textbf{Valore Accettato}}\\
-    \rowcolor[RGB]{216, 235, 171}
-    SV & 0\% & 5\%\\
-\end{longtable}
+\subsubsection{Valori di riferimento}
 
-\subsubsection{Assicurazione della qualità}
-Il seguente processo si occupa di definire:
-\begin{itemize}
-    \item risorse disponibili;
-    \item scelta delle procedure.
-\end{itemize}
-\paragraph{2.2.1.1 - Metriche utilizzate}
 {\renewcommand{\arraystretch}{1.5}
-\begin{longtable}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}m{0.20\linewidth}m{0.10\linewidth}m{0.20\linewidth}m{0.20\linewidth}}
 	\rowcolor[RGB]{33, 73, 50}
-	\textcolor{white}{\textbf{Metrica}} & \textcolor{white}{\textbf{Valore Ottimale}} & \textcolor{white}{\textbf{Valore Accettato}}\\
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Metrica}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.10\linewidth}}{\textcolor{white}{\textbf{Codice}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore ottimale}}}
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore accettabile}}}\\
+    
+    \rowcolor[RGB]{47, 106, 73}
+    \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Documentazione}}}\\
+
     \rowcolor[RGB]{216, 235, 171}
-    SV & 0\% & 5\%\\
+        \centering \textbf{Schedule Variance \\ (SV)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Budget Variance \\ (BV)} 
+        & \centering \textbf{MCP2} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    
+        \rowcolor[RGB]{47, 106, 73}
+        \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Verifica}}}\\    
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Code coverage \\ (CC)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Passed test cases percentage \\ (PTCP) } 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Failed test cases percentage \\ (FTCP)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
+
+        \rowcolor[RGB]{47, 106, 73}
+        \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Assicurazione della qualità}}}\\    
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Quality Metrics Satisfied \\ (QMS)} 
+        & \centering \textbf{MCP1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 0\% $}\\
 \end{longtable}
 
 
