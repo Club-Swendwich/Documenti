@@ -1,19 +1,27 @@
 \section{Documentazione}
 
-Lo strumento scelto dal gruppo per la stesura della documentazione è \LaTeX,
-tutta la documentazione deve essere mantenuta all'interno della repo git
-\href{https://github.com/Club-Swendwich/Documenti}{hostata su GitHub (LINK)}.
+Lo strumento scelto dal gruppo per la stesura della documentazione è \LaTeX. Per permettere un avanzamento \textit{agile} e tracciare lo stato delle attività è stato deciso di utilizzare una Kanban board su Trello.
+La struttura della board è la seguente:
+\begin{itemdescript}
+    \item [To do] Lista delle card relative a issues che devono ancora essere prese in carico. È il backlog della board.
+    \item [In progress] Lista delle produzioni in esecuzione al momento. Ogni card corrisponde a un branch.
+    \item [To be verified] Lista delle modifiche in attesa di verifica da parte del verificatore.
+    \item [To be approved] Lista delle verifiche in attesa di approvazione e merge da parte del verificatore.
+    \item [Done] Lista degli issues approvati e risolti.
+\end{itemdescript}
+È inoltre presente un archivio dove vengono automaticamente spostate le card dopo 15 giorni di permanenza nella lista \texttt{Done}. Questo viene fatto per evitare il sovraffollamento della board.\\
+Tutta la documentazione prodotta deve essere mantenuta all'interno della repo git \href{https://github.com/Club-Swendwich/Documenti}{hostata su GitHub (LINK)}.
 La struttura della repository è la seguente:
 \begin{itemize}
     \item \texttt{assets}: Contiene tutti gli elementi grafici comuni ai documenti
         prodotti dal team.
-    \item \texttt{verbali}: Contiene i resoconti di tutti gli incontri del team sia
-        interni che con entità esterne al team.
-    \item \texttt{presentazioni}: Contiene tutte le presentazioni basate su slide.
     \item \texttt{documenti}: Contiene tutti i documenti che non sono verbali o
         presentazioni.
+    \item \texttt{presentazioni}: Contiene tutte le presentazioni basate su slide.
     \item \texttt{template}: Contiene tutti i template da utilizzare quando si va a
         creare un nuovo documento.
+    \item \texttt{verbali}: Contiene i resoconti di tutti gli incontri del team sia
+        interni che con entità esterne al team.
 \end{itemize}
 
 \subsection{Creazione e Modifica di un documento}
@@ -29,7 +37,7 @@ Tale issue dovrà essere aperta su GitHub nell'apposita sezione "Issues", della 
     \item Nella descrizione è opportuno spiegare in breve in cosa consisterà tale documento o le modifiche che dovranno essere apportate
     \item È consigliato l'utilizzo della label \texttt{documento}
     \item Se necessario, assegnare l'issue a una milestone fissata
-    \item Se la produzione da effettuare è di mole importante, è consigliato suddivedere la produzione in punti elenco, tramite checklist, in modo da distribuire e tracciare più facilmente il lavoro
+    \item Se la produzione da effettuare è di mole importante, è consigliato suddividere la produzione in punti elenco, tramite checklist, in modo da distribuire e tracciare più facilmente il lavoro
 \end{itemize}
 
 \noindent Le issues create in questo modo saranno automaticamente trasformate in \textit{Trello cards} grazie all'integrazione con Zapier. \\
@@ -128,17 +136,13 @@ La richiesta di verifica dei documenti deve essere effettuata in uno dei seguent
 \subsection{Verificare un documento}
 La fase di verifica non è meramente un controllo di errori grammaticali o di battitura. È necessario, infatti, verificare anche la completezza e la coerenza del contenuto all'interno del documento.
 I compiti che dovrà eseguire il verificatore saranno, quindi:
-\newcounter{descriptcounti}
-\setlist[description]{%
-  before={\setcounter{descriptcounti}{0}},%
-  ,font=\bfseries\refstepcounter{descriptcounti}\thedescriptcounti.~}
-\begin{description}
-    \item [Controllo grammaticale] \hfill \\ Controllo morfologico, ortografico, sintattico e semantico del testo prodotto.
-    \item [Controllo della coerenza delle parti del documento] \hfill \\ Controllo della coerenza dei contenuti delle sezioni di testo aggiunte. Esse non devono essere in conflitto tra loro o con il testo già esistente. È necessario, inoltre, controllare la coerenza e continuità della suddivisione delle sezioni del documento.
-    \item [Controllo dell'aderenza alle Norme di Progetto] \hfill \\ Controllo dell'ottemperanza alle buone pratiche descritte nelle Norme di Progetto durante la produzione del documento.
-    \item [Controllo del registro delle modifiche e delle informazioni del documento] \hfill \\ Controllo dello stato di aggiornamento e coerenza del registro delle modifiche e delle informazioni del documento presenti in copertina.
-    \item [Controllo dell'impaginazione] \hfill \\ Controllo della corretta impaginazione del documento. In particolare, è necessario controllare gli allineamenti dei paragrafi, la disposizione delle immagini rispetto al testo, la posizione delle didascalie e il funzionamento di eventuali link.
-\end{description}
+\begin{enumdescript}
+    \item [Controllo grammaticale] Controllo morfologico, ortografico, sintattico e semantico del testo prodotto.
+    \item [Controllo della coerenza delle parti del documento] Controllo della coerenza dei contenuti delle sezioni di testo aggiunte. Esse non devono essere in conflitto tra loro o con il testo già esistente. È necessario, inoltre, controllare la coerenza e continuità della suddivisione delle sezioni del documento.
+    \item [Controllo dell'aderenza alle Norme di Progetto] Controllo dell'ottemperanza alle buone pratiche descritte nelle Norme di Progetto durante la produzione del documento.
+    \item [Controllo del registro delle modifiche e delle informazioni del documento] Controllo dello stato di aggiornamento e coerenza del registro delle modifiche e delle informazioni del documento presenti in copertina.
+    \item [Controllo dell'impaginazione] Controllo della corretta impaginazione del documento. In particolare, è necessario controllare gli allineamenti dei paragrafi, la disposizione delle immagini rispetto al testo, la posizione delle didascalie e il funzionamento di eventuali link.
+\end{enumdescript}
 Una volta che il documento supererà con successo questi passaggi, il verificatore aggiornerà lo stato del documento (\textbackslash docstatus) e procederà con la richiesta di approvazione.
 
 \subsubsection{Segnalare un problema}

@@ -12,7 +12,25 @@
 \newcommand{\docapprovers}{Canel Alessandro}
 \newcommand{\docdistribution}{}
 
+% Definizione nuove liste
+% Lista ibrido tra description e enumeration
+\newcounter{descriptcount}
+\newlist{enumdescript}{description}{1}
+\setlist[enumdescript]{style=nextline}
+\setlist[enumdescript,1]{
+  	before={\setcounter{descriptcount}{0}%
+    	\renewcommand*\thedescriptcount{\arabic{descriptcount}.}}
+	,labelindent = \parindent
+  	,font=\bfseries\stepcounter{descriptcount}\thedescriptcount~
+}
 
+% Lista ibrido tra description e itemize
+\newlist{itemdescript}{description}{1}
+\setlist[itemdescript]{style=nextline}
+\setlist[itemdescript,1]{
+	labelindent = \parindent
+  	,font=\bfseries$\bullet$~
+}
 
 % Configurazione ORG
 \definecolor{orgcolorlight}{HTML}{99b755}
