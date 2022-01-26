@@ -1,1 +1,55 @@
 \section{Modello di sviluppo}
+Il gruppo ha deciso di utilizzare un modello di sviluppo agile di tipo di incrementale.
+\subsection {Sviluppo incrementale di tipo agile}
+Verrà utilizzato il framework Scrum, che si basa su:
+\begin{itemize}
+    \item \textbf{Trasparenza:} Gli elementi chiave devono essere comprensibili e facilmente consultabile, in maniera tale che una
+                                terza parte ne abbia una fruibile comprensione.
+    \item \textbf{Ispezione:} Scrum necessita di essere concentrato su un Sprint goal, in maniera da evitare di andare fuori strada
+    \item \textbf{Adattamento:} Quando ci si muove verso un obbiettivo, se vengono rilevati dei rallentamenti inspettati, è necessario comportarsi di conseguenza
+\end{itemize}
+I vantaggi della metodologia Agile permettono di offrire un prodotto in maniera rapida, strutturando il workflow in sezioni brevi, con una maggiore flessibilità
+e riducendo i possibili rischi di ritardo.
+\subsection {Incrementi individuati}
+Gli incrementi individuati sono riassunti in questa tabella, con riportati i requisiti e i casi d'uso per ogni incremento. I possibili requisiti o 
+casi d'uso omessi sono requisiti figli. \newline
+{\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.27\linewidth}p{0.40\linewidth}p{0.12\linewidth}p{0.12\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Incremento}} & \textcolor{white}{\textbf{Obiettivo dell'incremento}} & \textcolor{white}{\textbf{Requisiti}} & \textcolor{white}{\textbf{Casi d'uso}}\\
+    \rowcolor[RGB]{216, 235, 171}
+    Incremento 0 & Caricamento del CSV con selezione e associazione delle dimensioni & UC1 & R1F1, R1F4, R1F11 \\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    Incremento 1 & Visualizzazione Scatter Plot. & UC2.1 & R1F2.1, R2F5, R2F7, R2F8, R2F9 \\
+    
+    \rowcolor[RGB]{216, 235, 171}
+    Incremento 2 & Personalizzazione e modifica dello Scatter Plot. & UC5.1 & R1F2.1, R1F6, R1F6.1\\
+
+    \rowcolor[RGB]{233, 245, 206}
+    Incremento 3 & Visualizzazione Parallels coordinates & UC2.2 & R1F2.2, R2F5, R2F7, R2F8, R2F9\\
+
+    \rowcolor[RGB]{216, 235, 171}
+    Incremento 4 & Personalizzazione e modifica dello stile grafico di Parallels coordinates. & UC5.2.3 & R1F2.2, R1F6, R1F6.2\\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    Incremento 5 & Visualizzazione Force-directed graph. & UC2.3 & R1F2.3, R2F5, R2F7, R2F8, R2F9\\
+    
+    \rowcolor[RGB]{216, 235, 171}
+    Incremento 6 & Personalizzazione e modifica del Force-directed graph. & UC5.3 & R1F2.3, R1F6, R1F6.3\\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    Incremento 7 & Visualizzazione Sankey diagram. & UC2.4 & R1F2.4, R2F5, R2F7, R2F8, R2F9\\
+
+    \rowcolor[RGB]{216, 235, 171}
+    Incremento 8 & Personalizzazione e modifica del Sankey diagram. & UC5.4 & R1F2.4, R1F6, R1F6.4\\
+
+    \rowcolor[RGB]{216, 235, 171}
+    Incremento 9 & Salvataggio e caricamento vista. & UC12, UC13 & R1F2.4, R1F6, R1F6.4\\
+
+    \rowcolor[RGB]{233, 245, 206}
+    Incremento 10 & Perfezionamento del software e correzioni del proponente  & - & - \\
+    
+    \caption{Tabella degli incrementi}
+\end{longtable}	
+}
