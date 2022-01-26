@@ -1,8 +1,8 @@
 % Configurazione standard documento
 \newcommand{\docname}{Norme di Progetto}
 \newcommand{\docprojectname}{Login Warrior}
-\newcommand{\docversion}{1.0.0}
-\newcommand{\docstatus}{Approvato}
+\newcommand{\docversion}{1.2.0}
+\newcommand{\docstatus}{In redazione}
 \newcommand{\docusage}{Interno}
 \newcommand{\docdescription}{Riassunto delle buone pratiche e procedure interne del gruppo di lavoro}
 \newcommand{\groupname}{Club Swendwich}
@@ -12,11 +12,31 @@
 \newcommand{\docapprovers}{Canel Alessandro}
 \newcommand{\docdistribution}{}
 
+% Definizione nuove liste
+% Lista ibrido tra description e enumeration
+\newcounter{descriptcount}
+\newlist{enumdescript}{description}{1}
+\setlist[enumdescript]{style=nextline}
+\setlist[enumdescript,1]{
+  	before={\setcounter{descriptcount}{0}%
+    	\renewcommand*\thedescriptcount{\arabic{descriptcount}.}}
+	,labelindent = \parindent
+  	,font=\bfseries\stepcounter{descriptcount}\thedescriptcount~
+}
+
+% Lista ibrido tra description e itemize
+\newlist{itemdescript}{description}{1}
+\setlist[itemdescript]{style=nextline}
+\setlist[itemdescript,1]{
+	labelindent = \parindent
+  	,font=\bfseries$\bullet$~
+}
 
 
 % Configurazione ORG
 \definecolor{orgcolorlight}{HTML}{99b755}
 \definecolor{orgcolordark}{HTML}{214932}
+\DeclareFontFamily{\encodingdefault}{\ttdefault}{\hyphenchar\font=`\-}
 
 
 
