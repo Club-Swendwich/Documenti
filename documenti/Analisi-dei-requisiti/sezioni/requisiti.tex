@@ -9,100 +9,127 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
     \textcolor{white}{\textbf{Riferimenti}}\\
     \rowcolor[RGB]{216, 235, 171}
     R1F1 & Obbligatorio & L'utente ha la possibilità di caricare i dati nel sistema. & UC1\\
-    
     \rowcolor[RGB]{233, 245, 206}
+    R1F1.1 & Obbligatorio & Il sistema deve eseguire il parsing$^{G}$ del file csv$^{G}$. & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F1.2 & Obbligatorio & Controllo sulla presenza di colonne potenzialmente derivabili. & \\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F1.3 & Obbligatorio & Creazione delle dimensioni$^{G}$ derivate. & \\
+
+    \rowcolor[RGB]{216, 235, 171}
     R1F2 & Obbligatorio & L'utente può scegliere la tipologia di grafico che vuole visualizzare. & UC2\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F2.1 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Scatter Plot$^{G}$}. & UC2.1\\
-    \rowcolor[RGB]{233, 245, 206}
-    R1F2.2 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Parallels Coordinates$^{G}$}. & UC2.2\\
     \rowcolor[RGB]{216, 235, 171}
+    R1F2.1.1 & Obbligatorio & Viene eseguito il render del grafico \textit{Scatter Plot$^{G}$}. & \\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.1.2 & Obbligatorio & Viene eseguita la normalizzazione dei valori relativi agli assi del grafico. & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F2.2 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Parallel Coordinates$^{G}$}. & UC2.2\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.2.1 & Obbligatorio & Viene eseguito il render del grafico \textit{Parallel Coordinates$^{G}$}. & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F2.2.2 & Obbligatorio & Viene eseguita la normalizzazione dei valori relativi agli assi del grafico. & \\
+    \rowcolor[RGB]{233, 245, 206}
     R1F2.3 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Force-directed Graph$^{G}$}. & UC2.3\\
-    \rowcolor[RGB]{233, 245, 206}
-    R1F2.4 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Sankey Diagram$^{G}$}. & UC2.4\\
-    
     \rowcolor[RGB]{216, 235, 171}
+    R1F2.3.1 & Obbligatorio & Viene eseguito il render del grafico \textit{Force-directed Graph$^{G}$}. & \\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.3.2 & Obbligatorio & Viene eseguita la normalizzazione dei valori relativi agli assi del grafico. & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F2.4 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Sankey Diagram$^{G}$}. & UC2.4\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.4.1 & Obbligatorio & Viene eseguito il render del grafico \textit{Sankey Diagram$^{G}$}. & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F2.4.2 & Obbligatorio & Viene eseguita la normalizzazione dei valori relativi agli assi del grafico. & \\
+
+
+    \rowcolor[RGB]{233, 245, 206}
     R2F3 & Obbligatorio & L'utente deve poter tornare alla visualizzazione di default. & UC4\\
     
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F4 & Obbligatorio & L'utente deve poter scegliere quale vista$^{G}$ di dati visualizzare. & UC3\\
     
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R2F5 & Desiderabile & L'utente passando sopra ad alcuni elementi con il mouse visualizza delle informazioni utili. & UC9\\
     
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6 & Obbligatorio & L'utente deve poter personalizzare il grafico da lui scelto. & UC5\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.1 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Scatter Plot}. & UC5.1\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6.1.1 & Obbligatorio & L'utente sceglie l'associazione dimensioni$^{G}$-assi nel grafico \textit{Scatter Plot}. & UC5.1.1\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.1.2 & Obbligatorio & L'utente può personalizzare lo stile del grafico \textit{Scatter Plot$^{G}$}. & UC5.1.2\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6.2 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Parallel Coordinates$^{G}$}. & UC5.2\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.2.1 & Obbligatorio & L'utente sceglie l'associazione dimensioni$^{G}$-assi nel grafico \textit{Parallel Coordinates$^{G}$}. & UC5.2.1\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6.2.2 & Obbligatorio & L'utente sceglie l'ordine e il numero di assi visualizzati nel grafico \textit{Parallel Coordinates$^{G}$}. & UC5.2.2\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.2.3 & Obbligatorio & L'utente sceglie lo scaling dei dati nel grafico \textit{Parallel Coordinates$^{G}$}. & UC5.2.3\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6.2.4 & Obbligatorio & L'utente deve poter personalizzare lo stile del grafico \textit{Parallel Coordinates$^{G}$}. & UC5.2.4\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.3 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Force-directed Graph$^{G}$}. & UC5.3\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6.3.1 & Obbligatorio & L'utente sceglie quale algoritmo d'integrazione usare nel grafico \textit{Force-directed Graph$^{G}$}. & UC5.3.1\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.3.2 & Obbligatorio & L'utente può scegliere quale funzione di forza usare nel grafico \textit{Force-directed Graph$^{G}$}. & UC5.3.2\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F6.3.3 & Obbligatorio & L'utente deve poter personalizzare lo stile del grafico \textit{Force-directed Graph$^{G}$}. & UC5.3.3\\
-    \rowcolor[RGB]{216, 235, 171}
-    R1F6.4 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Sankey Diagram$^{G}$}. & UC5.4\\
     \rowcolor[RGB]{233, 245, 206}
-    R1F6.4.1 & Obbligatorio & L'utente deve poter scegliere l'ordine dei dati nel grafico \textit{Sankey Diagram$^{G}$}. & UC5.4.1\\
+    R1F6.4 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Sankey Diagram$^{G}$}. & UC5.4\\
     \rowcolor[RGB]{216, 235, 171}
+    R1F6.4.1 & Obbligatorio & L'utente deve poter scegliere l'ordine dei dati nel grafico \textit{Sankey Diagram$^{G}$}. & UC5.4.1\\
+    \rowcolor[RGB]{233, 245, 206}
     R1F6.4.2 & Obbligatorio & L'utente deve poter personalizzare lo stile del grafico \textit{Sankey Diagram$^{G}$}. & UC5.4.2\\
 
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R2F7 & Desiderabile & L'utente può visualizzare un grafico a tutto schermo. & UC6\\
     
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R2F8 & Desiderabile & L'utente può eseguire uno zoom su alcuni tipi di grafici. & UC7, UC8\\
     
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R2F9 & Desiderabile & L'utente può salvare una vista$^{G}$ da lui precedentemente creata. & UC12\\
     
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R2F10 & Desiderabile & L'utente può caricare una vista$^{G}$ personalizzata.  & UC13\\
+    \rowcolor[RGB]{216, 235, 171}
+    R2F10.1 & Desiderabile & Viene eseguito il parsing$^{G}$ delle viste caricate. & \\
+    \rowcolor[RGB]{233, 245, 206}
+    R2F10.2 & Desiderabile & Viene eseguita la serializzazione delle viste caricate. & \\
 
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F11 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ relativa al grafico da lui selezionato. & UC11\\ 
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F11.1 & Obbligatorio & L'utente deve poter scegliere quale sottoinsieme di dati associare alla nuova vista$^{G}$. & UC11.1\\
-    \rowcolor[RGB]{233, 245, 206} 
+    \rowcolor[RGB]{216, 235, 171} 
     R1F11.2 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ su \textit{Scatter plot$^{G}$}. & UC11.2\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F11.2.1 & Obbligatorio & L'utente sceglie l'associazione dimensioni$^{G}$-assi nel grafico \textit{Scatter Plot$^{G}$}. & UC11.2.1\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F11.3 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ su \textit{Parallel Coordinates$^{G}$}. & UC11.3\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F11.3.1 & Obbligatorio & L'utente sceglie l'associazione dimensioni$^{G}$-assi nel grafico \textit{Parallel Coordinates$^{G}$}. & UC11.3.1\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F11.3.2 & Obbligatorio & L'utente sceglie l'ordine e il numero di assi visualizzati nel grafico \textit{Parallel Coordinates$^{G}$}. &UC11.3.2\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F11.3.3 & Obbligatorio & L'utente sceglie lo scaling dei dati nel grafico \textit{Parallel Coordinates$^{G}$}. & UC11.3.3\\
-    \rowcolor[RGB]{233, 245, 206}
+    \rowcolor[RGB]{216, 235, 171}
     R1F11.4 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ su \textit{Force-directed Graph$^{G}$}. & UC11.4\\
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F11.4.1 & Obbligatorio & L'utente sceglie quale algoritmo d'integrazione usare nel grafico \textit{Force-directed Graph$^{G}$}. & UC11.4.1\\
-    \rowcolor[RGB]{233, 245, 206}
-    R1F11.4.2 & Obbligatorio & L'utente può scegliere quale funzione di forza usare nel grafico \textit{Force-directed Graph$^{G}$}. & UC11.4.2\\
     \rowcolor[RGB]{216, 235, 171}
-    R1F11.5 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ su \textit{Sankey Diagram$^{G}$}. & UC11.5\\
+    R1F11.4.2 & Obbligatorio & L'utente può scegliere quale funzione di forza usare nel grafico \textit{Force-directed Graph$^{G}$}. & UC11.4.2\\
     \rowcolor[RGB]{233, 245, 206}
+    R1F11.5 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ su \textit{Sankey Diagram$^{G}$}. & UC11.5\\
+    \rowcolor[RGB]{216, 235, 171}
     R11F11.5.1 & Obbligatorio & L'utente sceglie l'ordine dei dati nel grafico \textit{Sankey diagram$^{G}$}. & UC11.5.1\\
 
-    \rowcolor[RGB]{216, 235, 171}
+    \rowcolor[RGB]{233, 245, 206}
     R1F12 & Obbligatorio & In caso di errori verranno visualizzati dei messaggi esplicativi. & UC14, UC15 \par UC16, UC17 \par UC18, UC19\\
 
     \caption{Tabella dei requisiti funzionali}
