@@ -14,9 +14,8 @@ I processi sono suddivisi in tre categorie:
 \setlength\extrarowheight{5pt}
 
 \begin{table}[h!]
-	\footnotesize
     \centering
-    \begin{tabular}{>{\raggedright\arraybackslash}c|c}
+    \begin{tabular}{c|p{0.65\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
     \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Categoria}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}} \\[4pt]
@@ -33,131 +32,194 @@ I processi sono suddivisi in tre categorie:
 \noindent
 Per ogni processo, oltre alla lista delle attività, sono riportati
 gli obiettivi, i risultati e le responsabilità.\\
+I processi che di seguito vengono riportati in \textbf{grassetto} sono quelli analizzati all'interno
+del \textit{Piano di Qualifica}.
 
 %-------------------------------------------------------------------------------------------------------------------
 
 \subsection{Processi primari}
 
 \begin{table}[h!]
-	\footnotesize
     \centering
-    \begin{tabular}{>{\raggedright\arraybackslash}c|c}
+    \begin{tabular}{c|p{0.70\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
-    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Categoria}}} 
+    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Processo}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}} \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        P1 Acquisizione
-        & - \\[4pt]
+        Acquisizione
+        & Il processo ha lo scopo di ottenere il prodotto/servizio che soddisfa
+        le necessità del cliente. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        \textbf{P2 Fornitura} 
-        & \Centerstack{Il processo ha lo scopo di identificare procedure e risorse 
-        atte a soddisfare\\ i requisiti di progetto}\\[4pt]
+        \textbf{Fornitura} 
+        & Il processo ha lo scopo di identificare procedure e risorse 
+        atte a soddisfare i requisiti di progetto. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        \textbf{P3 Sviluppo} 
+        \textbf{Sviluppo} 
         & Il processo si occupa delle attività per la
         realizzazione del prodotto. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        P4 Esecuzione
-        & - \\[4pt]
+        Operation
+        & Il processo è svolto simultaneamente al processo di manutenzione. 
+        Il processo ha lo scopo di mantenere operativo il sistema e di fornire
+        il supporto agli utenti. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        P5 Manutenzione
-        & - \\[4pt]
+        Manutenzione
+        & Il processo è svolto simultaneamente al processo di operation.
+        Il processo ha lo scopo di modificare il prodotto software dopo il suo rilascio per
+        correggerne i difetti e migliorare le prestazioni. \\[4pt]
     \end{tabular}
     \caption{Categorie di processo}
 \end{table}
 
+Di questi processi sono stati selezionati i seguenti, con le relative attività:
 \subsubsection{Fornitura}
+Le attività del seguente processo sono:
+\begin{itemize}
+    \item Preparazione della risposta
+    \item Contratto
+    \item Pianiicazione
+    \item Esecuzione e Controllo
+    \item Revisione e Valutazione
+    \item Rilascio e Completamento
+\end{itemize}
 \subsubsection{Sviluppo}
-
+Le attività del seguente processo sono:
+\begin{itemize}
+    \item Estrazione dei requisiti
+    \item Analisi dei requisiti di sistema
+    \item Progettazione architettura di sistema
+    \item Analisi dei requisiti software
+    \item Progettazione software
+    \item Codifica
+    \item Integrazione dei componenti
+    \item Testing del software
+    \item Integrazione del sistema
+    \item Testing del sistema
+    \item Installazione software
+\end{itemize}
 %-----------------------------------------------------------------------------------------------------------------
-
+\newpage
 \subsection{Processi organizzativi}
 
 \begin{table}[h!]
-	\footnotesize
     \centering
-    \begin{tabular}{>{\raggedright\arraybackslash}c|c}
+    \begin{tabular}{c|p{0.58\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
     \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Categoria}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}} \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        O1 Gestione dell’infrastruttura
-        & - \\[4pt]
+        Gestione dell’infrastruttura
+        & Il processo ha lo scopo di mantenere una infrastruttura stabile ed affidabile
+        per supportare le prestazioni di qualsiasi processo. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        O2 Management
-        & - \\[4pt]
+        Management
+        & Il processo ha lo scopo di organizzare, monitorare e controllare l'avvio e le
+        prestazioni di un processo per il raggiungimento degli obiettivi in accordo. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        O3 Miglioramento 
-        & - \\[4pt]
+        Miglioramento del processo
+        & Il processo ha lo scopo di stabilire, valutare, misurare, controllare 
+        e migliorare il ciclo di vita del software. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        \textbf{O4 Risorse Umane}
-        & \Centerstack{Il processo ha lo scopo di identificare procedure e 
-        risorse atte\\ a soddisfare i requisiti di progetto} \\[4pt]
+        \textbf{Risorse Umane}
+        & Il processo ha lo scopo di mantenere le competenze del gruppo consistenti 
+        con le necessità di progetto. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        O5 Asset Management
-        & - \\[4pt]
+        Asset Management
+        & Il processo ha lo scopo di gestire gli elementi definiti
+        come "asset" per tutta la loro durata. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        O6 Reuse Program Management
-        & - \\[4pt]
+        Reuse Program Management
+        & Il processo ha lo scopo di pianificare, stabilire, gestire,
+        controllare e monitorare il programma di riuso formulato
+        dall'organizzazione \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        O7 Domain Engineering
-        & - \\[4pt]
+        Domain Engineering
+        & Il processo ha lo scopo di sviluppare e manutenere modelli,
+        architetture e asset del dominio in cui opera il prodotto
+        software sviluppato. \\[4pt]
     \end{tabular}
     \caption{Categorie di processo}
 \end{table}
 
 \subsubsection{Risorse Umane}
-
+Le attività del seguente processo sono:
+\begin{itemize}
+    \item Implementazione del processo
+    \item Materiale per l’implementazione della formazione
+    \item Pianificazione per l'implementazione del materiale
+\end{itemize}
 %-------------------------------------------------------------------------------------------------------------------
 \newpage
 \subsection{Processi di supporto}
 
 \begin{table}[h!]
-	\footnotesize
     \centering
-    \begin{tabular}{>{\raggedright\arraybackslash}c|c}
+    \begin{tabular}{c|p{0.56\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
     \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Categoria}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}} \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        S1 Gestione della documentazione
-        & - \\[4pt]
+        Gestione della documentazione
+        & Il processo garantisce lo sviluppo e la manutenzione delle informazioni prodotte e
+        registrate relativamente al prodotto software. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        S2 Gestione della configurazione
-        & - \\[4pt]
+        Gestione della configurazione
+        & Il processo ha lo scopo di definire e mantenere l'integrità di tutti i componenti 
+        della configurazione, e consentirne l'accesso a chi ne possiede l'autorizzazione. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        S3 Risoluzione problemi
-        & - \\[4pt]
+        Risoluzione problemi
+        & Il processo di risoluzione dei problemi ha lo scopo di analizzare e risolvere 
+        i problemi. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        \textbf{S4 Assicurazione della qualità}
-        & \Centerstack{Il processo ha lo scopo di identificare procedure 
-        e risorse atte\\ a soddisfare i requisiti di progetto} \\[4pt]
+        \textbf{Assicurazione della qualità}
+        & Il processo ha lo scopo di assicurare che tutti i prodotti di fase siano conformi con i piani e gli standard
+        definiti. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        \textbf{S5 Verifica}
-        & \Centerstack{Il processo si occupa delle attività per la
-        realizzazione del\\ prodotto} \\[4pt]
+        \textbf{Verifica}
+        & Il processo ha lo scopo di determinare se i prodotti software di un’attività soddisfano i
+        requisiti o le condizioni a loro imposti. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        S6 Audit
-        & - \\[4pt]
+        Audit
+        & Il processo ha lo scopo di determinare in maniera indipendente la conformità 
+        di prodotti e processi selezionati ai requisiti. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        S7 Revisione Congiunta
-        & - \\[4pt]
+        Revisione Congiunta
+        & Il processo ha lo scopo di rivedere con gli \textit{stakeholders} i processi 
+        eseguiti rispetto agli obiettivi definiti negli accordi, e le cose da fare per assicurare 
+        lo sviluppo di un prodotto che soddisfi i requisiti concordati. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        S8 Validazione
-        & - \\[4pt]
+        Validazione
+        & Il processo ha lo scopo di valutare che i requisiti siano rispettati quando,
+        uno specifico work product, è utilizzato nell'ambiente destinatario. \\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-        S9 Usabilità
-        & - \\[4pt]
+        Usabilità
+        & Il processo ha lo scopo di assicurare che siano prese in considerazione, ed  opportunamente indirizzate, 
+        le considerazioni espresse dagli \textit{stakeholders} relativamente alla facilità d'uso del prodotto finale. \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-        S10 Valutazione del Prodotto
-        & - \\[4pt]
+        Valutazione del Prodotto
+        & Il processo ha lo scopo di assicurare, tramite esami e misure, che il prodotto soddisfi le necessità esplicite 
+        ed implicite degli utilizzatori.  \\[4pt]
     \end{tabular}
     \caption{Categorie di processo}
 \end{table}
 
 \subsubsection{Assicurazione della qualità}
-\subsubsection{Verifica}
+Le attività del seguente processo sono:
+\begin{itemize}
+    \item Accertamento di prodotto
+    \item Accertamento di processo
+    \item Assicurazione della qualità di sistema
+\end{itemize}
 
+\subsubsection{Verifica}
+Per l'efficacia dei costi e delle prestazioni, la verifica deve essere integrata il prima possibile con il processo 
+che la utilizza.\\ 
+Questo processo include attività di:
+\begin{itemize}
+    \item Analisi
+    \item Revisione
+    \item Test
+\end{itemize}
 
 \setlength\extrarowheight{0pt}
 
