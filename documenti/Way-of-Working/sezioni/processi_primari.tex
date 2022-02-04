@@ -1,0 +1,205 @@
+\section{Processi primari}
+
+\subsection{Fornitura}
+Nella seguente sottosezione vengono normati i seguenti aspetti per il 
+processo di \textit{Fornitura}:
+\begin{itemize}
+    \item \textbf{Procedure}
+    \item \textbf{Metriche di qualità}
+    \item \textbf{Strumenti}
+\end{itemize}
+
+\subsubsection{Procedure}
+
+\paragraph{Attività}
+\mbox{} \\
+Le attività individuate dallo standard \textit{ISO/IEC 12207:1995} in questo processo sono:
+\begin{itemize}
+    \item Preparazione della risposta
+    \item Pianificazione
+    \item Esecuzione e Controllo
+    \item Revisione e Valutazione
+    \item Rilascio e Completamento
+\end{itemize}
+
+\paragraph{Preparazione della risposta}
+\mbox{} \\
+Il gruppo \textit{Club Swendwich} deve redigere i seguenti documenti:
+\begin{itemize}
+    \item \textbf{Impegni}
+    \item \textbf{Scelta Capitolato}
+\end{itemize}
+Deve inoltre essere redatta la prima versione del \textit{way of working} da adottare, documento \textbf{Norme di Progetto} v1.0.0.
+
+\paragraph{Pianificazione}
+\mbox{} \\
+Il gruppo deve individuare i \textbf{requisiti} richiesti dal proponente.\\
+Il gruppo deve redigere i documenti per la gestione dei costi attesi, obiettivi da raggiungere e qualità attesa:
+\begin{itemize}
+    \item \textbf{Piano di Progetto}
+    \item \textbf{Piano di Qualifica}
+\end{itemize}
+
+\paragraph{Esecuzione e controllo}
+\mbox{} \\
+Per quanto concerne il \textit{Piano di Progetto} il gruppo deve controllare i seguenti aspetti:
+\begin{itemize}
+    \item Costi attesi (\textbf{Preventivo a finire})
+    \item Costi osservati (\textbf{Consuntivo di periodo})
+    \item Rischi e mitigazioni
+    \item Obiettivi raggiunti e da raggiungere
+\end{itemize}
+Per quanto concerne il \textit{Piano di Qualifica} il gruppo deve controllare i seguenti aspetti:
+\begin{itemize}
+    \item Specifica degli obiettivi quantitativi di \textbf{qualità di prodotto} e di \textbf{processo}
+    \item Misurazione del raggiungimento di tali obiettivi allo stato corrente (\textbf{Cruscotto})
+    \item Esiti di retrospettive
+\end{itemize}
+
+Il gruppo deve inoltre monitorare l'avanzamento mediante uso di \textbf{milestones}.
+
+\paragraph{Revisione e Valutazione}
+\mbox{} \\
+Il gruppo deve eseguire verifica costante dei propri prodotti, secondo quanto riportato alla sezione LIIINK||||||
+
+\paragraph{Rilascio e Completamento}
+\mbox{} \\
+Ogni rilascio sarà effettuato tramite \textit{release} nella \textit{repository} di lavoro.
+Dovrà essere rilasciato sia codice sorgente che documentazione.
+La struttura interna della cartella che sarà rilasciata dovrà includere le seguenti sezioni:
+\begin{itemize}
+    \item Documenti interni 
+    \item Documenti esterni
+\end{itemize}
+
+\subsubsection{Metriche di qualità}
+Il processo di Fornitura non fa uso di particolari metriche di qualità.
+
+\subsubsection{Strumenti}
+Gli strumenti da utilizzare in questo processo sono:
+
+\begin{itemize}
+    \item Google Sheets: per la creazione di tabelle e grafici \\
+    https://www.google.com/sheets/about/
+    \item Trello: per la gestione delle \textit{tasks} da svolgere nel progetto.\\
+    https://trello.com/it
+    \item Gantt Project: per la creazione dei grafici di Gantt relativi alla pianificazione di progetto.
+    https://www.ganttproject.biz/
+\end{itemize}
+
+\subsection{Sviluppo}
+Nella seguente sottosezione vengono normati i seguenti aspetti per il 
+processo di \textit{Sviluppo}:
+\begin{itemize}
+    \item \textbf{Procedure}
+    \item \textbf{Metriche di qualità}
+    \item \textbf{Strumenti}
+\end{itemize}
+
+\subsubsection{Procedure}
+
+\paragraph{Attività}
+\mbox{} \\
+Le attività individuate dallo standard \textit{ISO/IEC 12207:1995} in questo processo sono:
+\begin{itemize}
+    \item Analisi dei requisiti
+    \item Progettazione
+    \item Codifica
+\end{itemize}
+
+\paragraph{Analisi dei requisiti}
+\mbox{} \\
+Dopo aver individuato una prima pianificazione dei requisiti, il gruppo \textit{Club Swendwich}
+deve procedere allo sviluppo del documento:
+\begin{itemize}
+    \item \textbf{Analisi dei requisiti}
+\end{itemize}
+
+\paragraph{Casi d'uso}
+\begin{itemize}
+    \item   \textbf{Codice identificativo:}
+            \par \centerline{\textbf{UC[Numero caso d'uso].[Eventuale caso d'uso figlio]-[Titolo caso d'uso]}}
+\end{itemize}
+Per la realizzazione degli Use Case diagram si utilizza \textbf{Draw.io} con le seguenti norme:
+\begin{itemize}
+\item Carattere del testo: Helvetica 12pt.
+\item Titolo frame: UC[\#]
+\item Titolo Use Case: UC[\#], a capo "Nome del caso d'uso".
+\item Descrizione Extend with Condition: "Condition: \{descrizione\}" a capo "Extension Point: visualizzazione (descrizione di cosa viene visualizzato)".
+\end{itemize}
+Le componenti grafiche del diagramma seguono lo standard Use Case di UML analizzato nella lezione P4 del docente Cardin. \\
+
+\noindent Per la descrizione degli Use Case si utilizza sempre lo standard visto nella lezione P4:
+\begin{itemize}
+	\item \textbf{Attore primario:} Chi è l'attore primario del caso d'uso.
+	\item \textbf{Precondizioni:} Condizioni necessarie all'inizio del caso d'uso.
+	\item \textbf{Postcondizioni:} Effetti/garanzia di ciò che succede in seguito.
+	\item \textbf{Scenario principale:} Sequenza di passi che descrive le interazioni, si utilizza una lista \textit{itemize} in LaTeX per descriverne le fasi.
+	\item \textbf{Estensioni:} Descrizione dei possibili ``extend``.
+	\item \textbf{Generalizzazioni:} Descrizione di possibili aggiunte o modifiche delle caratteristiche base.
+\end{itemize}
+
+
+\paragraph{Struttura dei requisiti}
+\mbox{} \\
+La struttura delle tabelle relative alla sezione \textit{Requisiti} nel documento \textit{Analisi dei requisiti} è strutturata nel modo seguente:
+\begin{itemize}
+    \item   \textbf{Codice identificativo:}
+            \par \centerline{\textbf{R[Peso][Tipo][Codice]}}
+            Dove \textbf{Peso} indica un numero da 1 a 3 che rappresenta:
+            \begin{enumerate}
+                \item Requisito obbligatorio;
+                \item Requisito apprezzabile ma non essenziale;
+                \item Requisito opzionale.
+            \end{enumerate}
+            Con \textbf{Tipo} viene indicata la natura del requisito, le possibilità sono le seguenti:
+            \begin{itemize}
+                \item \textbf{V}: Vincolo;
+                \item \textbf{F}: Funzionale;
+                \item \textbf{Q}: Qualitativo;
+                \item \textbf{P}: Prestazionale.
+            \end{itemize}
+            Con \textbf{Codice} si intende un identificativo univoco del requisito.
+    \item \textbf{Classe:} Serve a rendere più esplicita la tabella, in essa viene infatti riportato il peso, già espresso nel codice identificativo, ma questa volta scritto a parole.
+    \item \textbf{Descrizione:} Una breve descrizione del requisito.
+    \item \textbf{Riferimenti:} Indica da quale fonte deriva il requisito in analisi.   
+\end{itemize}
+
+\paragraph{Progettazione}
+\mbox{} \\
+Basandosi sul documento \textit{Analisi dei requisiti} il gruppo deve sviluppare
+un applicativo di valore.
+
+\paragraph{Requirements and Technology Baseline}
+\mbox{} \\
+Per questa fase di avanzamento il progettista deve occuparsi di:
+\begin{itemize}
+    \item Scelta di tecnologie, framework, e librerie per la realizzazione del prodotto.
+    \item Progettazione di un \textbf{Proof of Concept}
+\end{itemize}
+
+\paragraph{Codifica}
+\mbox{} \\
+INSERIRE PARTE DI SAMUELE
+
+\subsubsection{Metriche di qualità}
+
+\paragraph{Metriche per la Funzionalità}
+\mbox{} \\
+
+\paragraph{Metriche per l' Affidabilità}
+\mbox{} \\
+
+\paragraph{Metriche per l' Efficienza}
+\mbox{} \\
+
+\paragraph{Metriche per l' Usabilità}
+\mbox{} \\
+
+\paragraph{Metriche per la Manutenibilità}
+\mbox{} \\
+
+\paragraph{Metriche per la Portabilità}
+\mbox{} \\
+
+\subsubsection{Strumenti}
