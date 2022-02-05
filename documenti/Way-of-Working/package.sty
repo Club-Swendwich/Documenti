@@ -49,3 +49,11 @@
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{5}
+
+%I subparagraph non indentano
+\makeatletter
+\renewcommand\subparagraph{%
+\@startsection{subparagraph}{5}{0pt}%
+{3.25ex \@plus 1ex \@minus .2ex}{-1em}%
+{\normalfont\normalsize\bfseries}}
+\makeatother
