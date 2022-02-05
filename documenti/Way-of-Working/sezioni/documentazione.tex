@@ -120,25 +120,6 @@ spelling, non va riportata nel registro modifiche.}\\
 La colonna di \textbf{approvazione} viene aggiornata solo nel momento in cui il documento viene approvato. Naturalmente nei documenti che avranno più revisioni di avanzamento, e che contestualmente richiederanno più versioni, l'approvazione verrà inserita per la fase di avanzamento da superare (che andrà segnalata nella descrizione), e sarà aggiunta una nuova riga di approvazione per il rilascio successivo.
 
 \subsection{Richiedere la verifica di un documento}
-La richiesta di verifica dei documenti deve essere effettuata in uno dei seguenti modi, a seconda della dimensione del documento in questione:
-\begin{itemize}
-    \item Per richiedere la verifica di un \textbf{documento di piccole dimensioni} (es. verbali) è sufficiente:
-    \begin{itemize}
-        \item spostare la card di Trello nella lista "To be verified"; 
-        \item togliere la partecipazione (azione eseguita automaticamente) in modo da rendere chiaro agli altri 
-        componenti che l'issue ha bisogno di una verifica, e tale verifica non è ancora stata presa in carico;
-        \item il verificatore si assegna poi la card e procede con il lavoro.
-    \end{itemize}
-    \item Per richiedere la verifica di un \textbf{documento di grandi dimensioni} (es. documenti esterni nei quali è presente 
-    una checklist con le sezioni da produrre/modificare) è necessario:
-    \begin{itemize}
-        \item creare una copia della card;
-        \item spostare quest'ultima in "To be verified" (questo per permettere una verifica in parallelo alla 
-        creazione/modifica dei punti della lista);
-        \item man mano che i punti della checklist nella card "In progress" verranno spuntati, si procederà con 
-        l'aggiunta di essi nella card "To be verified", in modo da iniziarne la verifica.
-    \end{itemize}
-\end{itemize}
 
 \subsection{Verificare un documento}
 La fase di verifica non è meramente un controllo di errori grammaticali o di battitura. È necessario, infatti, verificare anche la completezza e la coerenza del contenuto all'interno del documento.
@@ -167,13 +148,6 @@ seguendo le seguenti regole:
 \end{itemize}
 
 \subsection{Richiedere l'approvazione di un documento}
-Per richiedere l'approvazione di un documento è sufficiente spostare la card da "To be verified" a "To be approved" 
-e togliere la partecipazione dei componenti.\\ 
-Automaticamente verrà assegnata l'etichetta \texttt{To be merged} alla card (tale etichetta serve a ricordare all'approvatore 
-di eseguire il merge del branch dell'issue, una volta approvato il documento).\\
-Quando questa azione viene eseguita basterà premere il pulsante "Merged" presente nella card: tale pulsante sostituirà la label 
-\texttt{To be merged} con quella \texttt{Merged} e sposterà la card nella lista "Done", togliendo contemporaneamente tutti i 
-componenti assegnati alla card.
 
 \subsection{Grafici Use Case}
 
