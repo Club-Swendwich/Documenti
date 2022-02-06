@@ -151,20 +151,46 @@ aggiunta una nuova riga di approvazione per il rilascio successivo.
 \subsubsection{Metriche di qualità}
 \paragraph{Usabilità}
 \mbox{}\\
-Il processo di Documentazione utilizza le seguenti metriche:
+\setlength\extrarowheight{5pt}
 
-
+\begin{table}[htb]
+    \centering
+    \begin{longtable}{p{0.17\linewidth} c p{0.35\linewidth} c}
+    \rowcolor[RGB]{33, 73, 50}
+        \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Nome}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Codice}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
+    \rowcolor[RGB]{216, 235, 171}
+        &   & Indice di leggibilità di un documento &   \\
+    \rowcolor[RGB]{216, 235, 171}
+        \textbf{Indice di Gulpease} & MPD1 &  \textbf{$N_F$ numero frasi $N_L$ numero lettere} &   $ 89 + \frac{300 \cdot N_F - 10 \cdot N_L}{N_P} $ \\
+    \rowcolor[RGB]{216, 235, 171}
+        &   &  \textbf{$N_P$ numero parole} &   \\[4pt]
+    \rowcolor[RGB]{216, 235, 171}
+        &   &  &   \\
+    \rowcolor[RGB]{216, 235, 171}
+        \textbf{Ortogtrafia} & MPD2 & Correttezza ortografica di un documento  &   - \\
+    \rowcolor[RGB]{216, 235, 171}
+        &   &  &   \\[4pt]
+    
+    \end{longtable}
+    \caption{Verifica della Documentazione}
+\end{table}
+    
+\setlength\extrarowheight{0pt}
+\newpage
 \subsubsection{Strumenti}
 Gli strumenti da utilizzare in questo processo sono:
 \begin{itemize}
-    \item LaTeX: linguaggio per la stesura dei documenti\\
+    \item LaTeX: linguaggio per la stesura dei documenti.\\
     https://www.latex-project.org/
-    \item Visual Studio Code: editor di codice utilizzato dal gruppo per l'implementazione con Github(in particolare
-    per la gestione dei branch)\\
+    \item Visual Studio Code: editor di codice utilizzato dal gruppo, scelto per l'implementazione con Github(in particolare
+    per la gestione dei branch).\\
     https://code.visualstudio.com/
-    \item Draw.io: per la creazione di diagrammi dei casi d'uso\\
+    \item Draw.io: per la creazione di diagrammi UML.\\
     https://app.diagrams.net/
-    \item Google Sheets: per la creazione di tabelle e grafici\\
+    \item Google Sheets: per la creazione di tabelle e grafici.\\
     https://www.google.com/sheets/about/
 \end{itemize}
 %-------------------------------------------------------------------------------------------------
@@ -174,8 +200,6 @@ Nella seguente sottosezione vengono normati i seguenti aspetti per il
 processo di \textit{Assicurazione della qualità}:
 \begin{itemize}
     \item \textbf{Procedure}
-    \item \textbf{Metriche di qualità}
-    \item \textbf{Strumenti}
 \end{itemize}
 
 \subsubsection{Procedure}
@@ -197,14 +221,10 @@ Dove \textbf{PD} è abbreviazione di \textbf{Prodotto}
 \end{center}
 Dove \textbf{PD} è abbreviazione di \textbf{Processo}
 
-\subsubsection{Metriche di qualità}
-Il processo di Assicurazione delle qualità non fa uso di particolari metriche di qualità. 
-
-\subsubsection{Strumenti}
-Il processo di Assicurazione delle qualità non fa uso di particolari strumenti.
 %--------------------------------------------------------------------------------------
 
 \subsection{Verifica}
+\label{sec:Verifica}
 Nella seguente sottosezione vengono normati i seguenti aspetti per il 
 processo di \textit{Verifica}:
 \begin{itemize}
@@ -235,7 +255,57 @@ I compiti che dovrà eseguire il verificatore saranno, quindi:
 \end{enumdescript}
 Una volta che il documento supererà con successo questi passaggi, il verificatore aggiornerà lo stato del documento (\textbackslash docstatus) e procederà con la richiesta di approvazione.
 
+\setlength\extrarowheight{5pt}
+
+    \begin{longtable}{cp{0.28\linewidth}p{0.13\linewidth}p{0.31\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Metodo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Attori}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}\\[4pt]
+		\rowcolor[RGB]{216, 235, 171}
+	    	\textbf{Walkthrough} 
+            & Rilevamento di errori mediante letture ad ampio spettro.
+            & Redattori Verificatori
+            & Un errore trovato durante la fase di verifica va segnalato 
+            tramite le issue su Github, come indicato nella sezione \textit{Segnalare un problema}.\\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            \textbf{Inspection} 
+            & Rilevamento di errori mediante letture mirate. 
+            & Redattori Verificatori
+            & Il verificatore utilizza una \textit{lista di controllo}, per eseguire una verifica mirata.\\[4pt]
+        \caption{Tipologie di verifica di un documento}
+        \end{longtable}
+    
+\setlength\extrarowheight{0pt}
 \subparagraph{Verificare il codice}
+\mbox{}\\
+\setlength\extrarowheight{5pt}
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{cp{0.30\linewidth}p{0.17\linewidth}p{0.30\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Analisi}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Attori}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}\\[4pt]
+		
+		\rowcolor[RGB]{216, 235, 171}
+	    	\textbf{Statica} 
+            & Verificare il rispetto delle norme dello standard di codifica.
+            & \centering Programmatori Verificatori
+            & Analisi di flusso dei dati, verifica formale del codice.\\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            \textbf{Dinamica} 
+            & Eseguire il prodotto e trovare errori \textit{Run-time}. 
+            & \centering Programmatori Verificatori
+            & Test di unità, di integrazione, di sistema, di regressione, di accettazione.\\[4pt]
+        \end{tabular}
+        \caption{Verifica del codice}
+    \end{table}
+    
+\setlength\extrarowheight{0pt}
 
 \paragraph{Revisione}
 \subparagraph{Segnalare un problema}
@@ -258,8 +328,77 @@ Tutti i test eseguiti al codice devono essere ripetibili ed automatici (per quan
 
 
 \subsubsection{Metriche di qualità}
+Si utilizzano le seguenti metriche di processo:
 
-Tabella metriche di processo
+\setlength\extrarowheight{5pt}
+
+\begin{longtable}{P{0.1\linewidth}P{0.25\linewidth}P{0.25\linewidth}P{0.30\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+        \textcolor{white}{\textbf{Codice}}
+        & \textcolor{white}{\textbf{Nome}}
+        & \textcolor{white}{\textbf{Descrizione}}
+		& \textcolor{white}{\textbf{Formula}}\\[4pt]
+	\rowcolor[RGB]{216, 235, 171}
+	    MPC1 
+        & Schedule Variance (SV) 
+        & Indica se il gruppo è in linea (ritardo o anticipo) rispetto alla schedulazione delle attività di progetto pianificate.
+        & $SV = (\frac{BCWP}{BCWS} - 1) \cdot 100$ \\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            MPC2 
+            & Budget Variance (BV) 
+            & Indica se, alla data corrente, il gruppo ha speso di più o di meno rispetto a quanto previsto dal budget.
+            & $BV = (1 - \frac{ACWP}{BCWS}) \cdot 100$	\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    	MPC3 
+            & Estimated at Completion (EAC) 
+            & Corrisponde al BAC rivisto allo stato corrente del progetto.
+            & $EAC = CWP + ETC$	\\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            MPC4 
+            & Actual Cost of Work Performed (ACWP) 
+            & Costo effettivamente sostenuto dal gruppo alla data corrente (giorni o euro).
+            & -		\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    	MPC5 
+            & Budgeted Cost of Work Performed (BCWP) 
+            & Valore delle attività realizzate alla data corrente (giorni o euro). 
+            & $\%completamento \cdot EAC$		\\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            MPC6 
+            & Requirements Stability Index (RSI) 
+            & Metrica per tracciare le variazioni dei requisiti nel tempo originariamente specificati per il progetto.  
+            & $(1-\frac{NoC + NoD + NoA}{TNIR}) \cdot 100$	\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    	MPC7 
+            & Satisfied Obligatory Requirements (SOR) 
+            & Indica la percentuale dei requisiti obbligatori soddisfatti. 
+            & $\frac{NoS}{TnR} \cdot 100$		\\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            MPC8 
+            & Non-calculated Risk (NCR) 
+            & Indica il numero di rischi verificati non preventivati. 
+            & Numero intero		\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    	MPC9 & Code Coverage (CC) 
+            & Indica il grado di copertura del codice dai test dinamici.
+            & $\frac{LCE}{LC} \cdot 100$		\\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            MPC10 
+            & Passed Test Cases Percentage (PTCP) 
+            & Corrisponde alla percentuale di test superati rispetto al totale dei test dinamici.
+            & $\frac{\textit{Test Passati}}{\textit{Test Totali}} \cdot 100$	\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    	MPC11 
+            & Failed Test Cases Percentage (FTCP) 
+            & Corrisponde alla percentuale di test falliti rispetto al totale dei test dinamici.
+            & $\frac{\textit{Test Falliti}}{\textit{Test Totali}} \cdot 100$ \\[4pt]
+        \rowcolor[RGB]{233, 245, 206}
+            MPC12 
+            & Quality Metrics Satisfied (QMS) 
+            & Indica la percentuale di metriche di qualità soddisfatte
+            & $\frac{NQMS}{TQM} \cdot 100$		\\[4pt]
+\end{longtable}
+\setlength\extrarowheight{0pt}
 
 \subsubsection{Strumenti}
 
