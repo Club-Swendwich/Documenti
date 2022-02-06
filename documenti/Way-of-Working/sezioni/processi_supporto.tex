@@ -89,7 +89,9 @@ Qualora non fosse presente il template desiderato è necessaria una discussione 
 
 \subparagraph{Redattori, Verificatori, Approvatori}
 \mbox{}\\
-In ogni documento e verbale in prima pagina viene inserito un riassunto dei ruoli svolti da ogni componente. I ruoli vengono svolti in più fasi, e queste sono visibili nel dettaglio nella tabella ``Registro delle modifiche''. Può succedere che un componente sia inserito sia come redattore che come verificatore, in quanto può aver svolto il ruolo in fasi differenti del documento.
+In ogni documento e verbale in prima pagina viene inserito un riassunto dei ruoli svolti da ogni componente. 
+I ruoli vengono svolti in più fasi, e queste sono visibili nel dettaglio nella tabella ``Registro delle modifiche''.\\ 
+Può succedere che un componente sia inserito sia come redattore che come verificatore, in quanto può aver svolto il ruolo in fasi differenti del documento.
 
 \subparagraph{Gestione nominativi}
 \mbox{}\\
@@ -97,6 +99,36 @@ Per dare maggiore coerenza al testo si è deciso di utilizzare le seguenti regol
 \begin{itemize}
 	\item \texttt{Cognome Nome} : ordine da seguire nelle tabelle, nel registro delle modifiche, e nelle prime pagine dei documenti in corrispondenza dei ruoli attribuiti.
 	\item \texttt{Assenti} : da indicare con "-" nel caso non fossero presenti assenti durante i meeting del gruppo o nelle call.
+\end{itemize}
+
+\subparagraph{Glossario}
+\mbox{}\\
+Per evitare ambiguità con la terminologia utilizzata nei documenti è stato redatto un glossario.
+\begin{itemize}
+    \item Ogni parola del Glossario è contrassegnata da una "G" ad apice.
+    \item Le parole contenute nei titoli non fanno parte del glossario.
+\end{itemize}
+
+\subparagraph{Immagini cruscotto PdP}
+\mbox{}\\
+Per rappresentare i dati nel \textit{preventivo di fase} e nel \textit{consuntivo di periodo}
+è importante inserire un cruscotto informativo sotto forma di grafico. Questo va creato con 
+\textit{Google Sheets} rispettando le seguenti regole:
+\begin{itemize}
+    \item \textbf{Grafico a colonne in pila}
+    \begin{itemize}
+        \item Legenda: posizionata a destra; colore del testo nero; dimensione 16 pt.
+        \item Nome asse verticale: Ore.
+        \item Colori ruoli: sono mantenuti i colori di default.
+        \item Nominativi: disposizione a 30°; carattere 16pt. 
+    \end{itemize}
+    \item \textbf{Grafico ad anello}
+    \begin{itemize}
+        \item Legenda: posizionata a destra; colore del testo nero; dimensione 16 pt.
+        \item Circonferenza anello: 50\%.
+        \item Colori ruoli: sono mantenuti i colori di default.
+        \item Inserire la percentuale dentro ogni "fetta"; dimensione carattere 14 pt.
+    \end{itemize}
 \end{itemize}
 
 \paragraph{Manutenzione}
@@ -175,11 +207,10 @@ aggiunta una nuova riga di approvazione per il rilascio successivo.
         &   &  &   \\[4pt]
     
     \end{longtable}
-    \caption{Verifica della Documentazione}
+    \caption{Metriche di usabilità}
 \end{table}
     
 \setlength\extrarowheight{0pt}
-\newpage
 \subsubsection{Strumenti}
 Gli strumenti da utilizzare in questo processo sono:
 \begin{itemize}
@@ -257,7 +288,7 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
 
 \setlength\extrarowheight{5pt}
 
-    \begin{longtable}{cp{0.28\linewidth}p{0.13\linewidth}p{0.31\linewidth}}
+    \begin{longtable}{cm{0.28\linewidth}m{0.13\linewidth}m{0.31\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
     \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Metodo}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
@@ -284,7 +315,7 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
 
 \begin{table}[htb]
     \centering
-    \begin{tabular}{cp{0.30\linewidth}p{0.17\linewidth}p{0.30\linewidth}}
+    \begin{tabular}{cm{0.30\linewidth}m{0.17\linewidth}m{0.30\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
     \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Analisi}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
@@ -302,7 +333,7 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
             & \centering Programmatori Verificatori
             & Test di unità, di integrazione, di sistema, di regressione, di accettazione.\\[4pt]
         \end{tabular}
-        \caption{Verifica del codice}
+        \caption{Tipologie di verifica del codice}
     \end{table}
     
 \setlength\extrarowheight{0pt}
@@ -325,10 +356,26 @@ seguendo le seguenti regole:
 
 \paragraph{Test}
 Tutti i test eseguiti al codice devono essere ripetibili ed automatici (per quanto possibile).
-
+SCRIVERE I CODICI E LE PROCEDURE DEI TEST EFFETTUATI
 
 \subsubsection{Metriche di qualità}
-Si utilizzano le seguenti metriche di processo:
+
+Parametri utilizzati nella tabella:
+\begin{itemize}
+    \item \textbf{Budget at Completion (BAC)}:Valore iniziale previsto per la realizzazione del progetto.
+    \item \textbf{Planned Value (BCWS)}: Costo pianificato per realizzare le attività di progetto alla data corrente (giorni o euro).
+    \item \textbf{Estimate to Complete (ETC)}: Valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
+    \item \textbf{Number of Changed (NoC)}: numero di requisiti variati.
+    \item \textbf{Number of Deleted (NoD)}: numero di requisiti eliminati.
+    \item \textbf{Number of Added (NoA)}: numero di requisiti aggiunti.
+    \item \textbf{Total Number of Initial Requirement (TNIR)}: numero totale dei requisiti iniziali.
+    \item \textbf{Number of Satisfied (NoS)}: numero totale di requisiti soddisfatti.
+    \item \textbf{Total number of Requirement (TnR)}: numero totale di requisiti.
+    \item \textbf{Line of Code Executed (LCE)}: linee di codice eseguite dagli algoritmi di test.
+    \item \textbf{Line of Code(LC)}: linee di codice totali.
+    \item \textbf{Number of Quality Metrics Satisfied (NQMS)}: numero di metriche di qualità soddisfatte.
+    \item \textbf{Total number of Quality Metrics (TQM)}: numero totale di metriche di qualità.
+\end{itemize}
 
 \setlength\extrarowheight{5pt}
 
@@ -352,7 +399,7 @@ Si utilizzano le seguenti metriche di processo:
 	    	MPC3 
             & Estimated at Completion (EAC) 
             & Corrisponde al BAC rivisto allo stato corrente del progetto.
-            & $EAC = CWP + ETC$	\\[4pt]
+            & $EAC = ACWP + ETC$	\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
             MPC4 
             & Actual Cost of Work Performed (ACWP) 
@@ -397,8 +444,9 @@ Si utilizzano le seguenti metriche di processo:
             & Quality Metrics Satisfied (QMS) 
             & Indica la percentuale di metriche di qualità soddisfatte
             & $\frac{NQMS}{TQM} \cdot 100$		\\[4pt]
+    \caption{Metriche di processo}
 \end{longtable}
 \setlength\extrarowheight{0pt}
 
 \subsubsection{Strumenti}
-
+ INSERIRE STRUMENTI DEI TEST
