@@ -1,6 +1,6 @@
 \section{Requisiti}
 \subsection{Introduzione}
-Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo quanto definito nelle \textit{Norme di Progetto}. 
+Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo quanto definito nelle \textit{Norme di Progetto}.
 \subsection{Requisiti funzionali}
 {\renewcommand{\arraystretch}{1.5}
 \begin{longtable}{p{0.12\linewidth}p{0.15\linewidth}p{0.50\linewidth}p{0.15\linewidth}}
@@ -12,6 +12,16 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
     
     \rowcolor[RGB]{233, 245, 206}
     R1F2 & Obbligatorio & L'utente può scegliere la tipologia di grafico che vuole visualizzare. & UC2\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.1 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Scatter Plot$^{G}$}. & UC2.1\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F2.1.1 & Obbligatorio & Viene eseguito il render del grafico \textit{Scatter Plot$^{G}$}. & \\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.1.1.1 & Obbligatorio & Viene eseguito il render degli assi del grafico & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F2.1.1.2 & Obbligatorio & Viene eseguito il render dei punti (colore, forma, grandezza e posizione)& \\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F2.1.2 & Obbligatorio & Viene eseguita la normalizzazione dei valori relativi agli assi del grafico. & \\
     \rowcolor[RGB]{216, 235, 171}
     R1F2.1 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Scatter Plot$^{G}$}. & UC2.1\\
     \rowcolor[RGB]{233, 245, 206}
@@ -23,19 +33,35 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
     
     \rowcolor[RGB]{216, 235, 171}
     R2F3 & Obbligatorio & L'utente deve poter tornare alla visualizzazione di default. & UC4\\
-    
-    \rowcolor[RGB]{233, 245, 206}
-    R1F4 & Obbligatorio & L'utente deve poter scegliere quale vista$^{G}$ di dati visualizzare. & UC3\\
-    
+
     \rowcolor[RGB]{216, 235, 171}
+    R1F4 & Obbligatorio & L'utente deve poter scegliere quale vista$^{G}$ di dati visualizzare. & UC3\\
+
+    \rowcolor[RGB]{233, 245, 206}
     R2F5 & Desiderabile & L'utente passando sopra ad alcuni elementi con il mouse visualizza delle informazioni utili. & UC9\\
-    
+
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6 & Obbligatorio & L'utente deve poter personalizzare il grafico da lui scelto. & UC5\\
     \rowcolor[RGB]{233, 245, 206}
     R1F6 & Obbligatorio & L'utente deve poter personalizzare il grafico da lui scelto. & UC5\\
     \rowcolor[RGB]{216, 235, 171}
     R1F6.1 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Scatter Plot}. & UC5.1\\
     \rowcolor[RGB]{233, 245, 206}
-    R1F6.1.1 & Obbligatorio & L'utente sceglie l'associazione dimensioni$^{G}$-assi nel grafico \textit{Scatter Plot}. & UC5.1.1\\
+    R1F6.1.1.1 & Obbligatorio & L'utente sceglie l'assiociazione tra dimensione del dato e posizione sull'asse x del punto.&\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.1.1.2 & Obbligatorio & L'utente sceglie l'assiociazione tra dimensione del dato e posizione sull'asse y del punto.&\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.1.1.3 & Obbligatorio & L'utente sceglie l'assiociazione tra dimensione del dato e colore del punto.&\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.1.1.4 & Obbligatorio & L'utente sceglie l'assiociazione tra dimensione del dato e forma del punto.&\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.1.1.5 & Obbligatorio & L'utente sceglie l'assiociazione tra dimensione del dato e grandezza del punto.&\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.1.2 & Obbligatorio & L'utente può personalizzare lo stile del grafico \textit{Scatter Plot$^{G}$}. & UC5.1.2\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.1.2.1 & Obbligatorio & L'utente sceglie il range di valori visualizzati sull'asse x. & \\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.1.2.3 & Obbligatorio & L'utente sceglie il range di valori visualizzati sull'asse y. & \\
     \rowcolor[RGB]{216, 235, 171}
     R1F6.1.2 & Obbligatorio & L'utente può personalizzare lo stile del grafico \textit{Scatter Plot$^{G}$}. & UC5.1.2\\
     \rowcolor[RGB]{233, 245, 206}
@@ -65,21 +91,33 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
 
     \rowcolor[RGB]{233, 245, 206}
     R2F7 & Desiderabile & L'utente può visualizzare un grafico a tutto schermo. & UC6\\
-    
-    \rowcolor[RGB]{216, 235, 171}
-    R2F8 & Desiderabile & L'utente può eseguire uno zoom su alcuni tipi di grafici. & UC7, UC8\\
-    
     \rowcolor[RGB]{233, 245, 206}
-    R2F9 & Desiderabile & L'utente può salvare una vista$^{G}$ da lui precedentemente creata. & UC12\\
-    
+    R2F8 & Desiderabile & L'utente può eseguire uno zoom su alcuni tipi di grafici. & UC7, UC8\\
     \rowcolor[RGB]{216, 235, 171}
-    R2F10 & Desiderabile & L'utente può caricare una vista$^{G}$ personalizzata.  & UC13\\
+    R2F9 & Desiderabile & L'utente può salvare una vista$^{G}$ da lui precedentemente creata. & UC12\\
+    \rowcolor[RGB]{233, 245, 206}
+    R2F9.1 & Desiderabile & L'applicazione serializza l'associazione degli assi del grafico in formato JSON.& \\
+    \rowcolor[RGB]{216, 235, 171}
+    R2F9.2 & Desiderabile & L'applicazione serializza le preferenze scelte del grafico in formato JSON.& \\
+    \rowcolor[RGB]{233, 245, 206}
+    R2F9.3 & Desiderabile & L'applicazione chiede dove deve essere salvato il file  contentete la vista.& \\
+    \rowcolor[RGB]{216, 235, 171}
+    R2F9.4 & Desiderabile & L'applicazione salva sul filesystem la vista alla posizione indicata.& \\
 
+    \rowcolor[RGB]{233, 245, 206}
+    R2F10 & Desiderabile & L'utente può caricare una vista$^{G}$ personalizzata.  & UC13\\
+    \rowcolor[RGB]{216, 235, 171}
+    R2F10.1 & Desiderabile & Viene eseguito il parsing$^{G}$ delle viste caricate. & \\
+    \rowcolor[RGB]{233, 245, 206}
+    R2F10.2 & Desiderabile & Viene eseguita la deserializzazione delle viste caricate. & \\
+
+    \rowcolor[RGB]{216, 235, 171}
+    R1F11 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ relativa al grafico da lui selezionato. & UC11\\
     \rowcolor[RGB]{233, 245, 206}
     R1F11 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ relativa al grafico da lui selezionato. & UC11\\ 
     \rowcolor[RGB]{216, 235, 171}
     R1F11.1 & Obbligatorio & L'utente deve poter scegliere quale sottoinsieme di dati associare alla nuova vista$^{G}$. & UC11.1\\
-    \rowcolor[RGB]{233, 245, 206} 
+    \rowcolor[RGB]{216, 235, 171}
     R1F11.2 & Obbligatorio & L'utente deve poter creare una vista$^{G}$ su \textit{Scatter plot$^{G}$}. & UC11.2\\
     \rowcolor[RGB]{216, 235, 171}
     R1F11.2.1 & Obbligatorio & L'utente sceglie l'associazione dimensioni$^{G}$-assi nel grafico \textit{Scatter Plot$^{G}$}. & UC11.2.1\\
@@ -107,7 +145,7 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
 
     \caption{Tabella dei requisiti funzionali}
 
-\end{longtable}	
+\end{longtable}
 }
 
 
@@ -117,11 +155,11 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Descrizione}} &
     \textcolor{white}{\textbf{Riferimenti}}\\
-    
+
     \rowcolor[RGB]{216, 235, 171}
     R2Q1 & Desiderabile & Il progetto sarà pubblicato su GitHub$^{G}$ in un repository$^{G}$ pubblico. & Capitolato$^{G}$\\
     \rowcolor[RGB]{233, 245, 206}
-    R2Q2 & Desiderabile & Il progetto sarà open-source$^{G}$. & Capitolato$^{G}$\\ 
+    R2Q2 & Desiderabile & Il progetto sarà open-source$^{G}$. & Capitolato$^{G}$\\
     \rowcolor[RGB]{216, 235, 171}
     R1Q3 & Obbligatorio & Il progetto deve essere sviluppato secondo quanto descritto nelle \textit{Norme di progetto}. & Norme di Progetto\\
     \rowcolor[RGB]{233, 245, 206}
@@ -129,10 +167,10 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
     \rowcolor[RGB]{216, 235, 171}
     R1Q5 & Obbligatorio & Dovrà essere fornito un manuale per l'utilizzo dell'applicativo. & Capitolato$^{G}$\\
     \rowcolor[RGB]{233, 245, 206}
-    R1Q6 & Obbligatorio & Dovrà essere fornito un manuale per la manutenzione e l'estensione dell'applicativo. & Capitolato$^{G}$\\ 
-    
+    R1Q6 & Obbligatorio & Dovrà essere fornito un manuale per la manutenzione e l'estensione dell'applicativo. & Capitolato$^{G}$\\
+
     \caption{Tabella dei requisiti qualitativi}
-\end{longtable}	
+\end{longtable}
 }
 
 \subsection{Requisiti di vincolo}
@@ -141,7 +179,7 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Descrizione}} &
     \textcolor{white}{\textbf{Riferimenti}}\\
-    
+
     \rowcolor[RGB]{216, 235, 171}
     R1V1 & Obbligatorio & L'applicativo deve essere sviluppato prevalentemente in Html, Css e Javascript. & Capitolato$^{G}$\\
     \rowcolor[RGB]{233, 245, 206}
@@ -153,21 +191,21 @@ Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo q
     \rowcolor[RGB]{216, 235, 171}
     R3V4 & Opzionale & Possibilità di utilizzo di altre tecnologie come \textit{Python} e libreria \textit{Scikit-learn}$^{G}$.& Capitolato$^{G}$\\
     \rowcolor[RGB]{233, 245, 206}
-    R3V4 & Opzionale & Possibilità di utilizzo di altri dataset$^{G}$ simili recuperati da archivi aperti. & Capitolato$^{G}$ \\ 
+    R3V4 & Opzionale & Possibilità di utilizzo di altri dataset$^{G}$ simili recuperati da archivi aperti. & Capitolato$^{G}$ \\
     \rowcolor[RGB]{216, 235, 171}
     R3V5 & Opzionale & Possibilità d'integrare algoritmi di preparazione del dato per la visualizzazione nell'applicativo. & Capitolato$^{G}$\\
     \rowcolor[RGB]{233, 245, 206}
     R3V5 & Opzionale & Possibilità d'integrare algoritmi di analisi del dato nell'applicativo. & Capitolato$^{G}$\\
     \rowcolor[RGB]{216, 235, 171}
     R2V6 & Desiderabile & Per i Caricamenti e i salvataggi delle viste$^{G}$ verranno usati file in formato \textit{.json}$^{G}$. & Verbale 009\\
-    
+
     \caption{Tabella dei requisiti di vincolo}
-\end{longtable}	
+\end{longtable}
 }
 
 \subsection{Requisiti prestazionali}
 Fino ad ora non sono stati individuati particolari requisiti prestazionali obbligatori.\\
-Potrebbero essere però necessari nel caso in cui in futuro si volessero approfondire alcuni dei requisiti opzionali a disposizione. 
+Potrebbero essere però necessari nel caso in cui in futuro si volessero approfondire alcuni dei requisiti opzionali a disposizione.
 
 
 \subsection{Conclusioni}
