@@ -138,22 +138,23 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % |___/\___\___|_|\__\__,_|  \__,_|\__,_|\__\__,_|___/\___|\__|
 
 
-\subsection{UC3 - Selezione Vista}
+\subsection{UC3 - Eliminazione Vista}
 \label{sec:UC3}
 \begin{figure}[h!]
     \centering
     % Controlla che UC abbia il numero corretto
-    \includegraphics[scale=0.60]{../../assets/scelta_vista.png}
+    \includegraphics[scale=0.60]{../../assets/eliminazione_vista.png}
     \caption{UC3 - Scelta della vista$^{G}$ dei dati da visualizzare}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente.
-    \item \textbf{Postcondizioni}: Viene mostrata all'utente la vista$^{G}$ dei dati selezionata.
+    \item \textbf{Precondizioni}: L'utente sta visualizzando una vista.
+    \item \textbf{Postcondizioni}: Viene eliminata la vista selezionata.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
-              \item L'utente apre il menù a tendina contenente tutte le interpretazioni disponibili.
-              \item L'utente seleziona la vista$^{G}$ che vuole visualizzare.
+              \item L'utente preme il pulsante elimina vista$^{G}$.
+              \item La vista$^{G}$ viene eliminata.
+              \item L'utente viene riportato alla visualizzazione di default.
           \end{enumerate}
 \end{itemize}
 \newpage
