@@ -356,10 +356,47 @@ seguendo le seguenti regole:
 
 \paragraph{Test}
 Tutti i test eseguiti al codice devono essere ripetibili ed automatici (per quanto possibile).
-SCRIVERE I CODICI E LE PROCEDURE DEI TEST EFFETTUATI
+I test vengono identificati attraverso i seguenti codici:
+\subparagraph{Test di unità}
+\begin{center}
+    \textbf{TU[\# test].[\# figlio]}
+\end{center}
+Dove:
+\begin{itemize}
+    \item \textbf{TU} sta per \textit{Test di unità};
+    \item \textbf{\# test} è un numero intero positivo che indentifica univocamente i test di unità;
+    \item \textbf{\# figlio} è un numero intero positivo che indica univocamente l'eventuale presenza di un test figlio;
+\end{itemize}
+
+\subparagraph{Test di integrazione}
+\begin{center}
+    \textbf{TI[\# test].[\# figlio]}
+\end{center}
+Dove:
+\begin{itemize}
+    \item \textbf{TI} sta per \textit{Test di integrazione};
+    \item \textbf{\# test} è un numero intero positivo che indentifica univocamente i test di integrazione;
+    \item \textbf{\# figlio} è un numero intero positivo che indica univocamente l'eventuale presenza di un test figlio;
+\end{itemize}
+
+\subparagraph{Test di sistema}
+\begin{center}
+    \textbf{TS[\# test].[\# figlio]}
+\end{center}
+Dove:
+\begin{itemize}
+    \item \textbf{TS} sta per \textit{Test di sistema};
+    \item \textbf{\# test} è un numero intero positivo che indentifica univocamente i test di sistema;
+    \item \textbf{\# figlio} è un numero intero positivo che indica univocamente l'eventuale presenza di un test figlio;
+\end{itemize}
+Nel caso si presentasse la necessità di aggiungere nuove tipologie di test, altri codici verranno agguinti e spiegati in seguito.\\\\
+La sezione \textbf{\textit{Stato}} presente nelle tabelle relative ai test contiene le seguenti sigle:
+\begin{itemize}
+    \item \textbf{I}: Indica che il test è stato implementato;
+    \item \textbf{NI}: indica che il test non è ancora stato implementato;
+\end{itemize}
 
 \subsubsection{Metriche di qualità}
-
 Parametri utilizzati nella tabella:
 \begin{itemize}
     \item \textbf{Budget at Completion (BAC)}:Valore iniziale previsto per la realizzazione del progetto.
@@ -378,7 +415,7 @@ Parametri utilizzati nella tabella:
 \end{itemize}
 
 \setlength\extrarowheight{5pt}
-
+\newpage
 \begin{longtable}{P{0.1\linewidth}P{0.25\linewidth}P{0.25\linewidth}P{0.30\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
         \textcolor{white}{\textbf{Codice}}
@@ -447,6 +484,3 @@ Parametri utilizzati nella tabella:
     \caption{Metriche di processo}
 \end{longtable}
 \setlength\extrarowheight{0pt}
-
-\subsubsection{Strumenti}
- INSERIRE STRUMENTI DEI TEST
