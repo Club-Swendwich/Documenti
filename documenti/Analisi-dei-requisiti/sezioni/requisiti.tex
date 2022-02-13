@@ -3,23 +3,146 @@
 Il team \textit{clubswendwich} ha classificato e assegnato i requisiti secondo quanto definito nelle \textit{Norme di Progetto}. 
 \subsection{Requisiti funzionali}
 {\renewcommand{\arraystretch}{1.5}
-\begin{tabular}{p{0.12\linewidth}p{0.15\linewidth}p{0.50\linewidth}p{0.15\linewidth}}
+\begin{longtable}{p{0.12\linewidth}p{0.15\linewidth}p{0.50\linewidth}p{0.15\linewidth}}
 	\rowcolor[RGB]{33, 73, 50}
 	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Descrizione}} &
     \textcolor{white}{\textbf{Riferimenti}}\\
     \rowcolor[RGB]{216, 235, 171}
-    R1F1 & Obbligatorio & L'utente ha la possibilità di caricare i dati nel sistema & UC1\\
+    R1F1 & Obbligatorio & L'utente ha la possibilità di caricare i dati nel sistema. & UC1\\
+    
     \rowcolor[RGB]{233, 245, 206}
-    R1F2 & Obbligatorio & L'utente può scegliere la tipologia di grafico che vuole visualizzare & UC2\\
+    R1F2 & Obbligatorio & L'utente può scegliere la tipologia di grafico che vuole visualizzare. & UC2\\
     \rowcolor[RGB]{216, 235, 171}
-    R1F2.2 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Scatter Plot} & UC2.1\\
+    R1F2.1 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Scatter Plot}. & UC2.1\\
     \rowcolor[RGB]{233, 245, 206}
-    R1F2.2.1 & Obbligatorio & L'utente può vedere i valori di ciascun punto passandoci sopra con il mouse & Verbale\\
+    R1F2.2 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Parallels coordinates}. & UC2.2\\
     \rowcolor[RGB]{216, 235, 171}
-    R1F2.3 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Parallels coordinates} & UC2.2\\
+    R1F2.3 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Force-directed graph}. & UC2.3\\
     \rowcolor[RGB]{233, 245, 206}
-    R2F3 & Obbligatorio & L'utente deve poter tornare alla visualizzazione di default & UC4\\
+    R1F2.4 & Obbligatorio & L'applicativo deve fornire la visualizzazione \textit{Sankey diagram}. & UC2.4\\
+    
     \rowcolor[RGB]{216, 235, 171}
-    R1F4 & Obbligatorio & L'utente deve poter scegliere quale vista di dati visualizzare & UC3\\
-\end{tabular}	
+    R2F3 & Obbligatorio & L'utente deve poter tornare alla visualizzazione di default. & UC4\\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    R1F4 & Obbligatorio & L'utente deve poter scegliere quale vista di dati visualizzare. & UC3\\
+    
+    \rowcolor[RGB]{216, 235, 171}
+    R2F5 & Desiderabile & L'utente passando sopra ad alcuni elementi con il mouse visualizza delle informazioni utili. & UC8\\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6 & Obbligatorio & L'utente deve poter personalizzare il grafico da lui scelto. & UC5\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.1 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Scatter Plot}. & UC5.1\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.1.1 & Obbligatorio & L'utente può decidere l'associazione dimensioni-assi nel grafico \textit{Scatter Plot}. & UC5.1.1\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.1.2 & Obbligatorio & L'utente può personalizzare lo stile del grafico \textit{Scatter Plot}. & UC5.1.2\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.2 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Parallel Coordinates}. & UC5.2\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.2.1 & Obbligatorio & L'utente deve poter decidere l'associazione dimensioni-assi nel grafico \textit{Parallel Coordinates}. & UC5.2.1\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.2.2 & Obbligatorio & L'utente sceglie l'ordine e il numero di assi visualizzati nel grafico. & UC5.2.2\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.2.3 & Obbligatorio & L'utente deve poter personalizzare lo stile del grafico \textit{Parallel Coordinates}. & UC5.2.3\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.3 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Force-directed graph}. & UC5.3\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.3.1 & Obbligatorio & L'utente può scegliere quale algoritmo d'integrazione usare nel grafico \textit{Force-directed graph}. & UC5.3.1\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.3.2 & Obbligatorio & L'utente può scegliere quale funzione di forza usare nel grafico \textit{Force-directed graph}. & UC5.3.2\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.3.3 & Obbligatorio & L'utente deve poter personalizzare lo stile del grafico \textit{Force-directed graph}. & UC5.3.3\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.4 & Obbligatorio & L'utente deve poter personalizzare il grafico \textit{Sankey diagram}. & UC5.4\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1F6.4.1 & Obbligatorio & L'utente deve poter scegliere l'ordine dei dati nel grafico \textit{Sankey diagram}. & UC5.4.1\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1F6.4.2 & Obbligatorio & L'utente deve poter personalizzare lo stile del grafico \textit{Sankey diagram}. & UC5.4.2\\
+
+    \rowcolor[RGB]{216, 235, 171}
+    R2F7 & Desiderabile & L'utente può visualizzare un grafico a tutto schermo. & UC6\\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    R2F8 & Desiderabile & L'utente può eseguire uno zoom su alcuni tipi di grafici. & UC7\\
+    
+    \rowcolor[RGB]{216, 235, 171}
+    R2F9 & Desiderabile & L'utente può salvare una vista da lui precedentemente creata. & UC10\\
+    
+    \rowcolor[RGB]{233, 245, 206}
+    R2F10 & Desiderabile & L'utente può caricare una vista personalizzata.  & UC11\\
+
+    \rowcolor[RGB]{216, 235, 171}
+    R1F11 & Obbligatorio & In caso di errori verranno visualizzati dei messaggi esplicativi & UC, UC \par UC, UC \par UC\\
+
+    \caption{Tabella dei requisiti funzionali}
+
+\end{longtable}	
 }
+
+
+\newpage
+\subsection{Requisiti di qualità}
+{\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.15\linewidth}p{0.50\linewidth}p{0.15\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Descrizione}} &
+    \textcolor{white}{\textbf{Riferimenti}}\\
+    
+    \rowcolor[RGB]{216, 235, 171}
+    R2Q1 & Desiderabile & Il progetto sarà pubblicato su GitHub$^{G}$ in un repository$^{G}$ pubblico. & Capitolato$^{G}$\\
+    \rowcolor[RGB]{233, 245, 206}
+    R2Q2 & Desiderabile & Il progetto sarà open-source$^{G}$. & Capitolato$^{G}$\\ 
+    \rowcolor[RGB]{216, 235, 171}
+    R1Q3 & Obbligatorio & Il progetto deve essere sviluppato secondo quanto descritto nelle \textit{Norme di progetto}. & Verbale 007 \\
+    \rowcolor[RGB]{233, 245, 206}
+    R1Q4 & Obbligatorio & Lo sviluppo deve fare riferimento alla documentazione ufficiale di D3.js$^{G}$. & Verbale\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1Q5 & Obbligatorio & Dovrà essere fornito un manuale per l'utilizzo dell'applicativo. & Capitolato$^{G}$\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1Q6 & Obbligatorio & Dovrà essere fornito un manuale per la manutenzione e l'estensione dell'applicativo. & Capitolato$^{G}$\\ 
+    
+    \caption{Tabella dei requisiti qualitativi}
+\end{longtable}	
+}
+
+\subsection{Requisiti di vincolo}
+{\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{p{0.12\linewidth}p{0.15\linewidth}p{0.50\linewidth}p{0.15\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+	\textcolor{white}{\textbf{Codice}} & \textcolor{white}{\textbf{Classe}} & \textcolor{white}{\textbf{Descrizione}} &
+    \textcolor{white}{\textbf{Riferimenti}}\\
+    
+    \rowcolor[RGB]{216, 235, 171}
+    R1V1 & Obbligatorio & L'applicativo deve essere sviluppato prevalentemente in html, css e Javascrip. & Capitolato$^{G}$\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1V2 & Obbligatorio & La principale libreria per la creazione dei grafici sarà \textit{D3.js}$^{G}$. & Capitolato$^{G}$\\
+    \rowcolor[RGB]{216, 235, 171}
+    R1V3 & Obbligatorio & I dati da presentare dovranno essere in formato \textit{CSV}$^{G}$ e saranno forniti all'azienda.& Capitolato$^{G}$\\
+    \rowcolor[RGB]{233, 245, 206}
+    R1V4 & Obbligatorio & \textit{Scatter Plot}$^{G}$, \textit{Parallel Coordinates}$^{G}$, \textit{Force-directed graph}$^{G}$ e \textit{Sankey diagram}$^{G}$ dovranno essere presenti.& Capitolato$^{G}$\\
+    \rowcolor[RGB]{216, 235, 171}
+    R3V4 & Opzionale & Possibilità di utilizzo di altre tecnologie come \textit{Python} e libreria \textit{Scikit-learn}$^{G}$.& Capitolato$^{G}$\\
+    \rowcolor[RGB]{233, 245, 206}
+    R3V4 & Opzionale & Possibilità di utilizzo di altri dataset$^{G}$ simili recuperati da archivi aperti. & Capitolato$^{G}$ \\ 
+    \rowcolor[RGB]{216, 235, 171}
+    R3V5 & Opzionale & Possibilità d'integrare algoritmi di preparazione del dato per la visualizzazione nell'applicativo. & Capitolato$^{G}$\\
+    \rowcolor[RGB]{233, 245, 206}
+    R3V5 & Opzionale & Possibilità d'integrare algoritmi di analisi del dato nell'applicativo. & Capitolato$^{G}$\\
+    \rowcolor[RGB]{216, 235, 171}
+    R2V6 & Desiderabile & Per i Caricamenti e i salvataggi delle viste$^{G}$ verranno usati file in formato \textit{.json}$^{G}$. & Verbale 009\\
+    
+    \caption{Tabella dei requisiti di vincolo}
+\end{longtable}	
+}
+
+\subsection{Requisiti prestazionali}
+Fino ad ora non sono stati individuati particolari requisiti prestazionali obbligatori.\\
+Potrebbero essere necessari nel caso in cui si volessero approfondire alcuni dei requisiti opzionali a disposizione in futuro. 
+
+
+\subsection{Conclusioni}
+I requisiti potranno subire delle variazioni in futuro, per apportare aggiornamenti e migliorie alle voci precedenti.
+Nel caso le attività terminassero in anticipo rispetto a quanto pianificato, e dovessero avanzare delle ore di lavoro, si potranno sviluppare nuovi
+requisiti per avvalorare l'applicativo. Per queste motivazioni eventuali estensioni saranno lasciate a momenti futuri.

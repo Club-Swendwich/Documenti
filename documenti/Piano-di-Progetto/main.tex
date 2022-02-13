@@ -1,0 +1,27 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{package}
+\usepackage{multirow}
+
+\input{comandi.tex}
+
+\begin{document}
+
+\FirstPage{}
+
+\newpage
+
+\include{sezioni/registro_modifiche}
+
+\renewcommand{\contentsname}{Indice}
+\tableofcontents
+
+\include{sezioni/introduzione}
+\include{sezioni/analisi_rischi}
+\include{sezioni/modello_sviluppo}
+\include{sezioni/pianificazione}
+\include{sezioni/preventivo}
+\include{sezioni/consuntivo_periodo}
+\include{sezioni/attualizzazione_rischi}
+
+\end{document}
