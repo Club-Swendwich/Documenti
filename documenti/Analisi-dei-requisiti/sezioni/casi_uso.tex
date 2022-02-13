@@ -157,6 +157,24 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
               \item L'utente viene riportato alla visualizzazione di default.
           \end{enumerate}
 \end{itemize}
+
+\subsubsection{UC3.1 - Visualizzazione messaggio di conferma eliminazione}
+\label{sec:UC3.1}
+\begin{itemize}
+	\item \textbf{Attore primario:} Utente.
+	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è presente e caricato correttamente. L'utente ha cliccato il pulsante per l'eliminazione di una vita \hyperref[sec:UC3]{UC3}.
+	\item \textbf{Postcondizioni:} Viene eliminala la vita, oppure l'operazione viene annullata.
+	\item \textbf{Scenario principale:}
+		\begin{enumerate}
+		\item Viene visualizzato un messaggio di conferma per l'eliminazione della vista.
+		\item L'utente sceglie una delle due opzioni:
+			\begin{itemize}
+				\item L'utente vuole ripristinare eliminare la vista e clicca ``Ok''
+				\item L'utente vuole annullare l'operazione e clicca ``Annulla''
+			\end{itemize}
+		\end{enumerate}
+\end{itemize}
+
 \newpage
 
 % --------------------------------------------------------------------
