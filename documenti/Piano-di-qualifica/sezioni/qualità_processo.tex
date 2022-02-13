@@ -1,0 +1,227 @@
+\section{Qualità di processo}
+\subsection{Introduzione}
+Per garantire la qualità di processo il gruppo \textit{Club Swendwich} 
+ha scelto di adottare lo standard \textbf{ISO/IEC 12207:1995}.
+Il seguente standard divide i processi in tre principali macrocategorie:
+\begin{itemize}
+    \item \hyperref[sec:PCP]{Processi primari}
+    \item \hyperref[sec:PCO]{Processi organizzativi}
+    \item \hyperref[sec:PCS]{Processi di supporto}
+\end{itemize}
+
+\noindent
+Nelle successive sottosezioni del documento si sono scelte alcune attività ritenute di valore all'interno
+delle macrocategorie dello standard \textbf{ISO/IEC 12207:1995}, esse vengono quindi analizzate
+secondo le \textbf{metriche di processo} adeguate.\\
+\\
+\noindent
+Riferimenti tecnici:
+\begin{itemize}
+    \item Lo standard \textbf{ISO/IEC 12207:1995} è approfondito nel documento \textit{"Norme di Progetto"},
+    sezione \textit{§Appendice A}.
+    \item Le \textbf{metriche} e le \textbf{formule} utilizzate sono descritte nel documento \textit{"Norme di Progetto"},
+    sezione \textit{§3.3.2 Metriche di qualità}.
+\end{itemize}
+
+
+\subsection{Processi primari}
+\label{sec:PCP}
+
+\begin{table}[htb]
+    \centering
+    \small
+    \begin{tabular}{>{\raggedright\arraybackslash}m{0.23\linewidth}|m{0.43\linewidth}|m{0.26\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.23\linewidth}|}{\textcolor{white}{\textbf{Processo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.43\linewidth}|}{\textcolor{white}{\textbf{Descrizione}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.26\linewidth}|}{\textcolor{white}{\textbf{Metrica di processo}}}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \textbf{Fornitura} 
+        & Il processo ha lo scopo di identificare procedure e risorse atte a soddisfare i requisiti di progetto. 
+        & MPC1 MPC2 MPC3 \par MPC4 MPC5\\
+    \rowcolor[RGB]{233, 245, 206}
+        \textbf{Sviluppo} 
+        & Il processo si occupa delle attività per la realizzazione del prodotto. 
+        & MPC6 MPC7\\
+    \end{tabular}
+    \caption{Processi primari e metriche utilizzate}
+\end{table}
+
+\subsubsection{Valori di riferimento}
+
+\begin{itemize}
+    \item La sigla \textbf{BAC} fa riferimento alla metrica \textit{Budget at Completion}.
+    \item La sigla \textbf{BCWS} fa riferimento alla metrica \textit{Budgeted Cost of Work Scheduled}.
+\end{itemize}
+
+{\renewcommand{\arraystretch}{1.5}
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}m{0.20\linewidth}m{0.10\linewidth}m{0.20\linewidth}m{0.20\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Metrica}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.10\linewidth}}{\textcolor{white}{\textbf{Codice}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore ottimale}}}
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore accettabile}}}\\
+    
+    \rowcolor[RGB]{47, 106, 73}
+    \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Fornitura}}}\\
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Schedule Variance \\ (SV)} 
+        & \centering \textbf{MPC1} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$ 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq -10\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Budget Variance \\ (BV)} 
+        & \centering \textbf{MPC2} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$ 0\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq -10\% $}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Estimated at Completion \\ (EAC)} 
+        & \centering \textbf{MPC3} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{EAC $=$ BAC}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{BAC $-$ 5\% $\leq EAC $\par EAC $\leq $ BAC $+$ 5\%}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Actual Cost of Work Performed \\ (ACWP)} 
+        & \centering \textbf{MPC4} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{ACWP $\leq$ BCWS}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{BCWS $+$ 5\%}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Budgeted Cost of Work Performed \\ (BCWP)} 
+        & \centering \textbf{MPC5} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{BCWP $=$ BCWS}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{BCWP$\leq$BCWS $+$ 5\%}\\
+
+        \rowcolor[RGB]{47, 106, 73}
+        \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Sviluppo}}}\\    
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Requirements stability index \\ (RSI)} 
+        & \centering \textbf{MPC6} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{100\%}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq$ 80\%}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Satisfied obligatory requirements \\ (SOR) } 
+        & \centering \textbf{MPC7} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{100\%}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{100\%}\\
+        \caption{Valori di riferimento per le metriche dei "Processi primari"}
+\end{longtable}
+
+%---------------------------------------------------------------------------------
+
+\subsection{Processi organizzativi}
+\label{sec:PCO}
+
+\begin{table}[htb]
+    \centering
+    \small
+    \begin{tabular}{>{\raggedright\arraybackslash}m{0.23\linewidth}|m{0.43\linewidth}|m{0.26\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.23\linewidth}|}{\textcolor{white}{\textbf{Processo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.43\linewidth}|}{\textcolor{white}{\textbf{Descrizione}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.26\linewidth}|}{\textcolor{white}{\textbf{Metrica di processo}}}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \textbf{Gestione organizzativa} 
+        & Il processo ha lo scopo di organizzare, monitorare
+        e controllare l'avvio e le prestazioni di un processo
+        per il raggiungimento degli obiettivi in accordo.
+        & MPC8\\
+    \end{tabular}
+    \caption{Processi organizzativi e metriche utilizzate}
+\end{table}
+
+\subsubsection{Valori di riferimento}
+
+{\renewcommand{\arraystretch}{1.5}
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}m{0.20\linewidth}m{0.10\linewidth}m{0.20\linewidth}m{0.20\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Metrica}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.10\linewidth}}{\textcolor{white}{\textbf{Codice}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore ottimale}}}
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore accettabile}}}\\
+    
+    \rowcolor[RGB]{47, 106, 73}
+    \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Gestione organizzativa}}}\\
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Non-calculated Risk \\ (NCR)} 
+        & \centering \textbf{MPC8} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{0 rischi avvenuti}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq$ 5 rischi avvenuti}\\
+        \caption{Valori di riferimento per le metriche dei "Processi organizzativi"}
+\end{longtable}
+
+%--------------------------------------------------------------------------
+
+\subsection{Processi di supporto}
+\label{sec:PCS}
+
+\begin{table}[htb]
+    \centering
+    \small
+    \begin{tabular}{>{\raggedright\arraybackslash}m{0.23\linewidth}|m{0.43\linewidth}|m{0.26\linewidth}}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.23\linewidth}|}{\textcolor{white}{\textbf{Processo}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.43\linewidth}|}{\textcolor{white}{\textbf{Descrizione}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.26\linewidth}|}{\textcolor{white}{\textbf{Metrica di processo}}}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \textbf{Verifica} 
+        & Il processo ha lo scopo di determinare se i prodotti
+        software di un'attività soddisfano i requisiti o le
+        condizioni a loro imposti. 
+        & MPC9 MPC10 MCP11 \\
+    \rowcolor[RGB]{233, 245, 206}
+        \textbf{Assicurazione della qualità} 
+        & Il processo ha lo scopo di assicurare che tutti i
+        prodotti di fase siano conformi con i piani e gli
+        standard definiti.         
+        & MPC12 \\
+    \end{tabular}
+    \caption{Processi di supporto e metriche utilizzate}
+\end{table}
+
+\subsubsection{Valori di riferimento}
+
+{\renewcommand{\arraystretch}{1.5}
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}m{0.20\linewidth}m{0.10\linewidth}m{0.20\linewidth}m{0.20\linewidth}}
+	\rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Metrica}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.10\linewidth}}{\textcolor{white}{\textbf{Codice}}} 
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore ottimale}}}
+    & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{\textcolor{white}{\textbf{Valore accettabile}}}\\
+
+    \rowcolor[RGB]{47, 106, 73}
+    \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Verifica}}}\\    
+
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Code coverage \\ (CC)} 
+        & \centering \textbf{MPC9} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq 90\% $}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq 80\% $}\\
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Passed test cases percentage \\ (PTCP) } 
+        & \centering \textbf{MPC10} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{100\%}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq 90\% $}\\
+    \rowcolor[RGB]{216, 235, 171}
+        \centering \textbf{Failed test cases percentage \\ (FTCP)} 
+        & \centering \textbf{MPC11} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{0\%}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\leq 10\% $}\\
+
+        \rowcolor[RGB]{47, 106, 73}
+        \multicolumn{4}{>{\centering\arraybackslash}m{0.779\linewidth}}{\textcolor{white}{\textbf{Assicurazione della qualità}}}\\    
+
+    \rowcolor[RGB]{233, 245, 206}
+        \centering \textbf{Quality Metrics Satisfied \\ (QMS)} 
+        & \centering \textbf{MPC12} 
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{100\%}
+        & \multicolumn{1}{>{\centering\arraybackslash}m{0.20\linewidth}}{$\geq 90\% $}\\
+        \caption{Valori di riferimento per le metriche dei "Processi di supporto"}
+\end{longtable}
+
+
+\newpage
