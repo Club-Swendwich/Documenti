@@ -83,6 +83,7 @@ Gli strumenti da utilizzare in questo processo sono:
     \href{https://github.com/Club-Swendwich}{https://github.com/Club-Swendwich}
 \end{itemize}
 
+\newpage
 \subsection{Sviluppo}
 Nella seguente sottosezione vengono normati i seguenti aspetti per il 
 processo di \textit{Sviluppo}:
@@ -110,33 +111,36 @@ deve procedere allo sviluppo del documento:
 \end{itemize}
 
 \subparagraph{Casi d'uso}
+\mbox{} \\
+I casi d'uso presenti nel documento \textit{Analisi dei requisiti} vengono identificati univocamente attraverso un codice, la struttura di questo codice è così formata:
 \begin{itemize}
     \item   \textbf{Codice identificativo:}
-            \par \centerline{\textbf{UC[Numero caso d'uso].[Eventuale caso d'uso figlio]-[Titolo caso d'uso]}}
+            \par \centerline{\textbf{UC[\# caso d'uso].[Eventuale caso d'uso figlio]-[Titolo]}}
 \end{itemize}
+\mbox{} \\
 Per la realizzazione degli Use Case diagram si utilizza \textbf{Draw.io} con le seguenti norme:
 \begin{itemize}
-\item Carattere del testo: Helvetica 12pt.
-\item Titolo frame: UC[\#]
-\item Titolo Use Case: UC[\#], a capo "Nome del caso d'uso".
+\item Carattere del testo: Helvetica 12pt;
+\item Titolo frame: UC[\#];
+\item Titolo Use Case: UC[\#], a capo "Nome del caso d'uso";
 \item Descrizione Extend with Condition: "Condition: \{descrizione\}" a capo "Extension Point: visualizzazione (descrizione di cosa viene visualizzato)".
 \end{itemize}
 Le componenti grafiche del diagramma seguono lo standard Use Case di UML analizzato nella lezione P4 del docente Cardin. \\
 
 \noindent Per la descrizione degli Use Case si utilizza sempre lo standard visto nella lezione P4:
 \begin{itemize}
-	\item \textbf{Attore primario:} Chi è l'attore primario del caso d'uso.
-	\item \textbf{Precondizioni:} Condizioni necessarie all'inizio del caso d'uso.
-	\item \textbf{Postcondizioni:} Effetti/garanzia di ciò che succede in seguito.
-	\item \textbf{Scenario principale:} Sequenza di passi che descrive le interazioni, si utilizza una lista \textit{itemize} in LaTeX per descriverne le fasi.
-	\item \textbf{Estensioni:} Descrizione dei possibili ``extend``.
+	\item \textbf{Attore primario:} Chi è l'attore primario del caso d'uso;
+	\item \textbf{Precondizioni:} Condizioni necessarie all'inizio del caso d'uso;
+	\item \textbf{Postcondizioni:} Effetti/garanzia di ciò che succede in seguito;
+	\item \textbf{Scenario principale:} Sequenza di passi che descrive le interazioni, si utilizza una lista \textit{itemize} in LaTeX per descriverne le fasi;
+	\item \textbf{Estensioni:} Descrizione dei possibili ``extend``;
 	\item \textbf{Generalizzazioni:} Descrizione di possibili aggiunte o modifiche delle caratteristiche base.
 \end{itemize}
 
 
 \subparagraph{Struttura dei requisiti}
 \mbox{} \\
-La struttura delle tabelle relative alla sezione \textit{Requisiti} nel documento \textit{Analisi dei requisiti} è strutturata nel modo seguente:
+La struttura delle tabelle relative alla sezione \textit{Requisiti} nel documento \textit{Analisi dei requisiti} è composta nel modo seguente:
 \begin{itemize}
     \item   \textbf{Codice identificativo:}
             \par \centerline{\textbf{R[Peso][Tipo][Codice]}}
@@ -168,8 +172,8 @@ un applicativo di valore.
 \mbox{} \\
 Per questa fase di avanzamento il progettista deve occuparsi di:
 \begin{itemize}
-    \item Scelta di tecnologie, framework, e librerie per la realizzazione del prodotto.
-    \item Progettazione di un \textbf{Proof of Concept}
+    \item Scelta di tecnologie, framework, e librerie per la realizzazione del prodotto;
+    \item Progettazione di un \textbf{Proof of Concept}.
 \end{itemize}
 
 \paragraph{Codifica}
@@ -182,31 +186,34 @@ INSERIRE PARTE DI SAMUELE
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
-    \centering
+
+\begin{center}
     \begin{longtable}{p{0.20\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
         \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Nome}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Codice}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
+
     \rowcolor[RGB]{216, 235, 171}
-        &   & Indice di copertura dei requisiti all'interno del prodotto  &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Copertura dei requisiti} & MPD3 &  \textbf{$R_M$ requisiti mancanti} &   $(1- \frac{R_M}{R_T}) \cdot 100$ \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  \textbf{$R_T$ requisiti totali} &   \\[4pt]
-    \end{longtable}
-    \caption{Metriche di funzionalità}
-\end{table}
+        \textbf{Copertura} \par \textbf{dei requisiti} & 
+        MPD3 &
+        Indice di copertura dei requisiti all'interno del prodotto. \par  
+        \textbf{$R_M$ requisiti mancanti}. \par
+        \textbf{$R_T$ requisiti totali}. &   
+        $(1- \frac{R_M}{R_T}) \cdot 100$ \\
     
+        \caption{Metriche di funzionalità}
+    \end{longtable}
+\end{center}
+
 \setlength\extrarowheight{0pt}
 
 \paragraph{Affidabilità}
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
+\begin{center}
     \centering
     \begin{longtable}{p{0.25\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
@@ -214,15 +221,18 @@ INSERIRE PARTE DI SAMUELE
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Codice}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
+
     \rowcolor[RGB]{216, 235, 171}
-        &   & Indice di percentuale di test falliti su test eseguiti  &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Densità di failure} & MPD4 &  \textbf{$T_F$ test falliti} &   $(\frac{T_F}{T_E}) \cdot 100$ \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  \textbf{$T_E$ test eseguiti} &   \\[4pt]
+        \textbf{Densità di failure} & 
+        MPD4 &  
+        Indice di percentuale di test falliti su test eseguiti. \par
+        \textbf{$T_F$ test falliti}. \par
+        \textbf{$T_E$ test eseguiti}.&   
+        $(\frac{T_F}{T_E}) \cdot 100$ \\
+        
+        \caption{Metriche di affidabilità}
     \end{longtable}
-    \caption{Metriche di affidabilità}
-\end{table}
+\end{center}
     
 \setlength\extrarowheight{0pt}
 
@@ -230,7 +240,7 @@ INSERIRE PARTE DI SAMUELE
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
+\begin{center}
     \centering
     \begin{longtable}{p{0.20\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
@@ -239,14 +249,14 @@ INSERIRE PARTE DI SAMUELE
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
     \rowcolor[RGB]{216, 235, 171}
-        &   &  &   \\
-    \rowcolor[RGB]{216, 235, 171}
-    \textbf{Tempo medio di risposta} & MPD5 & Tempo medio impiegato dal prodotto nel rispondere ad una richiesta/svolgere un'attività di sistema &  - \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  &   \\[4pt]
-    \end{longtable}
+    \textbf{Tempo medio} \par \textbf{di risposta} & 
+    MPD5 & 
+    Tempo medio impiegato dal \par prodotto nel rispondere ad una richiesta/svolgere un'attività di sistema. &  
+    - \\
+
     \caption{Metriche di efficienza}
-\end{table}
+    \end{longtable}
+\end{center}
         
 \setlength\extrarowheight{0pt}
 
@@ -255,7 +265,7 @@ INSERIRE PARTE DI SAMUELE
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
+\begin{center}
     \centering
     \begin{longtable}{p{0.30\linewidth} c p{0.32\linewidth} p{0.16\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
@@ -263,27 +273,28 @@ INSERIRE PARTE DI SAMUELE
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Codice}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
+
     \rowcolor[RGB]{216, 235, 171}
-        &   &  &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Average Cyclomatic Complexity} & MPD6 & Complessità condizionale, misura il numero di cammini linearmente indipendenti & Grafo di controllo del flusso \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  &   \\[4pt]
+        \textbf{Average Cyclomatic} \par \textbf{Complexity} &
+         MPD6 & 
+         Complessità condizionale,\par  misura il numero di cammini linearmente indipendenti & 
+         Grafo di \par controllo del \par flusso \\
+
     \rowcolor[RGB]{233, 245, 206}
-        &   &  &   \\
-    \rowcolor[RGB]{233, 245, 206}
-        \textbf{Facilità di utilizzo} & MPD7 & Numero di click necessari al raggiungimento della funzionalità di interesse &  - \\
-    \rowcolor[RGB]{233, 245, 206}
-        &   &  &   \\[4pt]
+        \textbf{Facilità di utilizzo} & 
+        MPD7 & 
+        Numero di clicli necessari \par al raggiungimento della funzionalità di interesse &  
+        - \\
+
     \rowcolor[RGB]{216, 235, 171}
-        &   &   &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Facilità apprendimento funzionalità} & MPD8 & Tempo necessario ( in minuti) all'utente per l'apprendimento delle funzionalità & - \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &   &   \\[4pt]
+        \textbf{Facilità apprendimento funzionalità} & 
+        MPD8 & 
+        Tempo necessario ( in \par minuti) all'utente per \par l'apprendimento delle \par funzionalità & 
+        - \\
+    
+        \caption{Metriche di usabilità}
     \end{longtable}
-    \caption{Metriche di usabilità}
-\end{table}
+\end{center}
     
 \setlength\extrarowheight{0pt}
 
@@ -291,7 +302,7 @@ INSERIRE PARTE DI SAMUELE
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
+\begin{center}
     \centering
     \begin{longtable}{p{0.20\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
@@ -300,14 +311,16 @@ INSERIRE PARTE DI SAMUELE
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
     \rowcolor[RGB]{216, 235, 171}
-        &   & Rapporto indicativo tra le linee di commento e di codice  &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Comprensione del codice} & MPD9 &  \textbf{$N_c$ numero linee commento} &   $(\frac{N_c}{N_C}) \cdot 100$ \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  \textbf{$N_C$ numero linee di codice} &   \\[4pt]
+        \textbf{Comprensione del codice} & 
+        MPD9 &  
+        Rapporto indicativo tra le linee di commento e di codice \par
+        \textbf{$N_c$ numero linee commento} \par
+        \textbf{$N_C$ numero linee di codice}&   
+        $(\frac{N_c}{N_C}) \cdot 100$ \\
+    
+        \caption{Metriche di manutenibilità}
     \end{longtable}
-    \caption{Metriche di manutenibilità}
-\end{table}
+\end{center}
     
 \setlength\extrarowheight{0pt}
 
@@ -316,7 +329,7 @@ INSERIRE PARTE DI SAMUELE
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
+\begin{center}
     \centering
     \begin{longtable}{p{0.25\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
@@ -325,14 +338,16 @@ INSERIRE PARTE DI SAMUELE
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
     \rowcolor[RGB]{216, 235, 171}
-        &   & Percentuale di browser supportati dal prodotto &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Versioni del browser supportate} & MPD10 &  \textbf{$B_S$ browser supportati} &   $(\frac{B_S}{B_I}) \cdot 100$ \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  \textbf{$B_I$ browser individuati nell'analisi dei requisiti} &   \\[4pt]
+        \textbf{Versioni del} \par \textbf{browser supportate} & 
+        MPD10 &  
+        Percentuale di browser supportati dal prodotto \par
+        \textbf{$B_S$ browser supportati} \par
+        \textbf{$B_I$ browser individuati} \par \textbf{nell'analisi dei requisiti} &   
+        $(\frac{B_S}{B_I}) \cdot 100$ \\
+        
+        \caption{Metriche di portabilità}
     \end{longtable}
-    \caption{Metriche di portabilità}
-\end{table}
+\end{center}
     
 \setlength\extrarowheight{0pt}
 
