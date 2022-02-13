@@ -2,6 +2,7 @@
 
 \usepackage{package}
 \usepackage{hyperref}
+\usepackage{enumitem}
 
 \input{comandi.tex}
 
@@ -16,7 +17,14 @@
 \renewcommand{\contentsname}{Indice}
 \tableofcontents
 
-\include{sezioni/documentazione}
+
+\include{sezioni/processi_primari}
+\include{sezioni/processi_organizzativi}
+\include{sezioni/processi_supporto}
+
+\appendix
+\include{sezioni/appendice_a}
+\include{sezioni/appendice_b}
 
 
 \end{document}
