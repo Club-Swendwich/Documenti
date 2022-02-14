@@ -22,6 +22,7 @@ Lo strumento scelto dal gruppo per la stesura della documentazione è \LaTeX.\\
 Per permettere un avanzamento \textit{agile} e tracciare lo stato delle attività è stato deciso di utilizzare una Scrum board su Trello.
 La struttura della board è la seguente:
 \begin{itemdescript}
+    \item [Questions for the next meeting] Lista delle domande individuate dal team \textit{Club Swendwich} da porre alla prossima riunione con il professore o con il proponente.
     \item [To do] Lista delle card relative a issues che devono ancora essere prese in carico. È il backlog della board.
     \item [In progress] Lista delle produzioni in esecuzione al momento. Ogni card corrisponde a un branch.
     \item [To be verified] Lista delle modifiche in attesa di verifica da parte del verificatore.
@@ -81,7 +82,7 @@ in modo da essere notificati su eventuali modifiche della stessa.
 \mbox{}\\
 Sono disponibili 3 tipi di template:
 \begin{itemize}
-    \item \texttt{documenti}: Tutti i documenti \LaTeX che non sono verbali, interni ed esterni.
+    \item \texttt{documenti}: Tutti i documenti \LaTeX \space che non sono verbali, interni ed esterni.
     \item \texttt{presentazioni}: Tutte le presentazioni.
     \item \texttt{verbali}: Tutti i verbali.
 \end{itemize}
@@ -185,7 +186,7 @@ aggiunta una nuova riga di approvazione per il rilascio successivo.
 \mbox{}\\
 \setlength\extrarowheight{5pt}
 
-\begin{table}[htb]
+\begin{center}
     \centering
     \begin{longtable}{p{0.17\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
@@ -194,35 +195,34 @@ aggiunta una nuova riga di approvazione per il rilascio successivo.
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
     \rowcolor[RGB]{216, 235, 171}
-        &   & Indice di leggibilità di un documento &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Indice di Gulpease} & MPD1 &  \textbf{$N_F$ numero frasi $N_L$ numero lettere} &   $ 89 + \frac{300 \cdot N_F - 10 \cdot N_L}{N_P} $ \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  \textbf{$N_P$ numero parole} &   \\[4pt]
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  &   \\
-    \rowcolor[RGB]{216, 235, 171}
-        \textbf{Ortogtrafia} & MPD2 & Correttezza ortografica di un documento  &   - \\
-    \rowcolor[RGB]{216, 235, 171}
-        &   &  &   \\[4pt]
-    
+        \textbf{Indice di} \par \textbf{Gulpease} & 
+        MPD1 &  
+        Indice di leggibilità di un documento \par
+        \textbf{$N_F$ numero frasi $N_L$ numero lettere} \par
+        \textbf{$N_P$ numero parole}&   
+        $ 89 + \frac{300 \cdot N_F - 10 \cdot N_L}{N_P} $ \\
+
+    \rowcolor[RGB]{233, 245, 206}
+        \textbf{Ortogtrafia} & 
+        MPD2 & Correttezza ortografica di un documento &
+        - \\
+
+        \caption{Metriche di usabilità}
     \end{longtable}
-    \caption{Metriche di usabilità}
-\end{table}
+\end{center}
     
 \setlength\extrarowheight{0pt}
 \subsubsection{Strumenti}
 Gli strumenti da utilizzare in questo processo sono:
 \begin{itemize}
-    \item LaTeX: linguaggio per la stesura dei documenti.\\
-    https://www.latex-project.org/
-    \item Visual Studio Code: editor di codice utilizzato dal gruppo, scelto per l'implementazione con Github(in particolare
-    per la gestione dei branch).\\
-    https://code.visualstudio.com/
-    \item Draw.io: per la creazione di diagrammi UML.\\
-    https://app.diagrams.net/
-    \item Google Sheets: per la creazione di tabelle e grafici.\\
-    https://www.google.com/sheets/about/
+    \item \textbf{\LaTeX}: linguaggio per la stesura dei documenti.\\
+    \href{https://www.latex-project.org/}{https://www.latex-project.org/}
+    \item \textbf{Visual Studio Code}: editor di codice utilizzato dal gruppo, scelto per \\ l'implementazione con Github (in particolare per la gestione dei branch).\\
+    \href{https://code.visualstudio.com/}{https://code.visualstudio.com/}
+    \item \textbf{Draw.io}: per la creazione di diagrammi UML.\\
+    \href{https://app.diagrams.net/}{https://app.diagrams.net/}
+    \item \textbf{Google Sheets}: per la creazione di tabelle e grafici.\\
+    \href{https://www.google.com/sheets/about/}{https://www.google.com/sheets/about/}
 \end{itemize}
 %-------------------------------------------------------------------------------------------------
 
@@ -250,7 +250,7 @@ Dove \textbf{PD} è abbreviazione di \textbf{Prodotto}
 \begin{center}
     \textbf{M[PC][ID numerico]}
 \end{center}
-Dove \textbf{PD} è abbreviazione di \textbf{Processo}
+Dove \textbf{PC} è abbreviazione di \textbf{Processo}
 
 %--------------------------------------------------------------------------------------
 
@@ -287,7 +287,7 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
 
 \setlength\extrarowheight{5pt}
 
-    \begin{longtable}{cm{0.28\linewidth}m{0.13\linewidth}m{0.31\linewidth}}
+\begin{longtable}{cm{0.28\linewidth}m{0.13\linewidth}m{0.31\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
     \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Metodo}}} 
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
@@ -295,17 +295,17 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}\\[4pt]
 		\rowcolor[RGB]{216, 235, 171}
 	    	\textbf{Walkthrough} 
-            & Rilevamento di errori mediante letture ad ampio spettro.
+            & Rilevamento di errori \par mediante letture ad ampio spettro.
             & Redattori Verificatori
             & Un errore trovato durante la fase di verifica va segnalato 
             tramite le issue su Github, come indicato nella sezione \textit{Segnalare un problema}.\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
             \textbf{Inspection} 
-            & Rilevamento di errori mediante letture mirate. 
+            & Rilevamento di errori \par  mediante letture mirate. 
             & Redattori Verificatori
             & Il verificatore utilizza una \textit{lista di controllo}, per eseguire una verifica mirata.\\[4pt]
         \caption{Tipologie di verifica di un documento}
-        \end{longtable}
+\end{longtable}
     
 \setlength\extrarowheight{0pt}
 \subparagraph{Verificare il codice}
@@ -323,14 +323,14 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
 		
 		\rowcolor[RGB]{216, 235, 171}
 	    	\textbf{Statica} 
-            & Verificare il rispetto delle norme dello standard di codifica.
+            & Verificare il rispetto \par delle norme dello standard di codifica.
             & \centering Programmatori Verificatori
             & Analisi di flusso dei dati, verifica formale del codice.\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
             \textbf{Dinamica} 
-            & Eseguire il prodotto e trovare errori \textit{Run-time}. 
+            & Eseguire il prodotto\par e trovare errori \textit{Run-time}. 
             & \centering Programmatori Verificatori
-            & Test di unità, di integrazione, di sistema, di regressione, di accettazione.\\[4pt]
+            & Test di unità,\par di integrazione,\par di sistema, di regressione, di accettazione.\\[4pt]
         \end{tabular}
         \caption{Tipologie di verifica del codice}
     \end{table}
@@ -355,6 +355,7 @@ seguendo le seguenti regole:
 \end{itemize}
 
 \paragraph{Test}
+\mbox{}\\
 Tutti i test eseguiti al codice devono essere ripetibili ed automatici (per quanto possibile).
 I test vengono identificati attraverso i seguenti codici:
 \subparagraph{Test di unità}
@@ -399,7 +400,7 @@ La sezione \textbf{\textit{Stato}} presente nelle tabelle relative ai test conti
 \subsubsection{Metriche di qualità}
 Parametri utilizzati nella tabella:
 \begin{itemize}
-    \item \textbf{Budget at Completion (BAC)}:Valore iniziale previsto per la realizzazione del progetto.
+    \item \textbf{Budget at Completion (BAC)}: Valore iniziale previsto per la realizzazione del progetto.
     \item \textbf{Planned Value (BCWS)}: Costo pianificato per realizzare le attività di progetto alla data corrente (giorni o euro).
     \item \textbf{Estimate to Complete (ETC)}: Valore stimato per la realizzazione delle rimanenti attività necessarie al completamento del progetto.
     \item \textbf{Number of Changed (NoC)}: numero di requisiti variati.
