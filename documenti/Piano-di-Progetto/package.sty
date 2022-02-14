@@ -1,0 +1,45 @@
+% Margini del foglio
+\usepackage[top=3cm, bottom=2.5cm, left=2.5cm, right=2.5cm, 
+	headsep=0.5cm, headheight=2cm, footskip=1.5cm]{geometry}
+
+\usepackage[utf8]{inputenc}
+
+% Convenzioni tipografiche di una determinata lingua
+\usepackage[italian,english]{babel}
+
+\usepackage{graphicx}
+
+\usepackage{xcolor}
+
+\usepackage{colortbl}
+
+\usepackage{float}
+
+\usepackage{eurosym}
+
+% Impostazioni vertici del foglio
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \lhead{\docprojectname{}}
+  \rhead{\includegraphics[scale=0.12]{../../assets/ClubSweLogo.png}}
+  \lfoot{\docname{}}
+  \rfoot{\thepage{}} 
+  \renewcommand{\headrulewidth}{0.3pt}
+  \renewcommand{\footrulewidth}{0.3pt}
+}
+\pagestyle{plain}
+
+
+%Generazione testo casuale
+\usepackage{lipsum}
+
+% Gestione link
+\usepackage{hyperref}
+
+%caption
+\usepackage{caption}
+\captionsetup[table]{position=bottom}
+
+% Tabelle multi-pagina
+\usepackage{longtable}
