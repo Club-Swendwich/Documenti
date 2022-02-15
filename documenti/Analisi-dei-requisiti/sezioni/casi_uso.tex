@@ -148,7 +148,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: L'utente sta visualizzando una vista.
+    \item \textbf{Precondizioni}: L'utente sta visualizzando una vista$^{G}$.
     \item \textbf{Postcondizioni}: Viene eliminata la vista selezionata.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
@@ -162,14 +162,14 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC3.1}
 \begin{itemize}
 	\item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è presente e caricato correttamente. L'utente ha cliccato il pulsante per l'eliminazione di una vita \hyperref[sec:UC3]{UC3}.
-	\item \textbf{Postcondizioni:} Viene eliminala la vita, oppure l'operazione viene annullata.
+	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è presente e caricato correttamente. L'utente ha cliccato il pulsante per l'eliminazione di una vista$^{G}$ \hyperref[sec:UC3]{UC3}.
+	\item \textbf{Postcondizioni:} Viene eliminata la vista$^{G}$, oppure l'operazione viene annullata.
 	\item \textbf{Scenario principale:}
 		\begin{enumerate}
-		\item Viene visualizzato un messaggio di conferma per l'eliminazione della vista.
+		\item Viene visualizzato un messaggio di conferma per l'eliminazione della vista$^{G}$.
 		\item L'utente sceglie una delle due opzioni:
 			\begin{itemize}
-				\item L'utente vuole ripristinare eliminare la vista e clicca ``Ok''
+				\item L'utente vuole ripristinare eliminare la vista$^{G}$ e clicca ``Ok''
 				\item L'utente vuole annullare l'operazione e clicca ``Annulla''
 			\end{itemize}
 		\end{enumerate}
@@ -347,7 +347,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	    \begin{enumerate}
 	    		\item L'utente sceglie ordine e numero degli assi.
 		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente abbia creato nuovi assi ma non abbia associato nessuna ${\mathrm{dimensione^{G}}}$ ad essi:
+	    \item \textbf{Estensioni:} Nel caso l'utente abbia creato nuovi assi ma non abbia associato nessuna ${\mathrm{dimensione^{G}}}$ a essi:
               \begin{itemize}
                   \item Non viene visualizzato nessun grafico.
                   \item Viene visualizzato un errore di personalizzazione grafico.
