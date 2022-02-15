@@ -1,6 +1,6 @@
 \section{Processi di supporto}
 \subsection{Gestione documentazione}
-Nella seguente sottosezione vengono normati i seguenti aspetti per il 
+Nella seguente sottosezione vengono normati i seguenti aspetti per il
 processo di \textit{Gestione documentazione}:
 \begin{itemize}
     \item \textbf{Procedure}
@@ -19,18 +19,18 @@ Le attività individuate dallo standard \textit{ISO/IEC 12207:1995} in questo pr
 \paragraph{Pianificazione}
 \mbox{}\\
 Lo strumento scelto dal gruppo per la stesura della documentazione è \LaTeX.\\
-Per permettere un avanzamento \textit{agile} e tracciare lo stato delle attività è stato deciso di utilizzare una Scrum board su Trello.
+Per permettere un avanzamento \textit{agile} e tracciare lo stato delle attività è stato deciso di utilizzare una Scrum$^G$  board su Trello$^G$.
 La struttura della board è la seguente:
 \begin{itemdescript}
     \item [Questions for the next meeting] Lista delle domande individuate dal team \textit{Club Swendwich} da porre alla prossima riunione con il professore o con il proponente.
-    \item [Backlog] Lista delle card relative a issues che sono in attesa di essere assegnate ad uno sprint.
-    \item [Next Sprint] Lista delle card assegnate allo sprint successivo. 
-    \item [Sprint Backlog] Lista delle card in attesa di essere prese in carico.
+    \item [Backlog] Lista delle card relative a issues$^G$  che sono in attesa di essere assegnate ad uno sprint$^G$.
+    \item [Next Sprint$^G$] Lista delle card assegnate allo sprint$^G$ successivo.
+    \item [Sprint$^G$ Backlog] Lista delle card in attesa di essere prese in carico.
     \item [In progress] Lista delle produzioni in esecuzione al momento. Ogni card corrisponde a un branch.
     \item [To be verified] Lista delle modifiche in attesa di verifica da parte del verificatore.
     \item [To be approved] Lista delle verifiche in attesa di approvazione e merge da parte del verificatore.
-    \item [Done - Current Sprint] Lista delle card approvate e delle quali è stato effettuato il merge durante lo sprint attuale.
-    \item [Done - All Time] Lista onnicomprensiva delle card approvate durante tutti gli sprint.
+    \item [Done - Current Sprint$^G$] Lista delle card approvate e delle quali è stato effettuato il merge durante lo sprint$^G$ attuale.
+    \item [Done - All Time] Lista onnicomprensiva delle card approvate durante tutti gli sprint$^G$.
 \end{itemdescript}
 %È inoltre presente un archivio dove vengono automaticamente spostate le card dopo 15 giorni di permanenza nella lista \texttt{Done}. Questo viene fatto per evitare il sovraffollamento della board.\\
 
@@ -38,15 +38,15 @@ La struttura della board è la seguente:
 \paragraph{Progettazione e sviluppo}
 \subparagraph{Creazione del Documento}
 \mbox{}\\
-Nel processo di produzione di un nuovo documento è fondamentale utilizzare i templates già
+Nel processo di produzione di un nuovo documento è fondamentale utilizzare i templates$^G$ già
 disponibili, essi sono il miglior modo per mantenere la documentazione uniforme e
 risparmiare tempo.
 La versione di partenza di un documento è la \texttt{0.1.0}.
 
-\subparagraph{Creazione Issue GitHub e gestione del workflow}
+\subparagraph{Creazione Issue$^G$  GitHub$^G$  e gestione del workflow}
 \mbox{}\\
-Il primo passaggio da effettuare, quando si decide di creare o modificare un documento, è quello dell'apertura dell'issue relativa ad esso.
-Tale issue dovrà essere aperta su GitHub nell'apposita sezione "Issues", della repository Documenti e dovrà essere compilata nel seguente modo:
+Il primo passaggio da effettuare, quando si decide di creare o modificare un documento, è quello dell'apertura dell'issue$^G$  relativa ad esso.
+Tale issue$^G$ dovrà essere aperta su GitHub$^G$  nell'apposita sezione "Issues", della repository$^G$  Documenti e dovrà essere compilata nel seguente modo:
 \begin{itemize}
     \item Se il documento dovrà essere creato, il titolo dovrà essere
     \texttt{Nome Documento}
@@ -54,47 +54,47 @@ Tale issue dovrà essere aperta su GitHub nell'apposita sezione "Issues", della 
     \texttt{Nome Documento - Modifica da effettuare (in breve)}
     \item Nella descrizione è opportuno spiegare in breve in cosa consisterà tale documento o le modifiche che dovranno essere apportate
     \item È consigliato l'utilizzo della label \texttt{documento}
-    \item Se necessario, assegnare l'issue a una milestone fissata
+    \item Se necessario, assegnare l'issue$^G$  a una milestone$^G$  fissata
     \item Se la produzione da effettuare è di mole importante, è consigliato suddividere la produzione in punti elenco, tramite checklist, in modo da distribuire e tracciare più facilmente il lavoro
 \end{itemize}
 
-\noindent Le issues create in questo modo saranno automaticamente trasformate in \textit{Trello cards} e inserite nel Backlog grazie all'integrazione con Zapier. \\
+\noindent Le issues$^G$  create in questo modo saranno automaticamente trasformate in \textit{Trello$^G$ cards} e inserite nel Backlog grazie all'integrazione con Zapier. \\
 
 \noindent \textbf{Gestione del Branch:}
 \begin{itemize}
-    \item Quando le cards vengono create gli viene assegnata in automatico 
-    l'etichetta \texttt{To Be Branched}, per ricordare al collaboratore di 
+    \item Quando le cards vengono create gli viene assegnata in automatico
+    l'etichetta \texttt{To Be Branched}, per ricordare al collaboratore di
     eseguire il branch.
-    \item Prima di procedere con la produzione del documento è fondamentale 
-    assegnare sia issue che card ad uno o più componenti che lo hanno preso in carico, 
-    ed eseguire il branch per la risoluzione dell'issue.
-    \item Il branch deve seguire lo standard \texttt{NomeUtente/Issue\#}, 
-    dove "\#" sarà sostituito dal numero della issue.
-    \item Una volta eseguita tale operazione, è necessario cambiare l'etichetta 
-    della card in \texttt{Branched}, manualmente o tramite il 
+    \item Prima di procedere con la produzione del documento è fondamentale
+    assegnare sia issue$^G$  che card ad uno o più componenti che lo hanno preso in carico,
+    ed eseguire il branch per la risoluzione dell'issue$^G$ .
+    \item Il branch deve seguire lo standard \texttt{NomeUtente/Issue\#},
+    dove "\#" sarà sostituito dal numero della issue$^G$ .
+    \item Una volta eseguita tale operazione, è necessario cambiare l'etichetta
+    della card in \texttt{Branched}, manualmente o tramite il
     bottone "Branched", che è possibile trovare all'interno della card (è consigliato usare il bottone della card).
 \end{itemize}
 \noindent A questo punto è possibile procedere con la creazione o modifica del documento.
-Per migliorare il workflow è possibile scegliere già verificatori e 
-approvatori che, una volta terminate le modifiche, procederanno con la 
-verifica e l'approvazione del documento.\\ 
-Questi componenti potranno seguire la card (tramite il pulsante apposito), 
+Per migliorare il workflow è possibile scegliere già verificatori e
+approvatori che, una volta terminate le modifiche, procederanno con la
+verifica e l'approvazione del documento.\\
+Questi componenti potranno seguire la card (tramite il pulsante apposito),
 in modo da essere notificati su eventuali modifiche della stessa.
 
-\subparagraph{Scelta template}
+\subparagraph{Scelta template$^G$}
 \mbox{}\\
-Sono disponibili 3 tipi di template:
+Sono disponibili 3 tipi di template$^G$:
 \begin{itemize}
     \item \texttt{documenti}: Tutti i documenti \LaTeX \space che non sono verbali, interni ed esterni.
     \item \texttt{presentazioni}: Tutte le presentazioni.
     \item \texttt{verbali}: Tutti i verbali.
 \end{itemize}
-Qualora non fosse presente il template desiderato è necessaria una discussione con il gruppo prima di procedere a crearne di nuovi.
+Qualora non fosse presente il template$^G$ desiderato è necessaria una discussione con il gruppo prima di procedere a crearne di nuovi.
 
 \subparagraph{Redattori, Verificatori, Approvatori}
 \mbox{}\\
-In ogni documento e verbale in prima pagina viene inserito un riassunto dei ruoli svolti da ogni componente. 
-I ruoli vengono svolti in più fasi, e queste sono visibili nel dettaglio nella tabella ``Registro delle modifiche''.\\ 
+In ogni documento e verbale in prima pagina viene inserito un riassunto dei ruoli svolti da ogni componente.
+I ruoli vengono svolti in più fasi, e queste sono visibili nel dettaglio nella tabella ``Registro delle modifiche''.\\
 Può succedere che un componente sia inserito sia come redattore che come verificatore, in quanto può aver svolto il ruolo in fasi differenti del documento.
 
 \subparagraph{Gestione nominativi}
@@ -116,7 +116,7 @@ Per evitare ambiguità con la terminologia utilizzata nei documenti è stato red
 \subparagraph{Immagini cruscotto PdP}
 \mbox{}\\
 Per rappresentare i dati nel \textit{preventivo di fase} e nel \textit{consuntivo di periodo}
-è importante inserire un cruscotto informativo sotto forma di grafico. Questo va creato con 
+è importante inserire un cruscotto informativo sotto forma di grafico. Questo va creato con
 \textit{Google Sheets} rispettando le seguenti regole:
 \begin{itemize}
     \item \textbf{Grafico a colonne in pila}
@@ -124,7 +124,7 @@ Per rappresentare i dati nel \textit{preventivo di fase} e nel \textit{consuntiv
         \item Legenda: posizionata a destra; colore del testo nero; dimensione 16 pt.
         \item Nome asse verticale: Ore.
         \item Colori ruoli: sono mantenuti i colori di default.
-        \item Nominativi: disposizione a 30°; carattere 16pt. 
+        \item Nominativi: disposizione a 30°; carattere 16pt.
     \end{itemize}
     \item \textbf{Grafico ad anello}
     \begin{itemize}
@@ -137,15 +137,15 @@ Per rappresentare i dati nel \textit{preventivo di fase} e nel \textit{consuntiv
 
 \paragraph{Manutenzione}
 \mbox{}\\
-Tutta la documentazione prodotta deve essere mantenuta all'interno della repo git hostata su GitHub \href{https://github.com/Club-Swendwich/Documenti}{(https://github.com/Club-Swendwich/Documenti)}.
-La struttura della repository è la seguente:
+Tutta la documentazione prodotta deve essere mantenuta all'interno della repo$^G$  git$^G$  hostata su GitHub$^G$  \href{https://github.com/Club-Swendwich/Documenti}{(https://github.com/Club-Swendwich/Documenti)}.
+La struttura della repository$^G$  è la seguente:
 \begin{itemize}
     \item \texttt{assets}: Contiene tutti gli elementi grafici comuni ai documenti
         prodotti dal team.
     \item \texttt{documenti}: Contiene tutti i documenti che non sono verbali o
         presentazioni.
     \item \texttt{presentazioni}: Contiene tutte le presentazioni basate su slide.
-    \item \texttt{template}: Contiene tutti i template da utilizzare quando si va a
+    \item \texttt{template$^G$}: Contiene tutti i template$^G$ da utilizzare quando si va a
         creare un nuovo documento.
     \item \texttt{verbali}: Contiene i resoconti di tutti gli incontri del team sia
         interni che con entità esterne al team.
@@ -154,7 +154,7 @@ La struttura della repository è la seguente:
 \subparagraph{Versionamento}
 \mbox{}\\
 Ogni documento che verrà aggiornato nel tempo deve essere versionato anche
-internamente (non sempre git basta), la versione è nel formato \texttt{X.Y.Z} dove
+internamente (non sempre git$^G$  basta), la versione è nel formato \texttt{X.Y.Z} dove
 \texttt{X}, \texttt{Y}, \texttt{Z} sono numeri interi e positivi:
 \begin{itemize}
     \item il numero al posto di \texttt{X} va incrementato solo se si tratta di una
@@ -179,9 +179,9 @@ spelling, non va riportata nel registro modifiche.}\\
 
 
 \noindent
-La colonna di \textbf{approvazione} viene aggiornata solo nel momento in cui il documento viene approvato. 
-Naturalmente nei documenti che avranno più revisioni di avanzamento, e che contestualmente richiederanno più versioni, 
-l'approvazione verrà inserita per la fase di avanzamento da superare (che andrà segnalata nella descrizione), e sarà 
+La colonna di \textbf{approvazione} viene aggiornata solo nel momento in cui il documento viene approvato.
+Naturalmente nei documenti che avranno più revisioni di avanzamento, e che contestualmente richiederanno più versioni,
+l'approvazione verrà inserita per la fase di avanzamento da superare (che andrà segnalata nella descrizione), e sarà
 aggiunta una nuova riga di approvazione per il rilascio successivo.
 
 \subsubsection{Metriche di qualità}
@@ -193,34 +193,34 @@ aggiunta una nuova riga di approvazione per il rilascio successivo.
     \centering
     \begin{longtable}{p{0.17\linewidth} c p{0.35\linewidth} c}
     \rowcolor[RGB]{33, 73, 50}
-        \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Nome}}} 
-        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Codice}}} 
+        \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Nome}}}
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Codice}}}
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Formula}}}\\[4pt]
     \rowcolor[RGB]{216, 235, 171}
-        \textbf{Indice di} \par \textbf{Gulpease} & 
-        MPD1 &  
+        \textbf{Indice di} \par \textbf{Gulpease} &
+        MPD1 &
         Indice di leggibilità di un documento \par
         \textbf{$N_F$ numero frasi $N_L$ numero lettere} \par
-        \textbf{$N_P$ numero parole}&   
+        \textbf{$N_P$ numero parole}&
         $ 89 + \frac{300 \cdot N_F - 10 \cdot N_L}{N_P} $ \\
 
     \rowcolor[RGB]{233, 245, 206}
-        \textbf{Ortogtrafia} & 
+        \textbf{Ortogtrafia} &
         MPD2 & Correttezza ortografica di un documento &
         - \\
 
         \caption{Metriche di usabilità}
     \end{longtable}
 \end{center}
-    
+
 \setlength\extrarowheight{0pt}
 \subsubsection{Strumenti}
 Gli strumenti da utilizzare in questo processo sono:
 \begin{itemize}
     \item \textbf{\LaTeX}: linguaggio per la stesura dei documenti.\\
     \href{https://www.latex-project.org/}{https://www.latex-project.org/}
-    \item \textbf{Visual Studio Code}: editor di codice utilizzato dal gruppo, scelto per \\ l'implementazione con Github (in particolare per la gestione dei branch).\\
+    \item \textbf{Visual Studio Code}: editor di codice utilizzato dal gruppo, scelto per \\ l'implementazione con Github$^G$  (in particolare per la gestione dei branch).\\
     \href{https://code.visualstudio.com/}{https://code.visualstudio.com/}
     \item \textbf{Draw.io}: per la creazione di diagrammi UML.\\
     \href{https://app.diagrams.net/}{https://app.diagrams.net/}
@@ -230,7 +230,7 @@ Gli strumenti da utilizzare in questo processo sono:
 %-------------------------------------------------------------------------------------------------
 
 \subsection{Assicurazione della qualità}
-Nella seguente sottosezione vengono normati i seguenti aspetti per il 
+Nella seguente sottosezione vengono normati i seguenti aspetti per il
 processo di \textit{Assicurazione della qualità}:
 \begin{itemize}
     \item \textbf{Procedure}
@@ -263,7 +263,7 @@ Dove \textbf{PC} è abbreviazione di \textbf{Processo}
 
 \subsection{Verifica}
 \label{sec:Verifica}
-Nella seguente sottosezione vengono normati i seguenti aspetti per il 
+Nella seguente sottosezione vengono normati i seguenti aspetti per il
 processo di \textit{Verifica}:
 \begin{itemize}
     \item \textbf{Procedure}
@@ -296,24 +296,24 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
 
 \begin{longtable}{cm{0.28\linewidth}m{0.13\linewidth}m{0.31\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
-    \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Metodo}}} 
-        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
+    \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Metodo}}}
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}}
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Attori}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}\\[4pt]
 		\rowcolor[RGB]{216, 235, 171}
-	    	\textbf{Walkthrough} 
+	    	\textbf{Walkthrough}
             & Rilevamento di errori \par mediante letture ad ampio spettro.
             & Redattori Verificatori
-            & Un errore trovato durante la fase di verifica va segnalato 
-            tramite le issue su Github, come indicato nella sezione \textit{Segnalare un problema}.\\[4pt]
+            & Un errore trovato durante la fase di verifica va segnalato
+            tramite le issue$^G$  su Github$^G$ , come indicato nella sezione \textit{Segnalare un problema}.\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            \textbf{Inspection} 
-            & Rilevamento di errori \par  mediante letture mirate. 
+            \textbf{Inspection}
+            & Rilevamento di errori \par  mediante letture mirate.
             & Redattori Verificatori
             & Il verificatore utilizza una \textit{lista di controllo}, per eseguire una verifica mirata.\\[4pt]
         \caption{Tipologie di verifica di un documento}
 \end{longtable}
-    
+
 \setlength\extrarowheight{0pt}
 \subparagraph{Verificare il codice}
 \mbox{}\\
@@ -323,35 +323,35 @@ Una volta che il documento supererà con successo questi passaggi, il verificato
     \centering
     \begin{tabular}{cm{0.30\linewidth}m{0.17\linewidth}m{0.30\linewidth}}
     \rowcolor[RGB]{33, 73, 50}
-    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Analisi}}} 
-        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}} 
+    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Analisi}}}
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Obiettivo}}}
         & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Attori}}}
 		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{Descrizione}}}\\[4pt]
-		
+
 		\rowcolor[RGB]{216, 235, 171}
-	    	\textbf{Statica} 
+	    	\textbf{Statica}
             & Verificare il rispetto \par delle norme dello standard di codifica.
             & \centering Programmatori Verificatori
             & Analisi di flusso dei dati, verifica formale del codice.\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            \textbf{Dinamica} 
-            & Eseguire il prodotto\par e trovare errori \textit{Run-time}. 
+            \textbf{Dinamica}
+            & Eseguire il prodotto\par e trovare errori \textit{Run-time}.
             & \centering Programmatori Verificatori
             & Test di unità,\par di integrazione,\par di sistema, di regressione, di accettazione.\\[4pt]
         \end{tabular}
         \caption{Tipologie di verifica del codice}
     \end{table}
-    
+
 \setlength\extrarowheight{0pt}
 
 \newpage
 \paragraph{Revisione}
 \subparagraph{Segnalare un problema}
 \mbox{}\\
-Un errore trovato durante la fase di verifica va segnalato tramite le issue su Github
+Un errore trovato durante la fase di verifica va segnalato tramite le issue$^G$  su Github$^G$
 seguendo le seguenti regole:
 \begin{itemize}
-    \item Il titolo della issue deve essere
+    \item Il titolo della issue$^G$  deve essere
     \texttt{Nome Documento - Descrizione problema}
     \item Nella descrizione va spiegato più approfonditamente la natura del
     problema e eventuali puntatori alle righe interessate.
@@ -431,62 +431,62 @@ Parametri utilizzati nella tabella:
         & \textcolor{white}{\textbf{Descrizione}}
 		& \textcolor{white}{\textbf{Formula}}\\[4pt]
 	\rowcolor[RGB]{216, 235, 171}
-	    MPC1 
-        & Schedule Variance (SV) 
+	    MPC1
+        & Schedule Variance (SV)
         & Indica se il gruppo è in linea (ritardo o anticipo) rispetto alla schedulazione delle attività di progetto pianificate.
         & $SV = (\frac{BCWP}{BCWS} - 1) \cdot 100$ \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            MPC2 
-            & Budget Variance (BV) 
+            MPC2
+            & Budget Variance (BV)
             & Indica se, alla data corrente, il gruppo ha speso di più o di meno rispetto a quanto previsto dal budget.
             & $BV = (1 - \frac{ACWP}{BCWS}) \cdot 100$	\\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-	    	MPC3 
-            & Estimated at Completion (EAC) 
+	    	MPC3
+            & Estimated at Completion (EAC)
             & Corrisponde al BAC rivisto allo stato corrente del progetto.
             & $EAC = ACWP + ETC$	\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            MPC4 
-            & Actual Cost of Work Performed (ACWP) 
+            MPC4
+            & Actual Cost of Work Performed (ACWP)
             & Costo effettivamente sostenuto dal gruppo alla data corrente (giorni o euro).
             & -		\\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-	    	MPC5 
-            & Budgeted Cost of Work Performed (BCWP) 
-            & Valore delle attività realizzate alla data corrente (giorni o euro). 
+	    	MPC5
+            & Budgeted Cost of Work Performed (BCWP)
+            & Valore delle attività realizzate alla data corrente (giorni o euro).
             & $\%completamento \cdot EAC$		\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            MPC6 
-            & Requirements Stability Index (RSI) 
-            & Metrica per tracciare le variazioni dei requisiti nel tempo originariamente specificati per il progetto.  
+            MPC6
+            & Requirements Stability Index (RSI)
+            & Metrica per tracciare le variazioni dei requisiti nel tempo originariamente specificati per il progetto.
             & $(1-\frac{NoC + NoD + NoA}{TNIR}) \cdot 100$	\\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-	    	MPC7 
-            & Satisfied Obligatory Requirements (SOR) 
-            & Indica la percentuale dei requisiti obbligatori soddisfatti. 
+	    	MPC7
+            & Satisfied Obligatory Requirements (SOR)
+            & Indica la percentuale dei requisiti obbligatori soddisfatti.
             & $\frac{NoS}{TnR} \cdot 100$		\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            MPC8 
-            & Non-calculated Risk (NCR) 
-            & Indica il numero di rischi verificati non preventivati. 
+            MPC8
+            & Non-calculated Risk (NCR)
+            & Indica il numero di rischi verificati non preventivati.
             & Numero intero		\\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-	    	MPC9 & Code Coverage (CC) 
+	    	MPC9 & Code Coverage (CC)
             & Indica il grado di copertura del codice dai test dinamici.
             & $\frac{LCE}{LC} \cdot 100$		\\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            MPC10 
-            & Passed Test Cases Percentage (PTCP) 
+            MPC10
+            & Passed Test Cases Percentage (PTCP)
             & Corrisponde alla percentuale di test superati rispetto al totale dei test dinamici.
             & $\frac{\textit{Test Passati}}{\textit{Test Totali}} \cdot 100$	\\[4pt]
         \rowcolor[RGB]{216, 235, 171}
-	    	MPC11 
-            & Failed Test Cases Percentage (FTCP) 
+	    	MPC11
+            & Failed Test Cases Percentage (FTCP)
             & Corrisponde alla percentuale di test falliti rispetto al totale dei test dinamici.
             & $\frac{\textit{Test Falliti}}{\textit{Test Totali}} \cdot 100$ \\[4pt]
         \rowcolor[RGB]{233, 245, 206}
-            MPC12 
-            & Quality Metrics Satisfied (QMS) 
+            MPC12
+            & Quality Metrics Satisfied (QMS)
             & Indica la percentuale di metriche di qualità soddisfatte
             & $\frac{NQMS}{TQM} \cdot 100$		\\[4pt]
     \caption{Metriche di processo}
