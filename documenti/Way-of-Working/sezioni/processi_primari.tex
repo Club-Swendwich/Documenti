@@ -178,7 +178,29 @@ Per questa fase di avanzamento il progettista deve occuparsi di:
 
 \paragraph{Codifica}
 \mbox{} \\
-INSERIRE PARTE DI SAMUELE
+Si vuole garantire uniformità nella produzione di codice da parte di tutto il team così da garantire codice comprensibile
+da tutti.
+Inoltre si vuole automatizzare il più possibile l'automatizzazione di questi processi.
+Per ogni membro del team è obbligatorio verificare che il codice prodotto rispetti questi standard prima che il codice
+venga fatto entrare all'interno della repo.
+
+Qui di seguito viene riportato per ogni linguaggio di programmazione le linee guida a cui fare riferimento e gli opportuni
+stumenti per la verifica:
+
+\subparagraph{TypeScript}
+Per la scrittura di tutto il code typescript che verrà prodotto dal team ci si impegna a seguire il coding
+style standard \textit{AirBnB} \href{https://github.com/airbnb/javascript}(https://github.com/airbnb/javascript)
+con annesse estensioni per il supporto al typesystem di Typescript.
+Per garantire che venga rispettatto costantemente e in modo totalmente automatico in ogni progetto JavaScript
+andrà installato il plugin \textit{eslint} \href{https://eslint.org/}(https://eslint.org/) e impostato l'insieme
+di regole \textit{AirBnB} \href{https://www.npmjs.com/package/eslint-config-airbnb-typescript}
+(https://www.npmjs.com/package/eslint-config-airbnb-typescript).
+
+\subparagraph{Python}
+Per lo sviluppo degli automatisti all'interno dei repository dell' organizzazione (esecuzione test automatici,
+compilazione automatica documenti \LaTeX, controlli ortografici automatici) si utilizzarà il linguaggio \textit{Python3}
+seguendo le direttive ufficiali \textit{PEP-8} \href{https://pep8.org/}(https://pep8.org/) e verrà verificato in modo
+automatico tramite lo strumento \textit{Pylint} \href{https://pylint.org/}(https://pylint.org/)
 
 \newpage
 \subsubsection{Metriche di qualità}
@@ -356,8 +378,10 @@ Gli strumenti da utilizzare in questo processo sono:
 \begin{itemize}
     \item D3.js: libreria JavaScript per la realizzazione del grafico Scatter Plot nel \textit{Proof of Concept}.\\
     \href{https://d3js.org/}{https://d3js.org/}
-    \item React  libreria JavaScript per la realizzazione del \textit{Proof of Concept}.\\
+    \item React: la libreria utilizzata per la realizzazione del \textit{Proof of Concept}.\\
     \href{https://it.reactjs.org/}{https://it.reactjs.org/}
+    \item TypeScript: il linguaggio utilizzato per la realizzazione del \textit{Proof of Concept}.\\
+    \href{https://www.typescriptlang.org/}{https://www.typescriptlang.org/}
     \item Visual Studio Code: editor di codice utilizzato dal gruppo. \\
     \href{https://code.visualstudio.com/}{https://code.visualstudio.com/}
     \item Draw.io: strumento per la realizzazione dei grafici UML.\\
