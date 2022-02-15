@@ -23,13 +23,16 @@ Per permettere un avanzamento \textit{agile} e tracciare lo stato delle attivit�
 La struttura della board è la seguente:
 \begin{itemdescript}
     \item [Questions for the next meeting] Lista delle domande individuate dal team \textit{Club Swendwich} da porre alla prossima riunione con il professore o con il proponente.
-    \item [To do] Lista delle card relative a issues che devono ancora essere prese in carico. È il backlog della board.
+    \item [Backlog] Lista delle card relative a issues che sono in attesa di essere assegnate ad uno sprint.
+    \item [Next Sprint] Lista delle card assegnate allo sprint successivo. 
+    \item [Sprint Backlog] Lista delle card in attesa di essere prese in carico.
     \item [In progress] Lista delle produzioni in esecuzione al momento. Ogni card corrisponde a un branch.
     \item [To be verified] Lista delle modifiche in attesa di verifica da parte del verificatore.
     \item [To be approved] Lista delle verifiche in attesa di approvazione e merge da parte del verificatore.
-    \item [Done] Lista degli issues approvati e risolti.
+    \item [Done - Current Sprint] Lista delle card approvate e delle quali è stato effettuato il merge durante lo sprint attuale.
+    \item [Done - All Time] Lista onnicomprensiva delle card approvate durante tutti gli sprint.
 \end{itemdescript}
-È inoltre presente un archivio dove vengono automaticamente spostate le card dopo 15 giorni di permanenza nella lista \texttt{Done}. Questo viene fatto per evitare il sovraffollamento della board.\\
+%È inoltre presente un archivio dove vengono automaticamente spostate le card dopo 15 giorni di permanenza nella lista \texttt{Done}. Questo viene fatto per evitare il sovraffollamento della board.\\
 
 
 \paragraph{Progettazione e sviluppo}
@@ -55,7 +58,7 @@ Tale issue dovrà essere aperta su GitHub nell'apposita sezione "Issues", della 
     \item Se la produzione da effettuare è di mole importante, è consigliato suddividere la produzione in punti elenco, tramite checklist, in modo da distribuire e tracciare più facilmente il lavoro
 \end{itemize}
 
-\noindent Le issues create in questo modo saranno automaticamente trasformate in \textit{Trello cards} grazie all'integrazione con Zapier. \\
+\noindent Le issues create in questo modo saranno automaticamente trasformate in \textit{Trello cards} e inserite nel Backlog grazie all'integrazione con Zapier. \\
 
 \noindent \textbf{Gestione del Branch:}
 \begin{itemize}
