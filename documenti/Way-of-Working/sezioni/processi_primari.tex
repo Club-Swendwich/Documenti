@@ -177,30 +177,59 @@ Per questa fase di avanzamento il progettista deve occuparsi di:
 \end{itemize}
 
 \paragraph{Codifica}
-\mbox{} \\
-Si vuole garantire uniformità nella produzione di codice da parte di tutto il team così da garantire codice comprensibile
-da tutti.
-Inoltre si vuole automatizzare il più possibile l'automatizzazione di questi processi.
-Per ogni membro del team è obbligatorio verificare che il codice prodotto rispetti questi standard prima che il codice
-venga fatto entrare all'interno della repo.
 
-Qui di seguito viene riportato per ogni linguaggio di programmazione le linee guida a cui fare riferimento e gli opportuni
+\subparagraph{Aggiunta e modifica di funzionalità}
+\mbox{}\\
+Tutte le funzionalità da aggiungere e modificare devono essere \textbf{unità atomiche}, cioè facilmente risolvibili, in modo da rispettare 
+l'approccio Scrum:
+\begin{itemize}
+    \item Ogni micro-obiettivo inserito nel backlog viene organizzato e suddiviso in sprint;
+    \item Assieme agli altri micro-obiettivi dello sprint permette di raggiungere lo scopo fissato per lo sprint stesso.
+\end{itemize} 
+
+\subparagraph{Adesione allo standard}
+\mbox{}\\
+Si vuole garantire:
+\begin{itemize}
+    \item Uniformità nella produzione di codice da parte di tutto il team;
+    \item Codice comprensibile da tutti;
+    \item Automatizzazione di questi processi
+\end{itemize} 
+Per ogni membro del team è obbligatorio verificare che il codice prodotto rispetti questi standard prima che il codice
+venga fatto entrare all'interno della repo.\\
+Di seguito viene riportato per ogni linguaggio di programmazione le linee guida a cui fare riferimento e gli opportuni
 stumenti per la verifica:
 
 \subparagraph{TypeScript}
+\mbox{}\\
 Per la scrittura di tutto il code typescript che verrà prodotto dal team ci si impegna a seguire il coding
-style standard \textit{AirBnB} \href{https://github.com/airbnb/javascript}(https://github.com/airbnb/javascript)
-con annesse estensioni per il supporto al typesystem di Typescript.
+style standard:
+\begin{itemize}
+    \item \textit{AirBnB} \href{https://github.com/airbnb/javascript}(https://github.com/airbnb/javascript)
+\end{itemize}
+con annesse estensioni per il supporto al typesystem di Typescript.\\
+
 Per garantire che venga rispettatto costantemente e in modo totalmente automatico in ogni progetto JavaScript
-andrà installato il plugin \textit{eslint} \href{https://eslint.org/}(https://eslint.org/) e impostato l'insieme
-di regole \textit{AirBnB} \href{https://www.npmjs.com/package/eslint-config-airbnb-typescript}
-(https://www.npmjs.com/package/eslint-config-airbnb-typescript).
+andrà installato il plugin:
+\begin{itemize}
+    \item \textit{Eslint} \href{https://eslint.org/}(https://eslint.org/) e impostato l'insieme di regole
+    \begin{itemize}
+        \item \textit{AirBnB} \href{https://www.npmjs.com/package/eslint-config-airbnb-typescript}(https://www.npmjs.com/package/eslint-config-airbnb-typescript)
+    \end{itemize}
+\end{itemize}
 
 \subparagraph{Python}
-Per lo sviluppo degli automatisti all'interno dei repository dell' organizzazione (esecuzione test automatici,
-compilazione automatica documenti \LaTeX, controlli ortografici automatici) si utilizzarà il linguaggio \textit{Python3}
-seguendo le direttive ufficiali \textit{PEP-8} \href{https://pep8.org/}(https://pep8.org/) e verrà verificato in modo
-automatico tramite lo strumento \textit{Pylint} \href{https://pylint.org/}(https://pylint.org/)
+\mbox{}\\
+Per lo sviluppo degli automatismi all'interno dei repository dell' organizzazione (esecuzione test automatici,
+compilazione automatica documenti \LaTeX, controlli ortografici automatici) si utilizzarà il linguaggio:
+\textit{Python3} seguendo le direttive ufficiali:
+\begin{itemize}
+    \item \textit{PEP-8} \href{https://pep8.org/}(https://pep8.org/)
+\end{itemize}
+Verrà verificato in modo automatico tramite lo strumento:
+\begin{itemize}
+    \item \textit{Pylint} \href{https://pylint.org/}(https://pylint.org/)
+\end{itemize}
 
 \newpage
 \subsubsection{Metriche di qualità}
