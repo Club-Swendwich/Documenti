@@ -516,13 +516,35 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % --------------------------------------------------------------------
 % SEZIONE ZOOM INTERATTIVO
 % --------------------------------------------------------------------
+\subsection{UC7 - Zoom}
+\label{sec:UC7}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.60]{../../assets/ZoomUC7.png}
+    \caption{UC7 - Zoom del grafico}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+    		\item $Scatter$ $Plot^{G}$.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Viene mostrato uno zoom della sezione selezionata dal mouse.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona con il mouse l'area all'interno del grafico che vuole ingrandire.
+              \item L'area selezionata viene ingrandita.
+          \end{enumerate}
+    \item \textbf{Generalizzazioni:}
+\end{itemize}
 
-\subsection{UC7 - Zoom con selezione}
+
+\subsubsection{UC7.1 - Zoom con selezione}
 \label{sec:UC7}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.60]{../../assets/zoom_selezione.png}
-    \caption{UC7 - Zoom con selezione sul grafico}
+    \caption{UC7.1 - Zoom con selezione sul grafico}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
@@ -538,12 +560,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
           \end{enumerate}
 \end{itemize}
 
-\subsection{UC8 - Zoom con scroll del mouse}
+\subsubsection{UC7.2 - Zoom con scroll del mouse}
 \label{sec:UC8}
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.60]{../../assets/zoom_mouse.png}
-    \caption{UC8 - Zoom con lo scroll del mouse}
+    \caption{UC7.2 - Zoom con lo scroll del mouse}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
