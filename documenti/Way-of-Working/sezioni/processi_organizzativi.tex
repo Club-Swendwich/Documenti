@@ -1,0 +1,254 @@
+\section{Processi organizzativi}
+
+\subsection{Gestione organizzativa}
+Nella seguente sottosezione vengono normati i seguenti aspetti per il
+processo di \textit{Gestione organizzativa}:
+\begin{itemize}
+    \item \textbf{Procedure}
+    \item \textbf{Strumenti}
+\end{itemize}
+
+\subsubsection{Procedure}
+Le attività individuate dallo standard \textit{ISO/IEC 12207:1995} in questo processo sono:
+\begin{itemize}
+    \item Inizializzazione e definizione dello scopo
+    \item Pianificazione
+    \item Esecuzione e Controllo
+    \item Revisione e Valutazione
+\end{itemize}
+
+\paragraph{Inizializzazione e definizione dello scopo}
+\mbox{}\\
+I ruoli di progetto sono quelli indicati nelle dispense T06 del docente Vardanega.
+Ogni membro del gruppo dovrà a rotazione svolgere ogni ruolo all'interno del progetto.
+\begin{itemize}
+    \item \textbf{Responsabile}
+    \begin{itemize}
+        \item Sigla: \textbf{RE}
+        \item Comunicazione con proponente e committente
+        \item Pianificazione del lavoro
+        \item Gestione e controllo
+    \end{itemize}
+    \item \textbf{Amministratore}
+    \begin{itemize}
+        \item Sigla: \textbf{AM}
+        \item Controllo dell'ambiente di lavoro
+        \item Direzione delle infrastrutture di supporto
+        \item Controllo di versioni e configurazioni
+        \item Gestione della documentazione
+        \item Risoluzione di problemi relativi alla gestione dei processi
+    \end{itemize}
+    \item \textbf{Analista}
+    \begin{itemize}
+        \item Sigla: \textbf{AN}
+        \item Studio e analisi del dominio applicativo
+        \item Definizione dei requisiti e delle complessità
+        \item Particolare importanza nella redazione del documento \textit{Analisi dei requisiti}
+    \end{itemize}
+    \item \textbf{Progettista}
+    \begin{itemize}
+        \item Sigla: \textbf{PT}
+        \item Progettazione dell'architettura di sistema in base alle tecnologie scelte
+        \item Controllo dello sviluppo tecnico del prodotto
+    \end{itemize}
+    \item \textbf{Programmatore}
+    \begin{itemize}
+        \item Sigla: \textbf{PG}
+        \item Codifica secondo le specifiche del progettista
+        \item Gestione delle componenti di supporto per la verifica e validazione del codice
+    \end{itemize}
+    \item \textbf{Verificatore}
+    \begin{itemize}
+        \item Sigla: \textbf{VE}
+        \item Verifica dei prodotti secondo le \textit{Norme di progetto}
+        \item Segnalazione degli errori riscontrati all'autore del prodotto oggetto di verifica
+    \end{itemize}
+\end{itemize}
+
+\paragraph{Pianificazione}
+\mbox{}\\
+Per la gestione delle attività da svolgere bisogna sempre guardare la pianificazione presente sulle bacheche di \textit{Trello}$^G$.
+Sono presenti due bacheche:
+\begin{itemize}
+    \item \textbf{Documenti}, con le seguenti sezioni:
+    \begin{itemize}
+        \item Questions for the next meeting
+        \item Backlog
+        \item Next Sprint$^G$
+        \item Sprint$^G$  Backlog
+        \item In progress
+        \item To be verified
+        \item To be approved
+        \item Done - Current Sprint$^G$
+        \item Done - All time
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{Coding}
+    \begin{itemdescript}
+        \item [Backlog] Lista delle card relative a issues$^G$  che sono in attesa di essere assegnate ad uno sprint$^G$ .
+        \item [Next Sprint$^G$ ] Lista delle card assegnate allo sprint$^G$  successivo.
+        \item [Sprint$^G$  Backlog] Lista delle card in attesa di essere prese in carico.
+        \item [Code Review] Lista delle card relative a eventuali bug o verifiche non superate in attesa di essere prese in carico non appena possibile.
+        \item [In Progress] Lista delle card attualmente nella fase di codifica. A ogni card corrisponde un branch di lavoro.
+        \item [Testing] Lista delle card in attesa o attualmente nella fase di verifica.
+        \item [Waiting for approval] Lista delle card in attesa di approvazione e merge nel branch padre.
+        \item [Done - Current Sprint$^G$ ] Lista delle card approvate e delle quali è stato effettuato il merge durante lo sprint$^G$  attuale.
+        \item [Done - All Time] Lista onnicomprensiva delle card approvate durante tutti gli sprint$^G$ .
+    \end{itemdescript}
+\end{itemize}
+Tutto il codice prodotto deve essere mantenuto all'interno della repo$^G$  git$^G$ hostata su GitHub.
+%La struttura della repository è la seguente:
+%\begin{itemize}
+%    \item \texttt{...}: ...
+%\end{itemize}
+
+\subparagraph{Gestione degli Sprint$^G$}
+\mbox{}\\
+Ogni 2 settimane inizia un nuovo sprint$^G$. Nello sprint$^G$ precedente sarà già stato preparato, dal responsabile del gruppo, il backlog per lo sprint$^G$ in partenza, e tali card saranno state posizionate nella lista \textit{Next Sprint}$^G$. \\
+Con questa condizione soddisfatta, si comincia il nuovo sprint$^G$ premendo il pulsante \textit{Next Sprint}$^G$. Questo causa lo spostamento delle card da \textit{Next Sprint}$^G$ a \textit{Sprtint Backlog} e da \textit{Done - Current Sprint}$^G$ a \textit{Done - All Time}.\\
+Queste ultime schede vengono inoltre rinominate automaticamente nel seguente modo: \texttt{Sprint$^G$ \{data inizio sprint$^G$\}\footnote{La data corrisponde all'inizio del primo sprint$^G$ di appartenenza della card dato che potrebbe accadere, per varie motivazioni, che una card sia incompleta alla fine dello sprint$^G$ e venga inclusa in quello successivo.} to \{data fine sprint$^G$\} - \{titolo della card\}}.\\
+A questo punto si procede con l'assegnazione delle cards (e delle corrispondenti issues$^G$ ) ai vari componenti.
+
+\subparagraph{Questions for the next meeting}
+\mbox{}\\
+La seguente scheda di \textit{Trello}$^G$ deve essere aggiornata nei seguenti casi:
+\begin{itemize}
+    \item \textbf{Prima} di un \textbf{incontro interno} al gruppo, per segnalare agli altri membri del gruppo
+    la presenza di questioni da discutere.
+    \item \textbf{Prima} di un \textbf{incontro esterno} con il proponente/committente. In questo caso il responsabile
+    di progetto, a seguito di una riunione interna con i membri del gruppo, si occuperà di segnare le
+    domande che dovranno esssere poste al successivo colloquio esterno.
+\end{itemize}
+
+\paragraph{Esecuzione e Controllo}
+
+\subparagraph{Comunicazioni}
+\mbox{}\\
+
+Le comunicazioni devono essere gestite nel seguente modo:
+\begin{itemize}
+    \item \textbf{Comunicazioni interne}
+    \begin{itemize}
+        \item Le comunicazioni di carattere generale avvengono sul canale \textit{Telegram}$^{G}$
+        che include tutti i membri del gruppo.
+        \item Le comunicazioni che invece includono temi come:
+        \begin{itemize}
+            \item Pianificazione
+            \item Decisioni
+            \item Confronto
+            \item Stesura di domande per il proponente/committente
+        \end{itemize}
+        devono avvenire sul canale \textit{Discord}$^{G}$.
+    \end{itemize}
+    \item \textbf{Comunicazioni esterne}
+    \begin{itemize}
+        \item Tutte le comunicazioni con il proponente e con il committente sono gestite dal Responsabile di progetto.
+        \item Vengono svolte su \textit{Zoom}$^{G}$ in caso di colloqui.
+        \item Vengono svolte tramite posta elettronica del gruppo \href{mailto:clubswendwich@gmail.com}{clubswendwich@gmail.com} in tutti gli altri casi.
+    \end{itemize}
+\end{itemize}
+
+Ogni incontro avvenuto su Discord$^{G}$/Zoom$^{G}$ deve produrre un relativo verbale interno/esterno.
+
+\subparagraph{Gestione dei Rischi}
+\mbox{}\\
+I rischi sono suddivisi per categoria a seconda della tipologia del problema che si può verificare e
+sono indicati tramite codici univoci così generati:
+
+\begin{center}
+    \textbf{R[Categoria][Numero progressivo]}
+\end{center}
+
+I rischi rientrano nelle seguenti categorie:
+\begin{itemize}
+    \item \textbf{Tecnologie di lavoro e di produzione software:} T;
+    \item \textbf{Rapporti interpersonali:} I;
+    \item \textbf{Organizzazione del lavoro:} O;
+    \item \textbf{Costi e tempi:} C;
+\end{itemize}
+
+
+\paragraph{Revisione e Valutazione}
+
+\subparagraph{Richiedere la verifica di un documento}
+\mbox{}\\
+La richiesta di verifica dei documenti deve essere effettuata in uno dei seguenti modi,
+a seconda della dimensione del documento in questione:
+\begin{itemize}
+    \item Per richiedere la verifica di un \textbf{documento di piccole dimensioni} (es. verbali) è sufficiente:
+    \begin{itemize}
+        \item spostare la card di Trello$^G$ nella lista "To be verified";
+        \item togliere la partecipazione (azione eseguita automaticamente) in modo da rendere chiaro agli altri
+        componenti che l'issue$^G$  ha bisogno di una verifica, e che tale verifica non è ancora stata presa in carico;
+        \item il verificatore si assegna poi la card e procede con il lavoro.
+    \end{itemize}
+    \item Per richiedere la verifica di un \textbf{documento di grandi dimensioni} (es. documenti esterni nei quali è presente
+    una checklist con le sezioni da produrre/modificare) è necessario:
+    \begin{itemize}
+        \item creare una copia della card;
+        \item spostare quest'ultima in "To be verified" (questo per permettere una verifica in parallelo alla
+        creazione/modifica dei punti della lista);
+        \item man mano che i punti della checklist nella card "In progress" verranno spuntati, si procederà con
+        l'aggiunta di essi nella card "To be verified", in modo da iniziarne la verifica.
+    \end{itemize}
+\end{itemize}
+
+\subparagraph{Richiedere l'approvazione di un documento}
+\mbox{}\\
+Per richiedere l'approvazione di un documento è sufficiente:
+\begin{itemize}
+    \item Spostare la card da "To be verified" a "To be approved";
+    \item Togliere la partecipazione dei componenti.
+\end{itemize}
+Automaticamente verrà assegnata l'etichetta \texttt{To be merged} alla card (tale etichetta serve a ricordare all'approvatore
+di eseguire il merge del branch dell'issue$^G$ , una volta approvato il documento).\\
+Quando questa azione viene eseguita basterà premere il pulsante "Merged" presente nella card: tale pulsante sostituirà la label
+\texttt{To be merged} con quella \texttt{Merged} e sposterà la card nella lista "Done - Current Sprint$^G$", togliendo contemporaneamente tutti i
+componenti assegnati alla card.
+
+\subparagraph{Richiedere la verifica di una funzionalità}
+\mbox{}\\
+Per richiedere la verifica di una funzionalità bisogna:
+\begin{itemize}
+    \item Spostare la card di Trello$^G$ nella lista \textit{Testing}.
+\end{itemize}
+I partecipanti vengono tolti automaticamente, in modo da rendere chiaro agli altri componenti che l'issue$^G$  ha bisogno di una verifica, e tale verifica non è ancora stata presa in carico.\\
+Il verificatore si assegna poi la card e procede con il lavoro.
+
+\subparagraph{Segnalare un problema nel codice}
+\mbox{}\\
+Se, durante la fase di verifica, si dovessero presentare dei problemi, bisognerà procedere nel seguente modo:
+\begin{enumerate}
+    \item Spostare la card nella lista \textit{Code Review}. Alla card verrà automaticamente assegnata la label \texttt{Bug}.
+    \item Assegnare la card e l'issue$^G$  corrisponde agli autori originali del codice. È possibile trovare tale informazione nei dettagli della card. In caso non siano visibili, premere il bottone \textit{Mostra Dettagli}.
+    \item Commentare la card con una descrizione precisa dell'errore. Tale descrizione deve essere quanto più completa possibile, comprensiva di situazione in cui si verifica l'errore e metodo per ripetere l'errore. Se possibile allegare alla card anche un file di log dell'errore.
+    \item È consigliato avvisare gli autori del problema rilevato tramite messaggio.
+\end{enumerate}
+
+\subparagraph{Richiedere l'approvazione di una funzionalità}
+\mbox{}\\
+Per richiedere l'approvazione di una funzionalità si effettuano i seguenti passi:
+\begin{itemize}
+    \item Spostare la card da \textit{Testing} a \textit{Waiting for approval};
+    \item I partecipanti vengono tolti automaticamente, in modo da rendere chiaro agli altri componenti che l'issue$^G$  necessita dell'approvazione finale, e tale compito non è ancora stato preso in carico;
+    \item L'approvatore si assegna poi la card e procede con il lavoro.
+    \item Automaticamente viene assegnata l'etichetta \texttt{To be merged} alla card (tale etichetta serve a ricordare all'approvatore di eseguire il merge del branch dell'issue$^G$ , una volta approvato il documento);
+    \item Quando questa azione viene eseguita, si preme il pulsante "Merged" presente nella card: tale pulsante sostituisce la label \texttt{To be merged} con quella \texttt{Merged} e sposta la card nella lista \textit{Done - Current Sprint}$^G$, togliendo contemporaneamente tutti i componenti assegnati alla card.
+\end{itemize}
+
+\subsubsection{Strumenti}
+
+\begin{itemize}
+    \item Trello$^G$: strumento di gestione delle \textit{tasks} da svolgere nel progetto. \\
+    \href{https://trello.com/it}{https://trello.com/it}
+    \item GitHub$^G$ : repository$^G$  ufficiale del gruppo \textit{Club Swendwich}.\\
+    \href{https://github.com/Club-Swendwich}{https://github.com/Club-Swendwich}
+    \item Telegram$^{G}$: chat di gruppo per le comunicazioni ed eventuali votazioni. \\
+    \href{https://web.telegram.org/}{https://web.telegram.org/}
+    \item Discord$^{G}$: canale vocale per le riunioni interne.\\
+    \href{https://discord.com/}{https://discord.com/}
+    \item Zoom$^{G}$: software utilizzato per i meeting esterni con proponente e committente.\\
+    \href{https://zoom.us/}{https://zoom.us/}
+\end{itemize}

@@ -1,22 +1,41 @@
 % Configurazione standard documento
-\newcommand{\docname}{Way of Working}
+\newcommand{\docname}{Norme di Progetto}
 \newcommand{\docprojectname}{Login Warrior}
-\newcommand{\docversion}{1.0.0}
-\newcommand{\docstatus}{Approvato}
+\newcommand{\docversion}{2.0.0}
+\newcommand{\docstatus}{Da Verificare}
 \newcommand{\docusage}{Interno}
 \newcommand{\docdescription}{Riassunto delle buone pratiche e procedure interne del gruppo di lavoro}
 \newcommand{\groupname}{Club Swendwich}
 \newcommand{\groupmail}{clubswendwich@gmail.com}
-\newcommand{\doceditors}{Ferrarini Alessio}
-\newcommand{\docverifiers}{Beni Valentina}
+\newcommand{\doceditors}{Ferrarini Alessio \\& Beni Valentina \\& Bustaffa Marco \\& Pozzebon Samuele}
+\newcommand{\docverifiers}{Beni Valentina \\& Bustaffa Marco \\& Ferrarini Alessio}
 \newcommand{\docapprovers}{Canel Alessandro}
-\newcommand{\docdistribution}{}
+\newcommand{\docdistribution}{Prof. Vardanega Tullio \\& Prof. Cardin Riccardo \\& Team \textit{Club Swendwich}}
 
+% Definizione nuove liste
+% Lista ibrido tra description e enumeration
+\newcounter{descriptcount}
+\newlist{enumdescript}{description}{1}
+\setlist[enumdescript]{style=nextline}
+\setlist[enumdescript,1]{
+  	before={\setcounter{descriptcount}{0}%
+    	\renewcommand*\thedescriptcount{\arabic{descriptcount}.}}
+	,labelindent = \parindent
+  	,font=\bfseries\stepcounter{descriptcount}\thedescriptcount~
+}
 
+% Lista ibrido tra description e itemize
+\newlist{itemdescript}{description}{1}
+\setlist[itemdescript]{style=nextline}
+\setlist[itemdescript,1]{
+	labelindent = \parindent
+  	,font=\bfseries$\bullet$~
+}
 
 % Configurazione ORG
 \definecolor{orgcolorlight}{HTML}{99b755}
 \definecolor{orgcolordark}{HTML}{214932}
+\DeclareFontFamily{\encodingdefault}{\ttdefault}{\hyphenchar\font=`\-}
 
 
 
@@ -41,11 +60,11 @@
     				\begin{tabular}{l|l}
     				\multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
     				\hline
-    				\textbf{Versione}      	& \docversion                     	\\
-    				\textbf{Approvatori}   	& \docapprovers                        \\
-    				\textbf{Redattori}     	& \doceditors                     	\\
-    				\textbf{Verificatori}  	& \docverifiers                   	\\
-    				\textbf{Uso}           	& \docusage                       	\\
+    				\textbf{Versione}      	& \docversion                     	\\\\
+    				\textbf{Approvatori}   	& \docapprovers                     \\\\
+    				\textbf{Redattori}     	& \doceditors                     	\\\\
+    				\textbf{Verificatori}  	& \docverifiers                   	\\\\
+    				\textbf{Uso}           	& \docusage                       	\\\\
     				\textbf{Distribuzione} 	& \docdistribution
     				\end{tabular}
 			\end{table}

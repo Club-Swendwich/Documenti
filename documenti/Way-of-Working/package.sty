@@ -34,3 +34,30 @@
 
 % Gestione link
 \usepackage{hyperref}
+
+%caption
+\usepackage{caption}
+\captionsetup[table]{position=bottom}
+
+% Tabelle multi-pagina
+\usepackage{longtable}
+
+\usepackage{multirow}
+\usepackage[usestackEOL]{stackengine}
+
+%I paragrafi ora sono sottosezioni
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{5}
+
+%I subparagraph non indentano
+\makeatletter
+\renewcommand\subparagraph{%
+\@startsection{subparagraph}{5}{0pt}%
+{3.25ex \@plus 1ex \@minus .2ex}{-1em}%
+{\normalfont\normalsize\bfseries}}
+\makeatother
+
+%Tabelle multirow centrate
+\usepackage{array, booktabs}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
