@@ -9,3 +9,4 @@
 **/*.fdb_latexmk
 **/*.synctex(busy)
 __pycache__
+.vscode/*
