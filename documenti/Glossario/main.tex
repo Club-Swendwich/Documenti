@@ -1,7 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 
 \usepackage{package}
-\usepackage{graphicx}
 
 \input{comandi.tex}
 
@@ -10,9 +9,13 @@
 \FirstPage{}
 
 \newpage
+
 \include{./sezioni/registro_modifiche.tex}
+
 \renewcommand{\contentsname}{Indice}
 \tableofcontents
+
+\include{./sezioni/introduzione.tex}
 \include{./sezioni/contenuto.tex}
 
 \end{document}

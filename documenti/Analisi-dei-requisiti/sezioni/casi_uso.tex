@@ -565,13 +565,13 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % --------------------------------------------------------------------
 % SEZIONE MOUSE HOVER
 % --------------------------------------------------------------------
-\subsection{UC9 - Mouse Hover}
+\subsection{UC9 - Visualizzazione dettagli aggiuntivi}
 \label{sec:UC9}
 \begin{figure}[h!]
     \centering
     % Controlla che UC abbia il numero corretto
-    \includegraphics[scale=0.60]{../../assets/UC9-MouseHover.png}
-    \caption{UC9 - Mouse Hover}
+    \includegraphics[scale=0.60]{../../assets/UC9-DettagliAggiuntivi.png}
+    \caption{UC9 - Visualizzazione dettagli aggiuntivi}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
@@ -583,16 +583,16 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 		\item Visualizza delle informazioni utili.
 		\item L'elemento viene evidenziato. 
 	\end{enumerate}
-	Tutto ciò dipende chiaramente su quale grafico l'utente sta eseguendo la funzione di hover.
+	Le tipologie di informazioni fornite dipendono dal grafico con cui l'utente interagisce, per questo vengono riportate le seguenti generalizzazioni.
     \item \textbf{Generalizzazioni:} \begin{enumerate}
-                                        \item Hover su \textit{$Scatter$ $Plot^{G}$} [\hyperref[sec:UC9.1]{UC9.1}]
-                                        \item Hover su \textit{$Parallel$ $Coordinates^{G}$} [\hyperref[sec:UC9.2]{UC9.2}]
-                                        \item Hover su \textit{$Force-directed$ $Graph^{G}$} [\hyperref[sec:UC9.3]{UC9.3}]
-                                        \item Hover su \textit{$Sankey$ $Diagram^{G}$} [\hyperref[sec:UC9.4]{UC9.4}]
+                                        \item Dettagli aggiuntivi su \textit{$Scatter$ $Plot^{G}$} [\hyperref[sec:UC9.1]{UC9.1}]
+                                        \item Dettagli aggiuntivi su \textit{$Parallel$ $Coordinates^{G}$} [\hyperref[sec:UC9.2]{UC9.2}]
+                                        \item Dettagli aggiuntivi su \textit{$Force-directed$ $Graph^{G}$} [\hyperref[sec:UC9.3]{UC9.3}]
+                                        \item Dettagli aggiuntivi su \textit{$Sankey$ $Diagram^{G}$} [\hyperref[sec:UC9.4]{UC9.4}]
                                     \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC9.1 - Hover su Scatter Plot}
+\subsubsection{UC9.1 - Dettagli aggiuntivi su Scatter Plot}
 \label{sec:UC9.1}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
@@ -601,26 +601,26 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Scenario principale}: 
     \begin{enumerate}
 		\item L'utente passa con il mouse sopra ad un punto sul grafico.
-		\item Visualizza un'etichetta che contiene informazioni più complete relative a quel punto, come ad esempio: valore delle coordinate delle x, valore delle coordinate delle y etc. 
+		\item Visualizza un'etichetta che contiene informazioni più complete relative a quel punto, come ad esempio: valore delle coordinate delle x, valore delle coordinate delle y. 
 		\item Viene evidenziato il punto rispetto a tutti gli altri.
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC9.2 - Hover su Parallel Coordinates}
+\subsubsection{UC9.2 - Dettagli aggiuntivi su Parallel Coordinates}
 \label{sec:UC9.2}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
     \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico $Parallel$ $Coordinates^{G}$ e ha selezionato una vista$^{G}$.
-    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse a una linea o a un gruppo di linee ottiene maggiori informazioni a riguardo.
+    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse a una linea, a un gruppo di linee o ad un asse ottiene maggiori informazioni a riguardo.
     \item \textbf{Scenario principale}:
     \begin{enumerate}
-		\item L'utente passa con il mouse sopra ad una linea o ad un gruppo di linee sul grafico.
-		\item Visualizza un'etichetta che contiene informazioni più complete relative a quella linea o a quel gruppo di linee.
-		\item Vengono evidenziati la linea o il gruppo intero.
+		\item L'utente passa con il mouse sopra ad una linea, ad un gruppo di linee o ad un asse sul grafico.
+		\item Visualizza un'etichetta che contiene informazioni più complete relative a quella linea, a quel gruppo di linee o a quell'asse.
+		\item Vengono evidenziati la linea, il gruppo intero o l'asse stesso.
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC9.3 - Hover su Force-directed Graph}
+\subsubsection{UC9.3 - Dettagli aggiuntivi su Force-directed Graph}
 \label{sec:UC9.3}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
@@ -629,12 +629,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Scenario principale}:
     \begin{enumerate}
 		\item L'utente passa con il mouse sopra ad un nodo del grafo.
-		\item Visualizza un \textit{tooltip} che mostra maggiori informazioni a riguardo.
+		\item Visualizza un \textit{tooltip} che mostra maggiori informazioni a riguardo. Ad esempio se un nodo rappresentasse il singolo tentativo di login, passandoci sopra con il mouse potrei visulizzare informazioni come l'ora in cui è avvenuto, l'indirizzo ip da cui si è verificato etc.
 		\item Viene evidenziato il nodo.
 	\end{enumerate}
 \end{itemize}
 
-\subsubsection{UC9.4 - Hover su Sankey Diagram}
+\subsubsection{UC9.4 - Dettagli aggiuntivi su Sankey Diagram}
 \label{sec:UC9.4}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
