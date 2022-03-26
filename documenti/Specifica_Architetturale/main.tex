@@ -1,0 +1,22 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage{package}
+
+\input{comandi.tex}
+
+\begin{document}
+
+\FirstPage{}
+
+\newpage
+
+\include{sezioni/registro_modifiche}
+
+\renewcommand{\contentsname}{Indice}
+\tableofcontents
+
+\include{sezioni/introduzione}
+\include{sezioni/configurazione}
+\include{sezioni/architettura}
+
+\end{document}
