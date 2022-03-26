@@ -196,7 +196,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 	\item \textbf{Scenario principale:}
 	\begin{itemize}
 		\item L'utente clicca sul pulsante ``Visualizzazione di default''.
-		\item L'utente visualizza un messaggio di conferma della scelta.
+		\item L'utente visualizza un messaggio in cui può confermare la scelta di ripristinare o meno la vista del grafico.
 	\end{itemize}
 \end{itemize}
 
@@ -204,24 +204,23 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC4.1}
 \begin{itemize}
 	\item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è presente e caricato correttamente, visualizzata nella finestra ci può essere un qualsivoglia grafico con qualsiasi tipo di personalizzazione applicata dall'utente.
-    L'utente ha cliccato il pulsante per il ripristino delle impostazioni di default \hyperref[sec:UC4]{UC4}.
-	\item \textbf{Postcondizioni:} Viene ripristinato il grafico con le impostazioni di default, il che implica che il grafico ritorna alle impostazioni
-    di personalizzazione prima delle modifiche dell'utente, oppure l'operazione viene annullata.
+	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è presente e caricato correttamente. L'utente ha cliccato il pulsante per il ripristino delle impostazioni di default \hyperref[sec:UC4]{UC4}.
+	\item \textbf{Postcondizioni:} Viene ripristinato il grafico con le impostazioni di default, oppure l'operazione viene annullata.
 	\item \textbf{Scenario principale:}
 		\begin{enumerate}
 		\item Viene visualizzato un messaggio di conferma per tornare alla visualizzazione di default del grafico.
 		\item L'utente sceglie una delle due opzioni:
 			\begin{itemize}
-				\item L'utente vuole ripristinare le impostazioni di default e clicca ``Ok''
-				\item L'utente vuole annullare l'operazione e clicca ``Annulla''
+				\item L'utente vuole ripristinare le impostazioni di default e clicca ``Ok'':
+                \newline 
+                Cliccando ``Ok'' l'utente conferma la propria scelta di continuare l'operazione e
+                viene eseguito il ripristino della vista del grafico alla configurazione di default.
+				\item L'utente vuole annullare l'operazione e clicca ``Annulla'':
+                \newline 
+                Cliccando ``Annulla'' l'utente sceglie di cancellare l'operazione di ripristino, la quale non verrà eseguita
+                tornando alla visualizzazione del grafico con le impostazioni correnti.
 			\end{itemize}
 		\end{enumerate}
-        \item Nel caso l'utente abbia cliccato l'opzione di tornare alle impostazioni di visualizzazione di default,
-              il grafico in questione ritorna alle impostazioni di personalizzazione prima delle modifiche di personalizzazione
-              selezionate dell'utente.
-        \item Nel caso invece in cui l'utente abbia cliccato l'operazione ``Annulla'', ritornerà alle impostazioni di personalizzazione 
-              precedentemente impostate.
 \end{itemize}
 
 \newpage
@@ -299,12 +298,11 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} L'utente ha selezionato il grafico $Scatter$ $Plot^{G}$ \hyperref[sec:UC2.1]{UC2.1}.
-	    \item \textbf{Postcondizioni:} L'utente ha associato nuovi colori e forme ai punti.
+	    \item \textbf{Postcondizioni:} L'utente ha personalizzato alcuni attributi estetici dei punti.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni di colori per la personalizzazione di ogni specifica del grafico, il che comprende ma
-                non è limitato a: forma dei punti, dimensione dei punti, colore dei punti.
-	    		\item Nel caso l'utente non li modifichi rimangono le impostazione di personalizzazione di default.
+	    		\item L'utente visualizza le opzioni di personalizzazione dei punti che comprendono: dimensione, forma e colore.
+	    		\item Le modifiche vengono applicate ai punti del grafico.
 		\end{enumerate}
     \end{itemize}
 
@@ -379,12 +377,11 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} L'utente ha selezionato $Parallel$ $Coordinates^{G}$ \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha evidenziato uno specifico gruppo di linee di interesse modificandone i colori.
+	    \item \textbf{Postcondizioni:} L'utente ha evidenziato uno specifico gruppo di linee di interesse modificandone gli attributi estetici.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni di colori per la personalizzazione, le quali comprendono ma non sono limitate a:
-                      dimensione e colore dei punti sugli assi, colore dei collegamenti tra nodi, opacità dei collegamenti tra nodi.
-	    		\item Nel caso l'utente non li modifichi rimangono quelli di default.
+	    		\item L'utente visualizza le opzioni di personalizzazione che comprendono: dimensione e colore dei punti sugli assi, colore dei collegamenti tra nodi, opacità dei collegamenti tra nodi.
+	    		\item Le modifiche vengono applicate agli elementi del grafico.
 		\end{enumerate}
     \end{itemize}
 
@@ -440,12 +437,11 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \begin{itemize}
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} L'utente ha selezionato $Force-directed$ $Graph^{G}$ \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha selezionato le personalizzazioni per i \textit{cluster} dei nodi.
+	    \item \textbf{Postcondizioni:} L'utente ha personalizzato gli attributi estetici dei \textit{cluster} dei nodi.
 	    \item \textbf{Scenario principale:} 
 	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni per la personalizzazione di ogni specifica del grafico, che comprendono ma non sono limitati da:
-                dimensione nodi, colore dei \textit{cluster} di nodi, forma dei nodi.
-	    		\item Nel caso l'utente non li modifichi rimangono quelli di default.
+                \item L'utente visualizza le opzioni di personalizzazione dei nodi che comprendono: dimensione, forma e colore dei \textit{cluster}.
+	    		\item Le modifiche vengono applicate agli elementi del grafico.
 		\end{enumerate}
     \end{itemize}
 
@@ -489,12 +485,12 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
     \item \textbf{Precondizioni:} L'utente ha selezionato $Sankey$ $Diagram^{G}$ \hyperref[sec:UC2.4]{UC2.4}.
-	\item \textbf{Postcondizioni:} L'utente ha selezionato i colori per le fasce del grafico.
+	\item \textbf{Postcondizioni:} L'utente ha personalizzato gli attributi estetici degli elementi del grafico.
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
-		\item L'utente visualizza le opzioni per la personalizzazione di ogni specifica del grafico, che sono comprese ma non limitate a:
+		\item L'utente visualizza le opzioni di personalizzazione che comprendono:
         colore e forma dei nodi, opacità dei collegamenti tra nodi, colore collegamento tra i nodi, spessore e opacità collegamento tra nodi.
-		\item Nel caso l'utente non li modifichi rimangono quelli di default.
+		\item Le modifiche vengono applicate agli elementi del grafico.
 	\end{enumerate}
 \end{itemize}
 
