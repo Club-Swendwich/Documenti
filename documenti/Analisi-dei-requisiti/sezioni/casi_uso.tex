@@ -523,13 +523,42 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 % --------------------------------------------------------------------
 % SEZIONE ZOOM INTERATTIVO
 % --------------------------------------------------------------------
-
-\subsection{UC7 - Zoom con selezione}
+\subsection{UC7 - Zoom dei dati}
 \label{sec:UC7}
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.60]{../../assets/zoom_selezione.png}
-    \caption{UC7 - Zoom con selezione sul grafico}
+    \includegraphics[scale=0.60]{../../assets/ZoomUC7.png}
+    \caption{UC7 - Zoom dei dati in un grafico}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto una delle seguenti tipologie di grafico:
+    \begin{itemize}
+    		\item $Scatter$ $Plot^{G}$.
+    		\item $Force-directed$ $Graph^{G}$.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Viene mostrato lo zoom scelto, con modalità differenti in base alla tipologia.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente vuole effettuare lo zoom in uno dei grafici sopracitati.
+          \end{enumerate}
+    \item \textbf{Generalizzazioni:}
+    \begin{itemize}
+        \item L'utente seleziona una delle seguenti opzioni:
+                \begin{enumerate}
+                    \item zoom con selezione su \textit{$Scatter$ $Plot^{G}$} \hyperref[sec:UC7.1]{UC7.1}
+                    \item zoom con scroll del mouse su \textit{$Force-directed$ $Graph^{G}$} \hyperref[sec:UC7.2]{UC7.2}
+                \end{enumerate}
+    \end{itemize} 
+\end{itemize}
+
+\newpage
+\subsubsection{UC7.1 - Zoom con selezione}
+\label{sec:UC7.1}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.60]{../../assets/UC7.1.png}
+    \caption{UC7.1 - Zoom con selezione sul grafico}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
@@ -540,17 +569,48 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Postcondizioni}: Viene mostrato uno zoom della sezione selezionata dal mouse.
     \item \textbf{Scenario principale}:
           \begin{enumerate}
-              \item L'utente seleziona con il mouse l'area all'interno del grafico che vuole ingrandire.
-              \item L'area selezionata viene ingrandita.
+              \item L'utente sceglie se vuole effettuare uno zoom-in \hyperref[sec:UC7.1.1]{UC7.1.1} oppure uno zoom-out \hyperref[sec:UC7.1.2]{UC7.1.2} nel grafico.
           \end{enumerate}
 \end{itemize}
 
-\subsection{UC8 - Zoom con scroll del mouse}
-\label{sec:UC8}
+\paragraph{UC7.1.1 - Zoom-in con selezione}
+\label{sec:UC7.1.1}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+    		\item $Scatter$ $Plot^{G}$.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Viene mostrato uno zoom della sezione selezionata dal mouse.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona con il mouse l'area all'interno del grafico che vuole ingrandire.
+              \item L'area selezionata subisce uno zoom-in.
+          \end{enumerate}
+\end{itemize}
+
+\paragraph{UC7.1.2 - Zoom-out con selezione}
+\label{sec:UC7.1.2}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+    		\item $Scatter$ $Plot^{G}$.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Il grafico subisce uno zoom-out.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente seleziona con il mouse un'area maggiore di quella attualmente selezionata per effettuare uno zoom-out nel grafico.
+              \item Se il grafico è già stato rimpicciolito al massimo non accade nulla.
+          \end{enumerate}
+\end{itemize}
+
+\subsubsection{UC7.2 - Zoom con scroll del mouse}
+\label{sec:UC7.2}
 \begin{figure}[h!]
     \centering
-    \includegraphics[scale=0.60]{../../assets/zoom_mouse.png}
-    \caption{UC8 - Zoom con lo scroll del mouse}
+    \includegraphics[scale=0.60]{../../assets/UC7.2.png}
+    \caption{UC7.2 - Zoom con lo scroll del mouse}
 \end{figure}
 \begin{itemize}
     \item \textbf{Attore primario}: Utente.
@@ -560,10 +620,43 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \end{itemize}
     \item \textbf{Postcondizioni}: Viene mostrato uno zoom dove si trova il puntatore del mouse.
     \item \textbf{Scenario principale}:
+            \begin{enumerate}
+                \item L'utente sceglie se vuole effettuare uno zoom-in \hyperref[sec:UC7.2.1]{UC7.2.1} oppure uno zoom-out \hyperref[sec:UC7.2.2]{UC7.2.2} nel grafico.
+            \end{enumerate}
+\end{itemize}
+
+\paragraph{UC7.2.1 - Zoom-in con scroll del mouse}
+\label{sec:UC7.2.1}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+          \item $Force-directed$ $Graph^{G}$.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Viene mostrato uno zoom-in dove si trova il puntatore del mouse.
+    \item \textbf{Scenario principale}:
           \begin{enumerate}
               \item L'utente posiziona il puntatore del mouse sulla zona di interesse.
               \item Per zoomare, l'utente esegue lo \textit{scroll} del mouse o utilizza le \textit{gesture} per lo zoom del \textit{trackpad}.
               \item L'area selezionata viene ingrandita.
+          \end{enumerate}
+\end{itemize}
+
+\paragraph{UC7.2.2 - Zoom-out con scroll del mouse}
+\label{sec:UC7.2.2}
+\begin{itemize}
+    \item \textbf{Attore primario}: Utente.
+    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
+    \begin{itemize}
+          \item $Force-directed$ $Graph^{G}$.
+    \end{itemize}
+    \item \textbf{Postcondizioni}: Il grafico subisce uno zoom-out.
+    \item \textbf{Scenario principale}:
+          \begin{enumerate}
+              \item L'utente posiziona il puntatore del mouse sulla zona di interesse.
+              \item Per effettuare uno zoom-out, l'utente esegue lo \textit{scroll} del mouse o utilizza le \textit{gesture} per lo zoom-out del \textit{trackpad}.
+              \item L'area selezionata viene rimpicciolita.
+              \item Se il grafico è già stato rimpicciolito al massimo non accade nulla.
           \end{enumerate}
 \end{itemize}
 
