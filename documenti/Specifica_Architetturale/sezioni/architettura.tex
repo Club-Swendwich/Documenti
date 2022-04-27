@@ -57,7 +57,27 @@ la nostra architettura risulta essere standard senza perdere di flessibilità.
   \includegraphics[scale=0.55]{../../assets/classi_uml/comdelcomposer.png}
   \caption{Dimostrazione di composizione generica}
 \end{figure}
+\newpage
 
+\subsection{Stato dell' applicazione}
+L'applicazione ha uno stato con cui tutte le viste interagiscono.
+\begin{itemize}
+  \item Viste create dall'utente in precedenza.
+  \item Trasformazioni sui dati disponibili.
+  \item Dataset.
+\end{itemize}
+
+\subsubsection{Trasformazioni}
+Il transformer è la classe che mantiene traccia di tutte le trasformazioni (cioè
+funzioni che trasformano un campo di una entry del dataset in qualcosa che il
+renderer è in grado di disegnare). \\
+Esso espone 2 interfacce così da segregarne l'uso una è destinata alla ricerca di
+trasformazioni (TransformationQuerryable) ed una all' ottenimento tramite
+signature (TransformationProvider).
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.65]{../../assets/classi_uml/modeltransfomer.png}
+\end{figure}
 
 % \subsection{Diagrammi dei package}
 % \subsection{Diagrammi delle classi}
