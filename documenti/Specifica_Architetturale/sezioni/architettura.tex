@@ -20,7 +20,7 @@ Una vista è caratterizzata da:
 \begin{itemize}
   \item Renderer: componente che si occupa di adattare (Adapter pattern) il
     meccanismo di rendering delle varie librerie alla nostra architettura
-    specifica in particolare esso opera sui nostri oggetti di dominio come il 
+    specifica, in particolare esso opera sui nostri oggetti di dominio come il 
     dataset già preparato per il render (ad esempio mappati come punti 2 
     dimensionali nello scatterplot) e le sue impostazioni specifiche di 
     rendering (ad esempio lunghezza degli assi x ed y nello scatterplot)
@@ -48,9 +48,9 @@ interazione, il componente verrà generato utilizzando la libreria \texttt{MobX}
 
 \subsubsection{Composizione}
 Per creare una vista completa sì utilizzerà un componente generico in modo da
-favorire la composizione e creazione di nuove tipologie di vista senza dover
+favorire la composizione e creazione di nuove tipologie di vista, senza dover
 interagire con il codice che si occupa di manipolare il flusso dei dati che data
-la nostra architettura risulta essere standard senza perdere di flessibilità.
+la nostra architettura risulta essere standard, senza perdere di flessibilità.
 
 \begin{figure}[h!]
   \centering
