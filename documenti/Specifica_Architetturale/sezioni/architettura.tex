@@ -21,12 +21,12 @@ Una vista è caratterizzata da:
   \item Renderer: componente che si occupa di adattare (Adapter pattern) il
     meccanismo di rendering delle varie librerie alla nostra architettura
     specifica, in particolare esso opera sui nostri oggetti di dominio come il 
-    dataset già preparato per il render (ad esempio mappati come punti 2 
-    dimensionali nello scatterplot) e le sue impostazioni specifiche di 
-    rendering (ad esempio lunghezza degli assi x ed y nello scatterplot)
+    dataset$^{G}$ già preparato per il render$^{G}$ (ad esempio mappati come punti 2 
+    dimensionali nello scatterplot$^{G}$) e le sue impostazioni specifiche di 
+    rendering$^{G}$ (ad esempio lunghezza degli assi x ed y nello scatterplot$^{G}$)
     traducendoli in un formato comprensibile dalla libreria di supporto.
-  \item Mapper: componente che si occupa di trasformare il dataset generale nel
-    dataset preparato per il render.
+  \item Mapper: componente che si occupa di trasformare il dataset$^{G}$ generale nel
+    dataset$^{G}$ preparato per il render$^{G}$.
 \end{itemize}
 
 \begin{figure}[h!]
@@ -38,7 +38,7 @@ Una vista è caratterizzata da:
 \subsubsection{Interazione con l'utente}
 L'utente deve poter interagire con l'applicazione per poter modificare
 preferenze del grafico specifico, quindi si utilizza mvvm per modellare questa
-interazione, il componente verrà generato utilizzando la libreria \texttt{MobX}.
+interazione. Il componente verrà generato utilizzando la libreria \texttt{MobX}.
 
 \begin{figure}[h!]
   \centering
@@ -49,7 +49,7 @@ interazione, il componente verrà generato utilizzando la libreria \texttt{MobX}
 \subsubsection{Composizione}
 Per creare una vista completa sì utilizzerà un componente generico in modo da
 favorire la composizione e creazione di nuove tipologie di vista, senza dover
-interagire con il codice che si occupa di manipolare il flusso dei dati che data
+interagire con il codice che si occupa di manipolare il flusso dei dati che vista
 la nostra architettura risulta essere standard, senza perdere di flessibilità.
 
 \begin{figure}[h!]
@@ -64,15 +64,15 @@ L'applicazione ha uno stato con cui tutte le viste interagiscono.
 \begin{itemize}
   \item Viste create dall'utente in precedenza.
   \item Trasformazioni sui dati disponibili.
-  \item Dataset.
+  \item Dataset$^{G}$.
 \end{itemize}
 
 \subsubsection{Trasformazioni}
 Il transformer è la classe che mantiene traccia di tutte le trasformazioni (cioè
 funzioni che trasformano un campo di una entry del dataset in qualcosa che il
 renderer è in grado di disegnare). \\
-Esso espone 2 interfacce così da segregarne l'uso una è destinata alla ricerca di
-trasformazioni (TransformationQuerryable) ed una all' ottenimento tramite
+Esso espone 2 interfacce così da segregarne l'uso, una è destinata alla ricerca di
+trasformazioni (TransformationQuerryable) e l'altra al riferimento delle stesse tramite
 signature (TransformationProvider).
 \begin{figure}[h!]
   \centering
@@ -80,7 +80,7 @@ signature (TransformationProvider).
 \end{figure}
 
 \subsubsection{Dataset}
-Il dataset raggruppa i dati caricati dall'utente in una collezione di
+Il dataset$^{G}$ raggruppa i dati caricati dall'utente in una collezione di
 \texttt{DatasetEntry} che non sono altro che una collezione di coppie nome del
 campo e valore (uno storable type).
 \textcolor{red}{TODO: PARLARE DELLE TRASFORMAZIONI SUL DATASET}
