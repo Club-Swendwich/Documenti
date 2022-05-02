@@ -64,7 +64,7 @@
 											"top": 316,
 											"width": 229.47412109375,
 											"height": 13,
-											"text": "ImplPreferenceSelectorView"
+											"text": "ImplDimensionSelectorView"
 										},
 										{
 											"_type": "LabelView",
@@ -4157,7 +4157,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "ImplPreferenceSelectorView",
+					"name": "ImplDimensionSelectorView",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
