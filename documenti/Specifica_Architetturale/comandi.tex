@@ -1,0 +1,77 @@
+% Configurazione standard documento
+\newcommand{\docname}{Specifica Architetturale}
+\newcommand{\docprojectname}{Login Warrior}
+\newcommand{\docversion}{0.1.0}
+\newcommand{\docstatus}{In redazione}
+\newcommand{\docusage}{Esterno}
+\newcommand{\docdescription}{\par Presentazione relativa alle specifiche architetturali adottate dal team \textit{Club Swendwich} nella realizzazione del capitolato$^G$ C5}
+\newcommand{\groupname}{Club Swendwich}
+\newcommand{\groupmail}{clubswendwich@gmail.com}
+\newcommand{\doceditors}{Beni Valentina}
+\newcommand{\docverifiers}{-}
+\newcommand{\docapprovers}{-}
+\newcommand{\docdistribution}{Zucchetti \\
+							& Prof. Vardanega Tullio \\
+							& Prof. Cardin Riccardo \\
+							& Team Club Swendwich \\}
+
+
+
+% Configurazione ORG
+\definecolor{orgcolorlight}{HTML}{99b755}
+\definecolor{orgcolordark}{HTML}{214932}
+
+
+% Configurazione colori link
+\hypersetup{
+	colorlinks=true,
+    linkcolor=[rgb]{0, 0, 0},
+    filecolor=[rgb]{0.431, 0, 0.431},      
+    urlcolor=[rgb]{0, 0.431, 0.431},
+    pdftitle={Piano di Progetto},
+    pdfpagemode=FullScreen,
+}
+
+
+% Definizione copertina
+\newcommand{\FirstPage}{
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.35]{../../assets/ClubSweLogo.png}
+
+			\vspace{0.5cm}
+			
+			\textcolor{orgcolordark}{\Large\textbf{\docprojectname}{}} \\
+					
+			\href{mailto:clubswendwich@gmail.com}{clubswendwich@gmail.com}
+			
+			\vspace{0.3cm}
+			
+			\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
+
+			\begin{table}[H]
+   			\centering
+    				\begin{tabular}{l|l}
+    				\multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
+    				\hline
+    				\textbf{Versione}      	& \docversion                     	\\
+    				& \\
+					\textbf{Approvatori}   	& \docapprovers                        \\
+					& \\
+					\textbf{Redattori}     	& \doceditors                     	\\
+					& \\
+					\textbf{Verificatori}  	& \docverifiers                   	\\
+					& \\
+					\textbf{Uso}           	& \docusage                       	\\
+					& \\
+					\textbf{Distribuzione} 	& \docdistribution
+    				\end{tabular}
+			\end{table}
+
+			\vspace{1cm}
+			\textbf{Descrizione:}
+			\docdescription
+	\end{center}
+\end{titlepage}
+}
+
