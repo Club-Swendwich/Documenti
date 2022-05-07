@@ -84,6 +84,18 @@ Il dataset$^{G}$ raggruppa i dati caricati dall'utente in una collezione di
 \texttt{DatasetEntry} che non sono altro che una collezione di coppie nome del
 campo e valore (uno storable type).
 \textcolor{red}{TODO: PARLARE DELLE TRASFORMAZIONI SUL DATASET}
+
+
+\subsubsection{Parsing del Dataset}
+
+Per rendere l'applicazione il più agnostica possibile al formato del dataset 
+(questo può tornare utile in caso si trovino altri dataset interessanti nella
+fase esplorativa ed è praticamente gratis da implementare) si è deciso di
+nascondere l'operazione dietro una interfaccia \texttt{DatasetParser}, questo
+tipo di architettura risulterà anche molto flessibile in quanto potrà anche
+essere parallelizzata facilmente in formati in cui il contesto è la singola
+linea tipo \texttt{CSV} aggregandone più diversi.
+
 % \subsection{Diagrammi dei package}
 % \subsection{Diagrammi delle classi}
 
