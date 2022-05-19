@@ -82,8 +82,20 @@ signature (TransformationProvider).
 \subsubsection{Dataset}
 Il dataset$^{G}$ raggruppa i dati caricati dall'utente in una collezione di
 \texttt{DatasetEntry} che non sono altro che una collezione di coppie nome del
-campo e valore (uno storable type).
-\textcolor{red}{TODO: PARLARE DELLE TRASFORMAZIONI SUL DATASET}
+campo e valore (uno storable type). \\
+
+\noindent
+Il dataset non è altro che un insieme di \texttt{DatasetEntry} che rappresentano
+una riga del dataset in un qualsiasi momento dell' elaborazione, una entry è un
+insieme di field accompagnati dal loro tipo così da poter mostrare all'utente
+solo opzioni sensate di rendering all'utente, il dataset espone la sua signature
+cioè i suoi campi e loro tipo così da permettere introspezione su di esso.\\
+
+\noindent
+Per mettere l'estrazione di dati derivati il dataset espone un metodo di map, 
+simile a quello presente sulle varie collezioni standard inJavaScript/Typescript, 
+è possibile attivare o disattivare il check della signature del dataset.
+
 
 
 \subsubsection{Parsing del Dataset}
