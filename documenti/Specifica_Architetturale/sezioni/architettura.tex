@@ -108,6 +108,13 @@ tipo di architettura risulterà anche molto flessibile in quanto potrà anche
 essere parallelizzata facilmente in formati in cui il contesto è la singola
 linea tipo \texttt{CSV} aggregandone più diversi.
 
+\subsubsection{Salvataggio viste}
+I tipi delle varie viste (Dimensioni e Preferenze) sono agglomerati all'interno
+del tipo somma \texttt{View} così da poter essere facilmente identificate
+discriminando il campo \texttt{type}, queste vengono serializzate e
+deserializzare dal formato \texttt{JSON} dalle classi \texttt{ViewSerializer} e
+\texttt{ViewDeserializer}
+
 % \subsection{Diagrammi dei package}
 % \subsection{Diagrammi delle classi}
 
