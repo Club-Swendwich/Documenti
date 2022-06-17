@@ -57,7 +57,20 @@ la nostra architettura risulta essere standard, senza perdere di flessibilità.
   \includegraphics[scale=0.55]{../../assets/classi_uml/comdelcomposer.png}
   \caption{Dimostrazione di composizione generica}
 \end{figure}
-\newpage
+
+Il view composer date delle higher-order functions in grado di costruire i vari
+componenti necessari, le preferenze, le dimensioni, un riferimento al dataset e
+un riferimento al transformer sarà in grado di posizionare tutti i componenti
+necessari per l'intreazione con l'utente ed effettuare il rendering della vista
+e di orchestrarli quando avviene un cambiamento.
+  
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/interazione_gw.png}
+  \caption{Dimostrazione dell'orchestrazione dell' aggiornamento delle
+    dimensioni da parte di generic view, ovviamente per semplcità è stato
+    trattato dimension selector come un unico componente}
+\end{figure}
 
 \subsection{Stato dell' applicazione}
 L'applicazione ha uno stato con cui tutte le viste interagiscono.
@@ -96,10 +109,7 @@ Per mettere l'estrazione di dati derivati il dataset espone un metodo di map,
 simile a quello presente sulle varie collezioni standard inJavaScript/Typescript, 
 è possibile attivare o disattivare il check della signature del dataset.
 
-
-
-\subsubsection{Parsing del Dataset}
-
+\paragraph{Parsing del Dataset:}
 Per rendere l'applicazione il più agnostica possibile al formato del dataset 
 (questo può tornare utile in caso si trovino altri dataset interessanti nella
 fase esplorativa ed è praticamente gratis da implementare) si è deciso di
@@ -108,7 +118,18 @@ tipo di architettura risulterà anche molto flessibile in quanto potrà anche
 essere parallelizzata facilmente in formati in cui il contesto è la singola
 linea tipo \texttt{CSV} aggregandone più diversi.
 
-\subsubsection{Salvataggio viste}
+\subsubsection{Viste utilizzabili dall'utente}
+Le viste sono il raggruppamento delle preferenze del grafico e delle dimensioni
+scelte dall'utente durante la fase esplorativa. Le viste all'interno dell'
+applicazione sono identificate tutte da un nome univoco scelto dall'utente al 
+momento della creazione o della modifica di una di esse. Esse sono manipolabili
+tramite la classe \texttt{ViewRepository} che permette di selezionare, eliminare
+e creare nuove viste tramite il loro identificatore univoco. Tramite l'utilizzo
+dei \texttt{sumtypes} è possibile utilizzare un unico tipo per rappresentare le
+preferenze e dimensioni di qualsiasi tipo di grafico disponibile all'interno
+dell' applicativo.
+
+\paragraph{Salvataggio e caricamento viste}
 I tipi delle varie viste (Dimensioni e Preferenze) sono agglomerati all'interno
 del tipo somma \texttt{View} così da poter essere facilmente identificate
 discriminando il campo \texttt{type}, queste vengono serializzate e
