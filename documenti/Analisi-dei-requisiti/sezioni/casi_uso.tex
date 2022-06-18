@@ -24,7 +24,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
     \item \textbf{Precondizioni:} Il sistema è funzionante
-    \item \textbf{Postcondizioni:} Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento dei dati e della loro validità. 
+    \item \textbf{Postcondizioni:} Viene visualizzato un messaggio che avvisa l'utente del corretto caricamento dei dati e della loro validità.
                                    I dati vengono caricati nel sistema
     \item \textbf{Scenario principale:}
           \begin{enumerate}
@@ -36,7 +36,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item   Nel caso in cui l'utente carichi un file in un formato non supportato
                 \begin{enumerate}
                     \item I dati non vengono caricati
-                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC13 - Errore formato file]{UC13}] % To Do: metti il link alla sezione   
+                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC13 - Errore formato file]{UC13}] % To Do: metti il link alla sezione
                 \end{enumerate}
         \item   Nel caso in cui l'utente carichi un file non correttamente strutturato
                 \begin{enumerate}
@@ -45,9 +45,9 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
                 \end{enumerate}
         \item   Nel caso in cui i dati di una o più righe non siano validi
                 \begin{enumerate}
-                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC15 - Errore validità riga]{UC15}] 
+                    \item Viene visualizzato un messaggio di errore esplicativo [\hyperref[sec:UC15 - Errore validità riga]{UC15}]
                 \end{enumerate}
-    \end{itemize} 
+    \end{itemize}
 \end{itemize}
 \newpage
 
@@ -75,11 +75,9 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item L'utente seleziona una delle seguenti opzioni:
                 \begin{enumerate}
                     \item \textit{$Scatter$ $Plot^{G}$} \hyperref[sec:UC2.1]{UC2.1}.
-                    \item \textit{$Parallel$ $Coordinates^{G}$} \hyperref[sec:UC2.2]{UC2.2}.
-                    \item \textit{$Force-directed$ $Graph^{G}$} \hyperref[sec:UC2.3]{UC2.3}.
                     \item \textit{$Sankey$ $Diagram^{G}$} \hyperref[sec:UC2.4]{UC2.4}.
                 \end{enumerate}
-    \end{itemize} 
+    \end{itemize}
 \end{itemize}
 
 \subsubsection{UC2.1 - Selezione Scatter Plot}
@@ -90,31 +88,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione $Scatter$ $Plot^{G}$ scelta dall'utente con possibilità di selezionare una diversa vista$^{G}$ \hyperref[sec:UC3]{UC3} e personalizzare grafico e stile \hyperref[sec:UC5.1]{UC5.1}. %inserire il numero corretto dello stile e delle dimensioni
     \item \textbf{Scenario principale}:
           \begin{enumerate}
-              \item L'utente seleziona il grafico $Scatter$ $Plot^{G}$ e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC2.2 - Selezione Parallel Coordinates}
-\label{sec:UC2.2}
-\begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente [UC2].
-    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione $Parallel$ $Coordinates^{G}$ scelta dall'utente con possibilità di selezionare una diversa vista$^{G}$ \hyperref[sec:UC3]{UC3} e personalizzare grafico e stile \hyperref[sec:UC5.2]{UC5.2}. %inserire il numero corretto dello stile e delle dimensioni
-    \item \textbf{Scenario principale}:
-          \begin{enumerate}
-              \item L'utente seleziona il grafico $Parallel$ $Coordinates^{G}$ e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
-          \end{enumerate}
-\end{itemize}
-
-\subsubsection{UC2.3 - Selezione Force-directed Graph}
-\label{sec:UC2.3}
-\begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente [UC2].
-    \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione $Force-directed$ $Graph^{G}$ scelta dall'utente con possibilità di selezionare una diversa vista$^{G}$ \hyperref[sec:UC3]{UC3} e personalizzare grafico e stile \hyperref[sec:UC5.3]{UC5.3}. %inserire il numero corretto dello stile e delle dimensioni
-    \item \textbf{Scenario principale}:
-          \begin{enumerate}
-              \item L'utente seleziona il grafico $Force-directed$ $Graph^{G}$ e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
+              \item L'utente seleziona il grafico $Scatter$ $Plot^{G}$ e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione.
           \end{enumerate}
 \end{itemize}
 
@@ -126,7 +100,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Postcondizioni}: Viene mostrata la visualizzazione $Sankey$ $Diagram^{G}$ scelta dall'utente con possibilità di selezionare una diversa vista$^{G}$ \hyperref[sec:UC3]{UC3} e personalizzare grafico e stile \hyperref[sec:UC5.4]{UC5.4}. %inserire il numero corretto dello stile e delle dimensioni
     \item \textbf{Scenario principale}:
           \begin{enumerate}
-              \item L'utente seleziona il grafico $Sankey$ $Diagram^{G}$ e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione. 
+              \item L'utente seleziona il grafico $Sankey$ $Diagram^{G}$ e il sistema ritorna tale grafico con conseguente possibilità di personalizzazione.
           \end{enumerate}
 \end{itemize}
 \newpage
@@ -212,11 +186,11 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 		\item L'utente sceglie una delle due opzioni:
 			\begin{itemize}
 				\item L'utente vuole ripristinare le impostazioni di default e clicca ``Ok'':
-                \newline 
+                \newline
                 Cliccando ``Ok'' l'utente conferma la propria scelta di continuare l'operazione e
                 viene eseguito il ripristino della vista del grafico alla configurazione di default.
 				\item L'utente vuole annullare l'operazione e clicca ``Annulla'':
-                \newline 
+                \newline
                 Cliccando ``Annulla'' l'utente sceglie di cancellare l'operazione di ripristino, la quale non verrà eseguita
                 tornando alla visualizzazione del grafico con le impostazioni correnti.
 			\end{itemize}
@@ -250,11 +224,9 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item L'utente seleziona una delle seguenti opzioni:
                 \begin{enumerate}
                     \item \textit{Personalizza $Scatter$ $Plot^{G}$} \hyperref[sec:UC5.1]{UC5.1}.
-                    \item \textit{Personalizza $Parallel$ $Coordinates^{G}$} \hyperref[sec:UC5.2]{UC5.2}.
-                    \item \textit{Personalizza $Force-directed$ $Graph^{G}$} \hyperref[sec:UC5.3]{UC5.3}.
                     \item \textit{Personalizza $Sankey$ $Diagram^{G}$} \hyperref[sec:UC5.4]{UC5.4}.
                 \end{enumerate}
-    \end{itemize} 
+    \end{itemize}
 \end{itemize}
 
 % SCATTER PLOT
@@ -269,7 +241,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
     \item \textbf{Attore primario:} Utente.
 	\item \textbf{Precondizioni:} L'utente ha scelto il grafico $Scatter$ $Plot^{G}$. \hyperref[sec:UC2.1]{UC2.1}.
-	\item \textbf{Postcondizioni:} 
+	\item \textbf{Postcondizioni:}
 	Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
 	\item \textbf{Scenario principale:} L'utente decide:
 	\begin{enumerate}
@@ -283,7 +255,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} L'utente ha selezionato il grafico $Scatter$ $Plot^{G}$ \hyperref[sec:UC2.1]{UC2.1}.
 	    \item \textbf{Postcondizioni:} L'utente ha associato le ${\mathrm{dimensioni^{G}}}$ disponibili con gli assi del grafico.
-	    \item \textbf{Scenario principale:} 
+	    \item \textbf{Scenario principale:}
 	    \begin{enumerate}
 	    		\item L'utente sceglie quali ${\mathrm{dimensioni^{G}}}$ associare agli assi del grafico.
 		\end{enumerate}
@@ -299,149 +271,10 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} L'utente ha selezionato il grafico $Scatter$ $Plot^{G}$ \hyperref[sec:UC2.1]{UC2.1}.
 	    \item \textbf{Postcondizioni:} L'utente ha personalizzato alcuni attributi estetici dei punti.
-	    \item \textbf{Scenario principale:} 
+	    \item \textbf{Scenario principale:}
 	    \begin{enumerate}
 	    		\item L'utente visualizza le opzioni di personalizzazione dei punti che comprendono: dimensione, forma e colore.
 	    		\item Le modifiche vengono applicate ai punti del grafico.
-		\end{enumerate}
-    \end{itemize}
-
-% PARALLEL CORDINATES 
-\subsubsection{UC5.2 - Personalizzazione Parallel Coordinates}
-\label{sec:UC5.2}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.60]{../../assets/personalizzazioneParallelCoordinates.png}
-	\caption{UC5.2 - Personalizzazione $Parallel$ $Coordinates^{G}$}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} L'utente ha scelto il grafico $Parallel$ $Coordinates^{G}$ \hyperref[sec:UC2.2]{UC2.2}.
-	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
-	\item \textbf{Scenario principale:} L'utente decide:
-	\begin{enumerate}
-        \item Associazione delle ${\mathrm{dimensioni^{G}}}$ \hyperref[sec:UC5.2.1]{UC5.2.1}.
-        \item Ordine degli assi \hyperref[sec:UC5.2.2]{UC5.2.2}.
-        \item \textit{Scaling} dei dati \hyperref[sec:UC5.2.3]{UC5.2.3}.
-        \item Personalizzazione dello stile \hyperref[sec:UC5.2.4]{UC5.2.4}.
-    \end{enumerate}
-\end{itemize}
-
-\paragraph{UC5.2.1 - Associazione delle dimensioni}
-\label{sec:UC5.2.1}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Parallel$ $Coordinates^{G}$ \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha associato le ${\mathrm{dimensioni^{G}}}$ disponibili con gli assi del grafico.
-	    \item \textbf{Scenario principale:}
-	    \begin{enumerate}
-	    		\item L'utente sceglie quali ${\mathrm{dimensioni^{G}}}$ associare agli assi del grafico.
-		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente le ${\mathrm{dimensioni^{G}}}$ agli assi del grafico:
-              \begin{itemize}
-                  \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC16 - Errore di personalizzazione]{UC16}.
-              \end{itemize}
-    \end{itemize}
-\paragraph{UC5.2.2 - Ordine e numero degli assi}
-\label{sec:UC5.2.2}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Parallel$ $Coordinates^{G}$ \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha modificato l'ordine verticale degli assi e il numero, il grafico quindi riduce o aumenta gli intrecci paralleli.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie ordine e numero degli assi.
-		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente abbia creato nuovi assi ma non abbia associato nessuna ${\mathrm{dimensione^{G}}}$ a essi:
-              \begin{itemize}
-                  \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di personalizzazione grafico.
-              \end{itemize}
-    \end{itemize}
-    
-\paragraph{UC5.2.3 - Scaling dei dati}
-\label{sec:UC5.2.3}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Parallel$ $Coordinates^{G}$ \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha ridimensionato i dati in una nuova scala comune tra le variabili o viceversa.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie lo \textit{scaling} dei dati.
-		\end{enumerate}
-    \end{itemize}
-
-\paragraph{UC5.2.4 - Personalizzazione dello stile}
-\label{sec:UC5.2.4}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Parallel$ $Coordinates^{G}$ \hyperref[sec:UC2.2]{UC2.2}.
-	    \item \textbf{Postcondizioni:} L'utente ha evidenziato uno specifico gruppo di linee di interesse modificandone gli attributi estetici.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente visualizza le opzioni di personalizzazione che comprendono: dimensione e colore dei punti sugli assi, colore dei collegamenti tra nodi, opacità dei collegamenti tra nodi.
-	    		\item Le modifiche vengono applicate agli elementi del grafico.
-		\end{enumerate}
-    \end{itemize}
-
-
-% FORCE-DIRECTED GRAPH 
-\subsubsection{UC5.3 - Personalizzazione Force-directed Graph}
-\label{sec:UC5.3}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.60]{../../assets/personalizzazioneForce-directedGraph.png}
-	\caption{UC5.3 - Personalizzazione $Force-directed$ $Graph^{G}$}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} L'utente ha scelto il grafico $Force-directed$ $Graph^{G}$ \hyperref[sec:UC2.3]{UC2.3}.
-	\item \textbf{Postcondizioni:} Il grafico viene ridisegnato secondo le scelte selezionate dall'utente.
-	\item \textbf{Scenario principale:}L'utente decide:
-	\begin{enumerate}
-        \item Scelta del tipo di algoritmo d'integrazione \hyperref[sec:UC5.3.1]{UC5.3.1}.
-        \item Scelta della funzione di forza \hyperref[sec:UC5.3.2]{UC5.3.2}.
-        \item Personalizzazione dello stile \hyperref[sec:UC5.3.3]{UC5.3.3}.
-    \end{enumerate}
-\end{itemize}
-\paragraph{UC5.3.1 - Scelta tipo di algoritmo d'integrazione}
-\label{sec:UC5.3.1}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Force-directed$ $Graph^{G}$ \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha scelto l'algoritmo d'integrazione che desidera.
-	    \item \textbf{Scenario principale:}
-	    \begin{enumerate}
-	    		\item L'utente sceglie l'algoritmo d'integrazione che desidera.
-		\end{enumerate}
-    \end{itemize}
-\paragraph{UC5.3.2 - Scelta della funzione di forza}
-\label{sec:UC5.3.2}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Force-directed$ $Graph^{G}$ \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha deciso la funzione di forza per i nodi.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
-		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso i parametri non rientrino nei limiti fissati:
-              \begin{itemize}
-                  \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC16 - Errore di personalizzazione]{UC16}.
-              \end{itemize}
-    \end{itemize}
-\paragraph{UC5.3.3 - Personalizzazione dello stile}
-\label{sec:UC5.3.3}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} L'utente ha selezionato $Force-directed$ $Graph^{G}$ \hyperref[sec:UC2.3]{UC2.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha personalizzato gli attributi estetici dei \textit{cluster} dei nodi.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-                \item L'utente visualizza le opzioni di personalizzazione dei nodi che comprendono: dimensione, forma e colore dei \textit{cluster}.
-	    		\item Le modifiche vengono applicate agli elementi del grafico.
 		\end{enumerate}
     \end{itemize}
 
@@ -509,8 +342,8 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 
 \begin{itemize}
 	\item \textbf{Attore primario:} Utente.
-	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente visualizza almeno un grafico sulla pagina. 
-	\item \textbf{Postcondizioni:} 
+	\item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente visualizza almeno un grafico sulla pagina.
+	\item \textbf{Postcondizioni:}
 	Viene mostrato il grafico scelto in \textit{fullscreen}.
 	\item \textbf{Scenario principale:}
 		\begin{enumerate}
@@ -535,7 +368,6 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto una delle seguenti tipologie di grafico:
     \begin{itemize}
     		\item $Scatter$ $Plot^{G}$.
-    		\item $Force-directed$ $Graph^{G}$.
     \end{itemize}
     \item \textbf{Postcondizioni}: Viene mostrato lo zoom scelto, con modalità differenti in base alla tipologia.
     \item \textbf{Scenario principale}:
@@ -547,9 +379,8 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item L'utente seleziona una delle seguenti opzioni:
                 \begin{enumerate}
                     \item zoom con selezione su \textit{$Scatter$ $Plot^{G}$} \hyperref[sec:UC7.1]{UC7.1}
-                    \item zoom con scroll del mouse su \textit{$Force-directed$ $Graph^{G}$} \hyperref[sec:UC7.2]{UC7.2}
                 \end{enumerate}
-    \end{itemize} 
+    \end{itemize}
 \end{itemize}
 
 \newpage
@@ -605,61 +436,6 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
           \end{enumerate}
 \end{itemize}
 
-\subsubsection{UC7.2 - Zoom con scroll del mouse}
-\label{sec:UC7.2}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.60]{../../assets/UC7.2.png}
-    \caption{UC7.2 - Zoom con lo scroll del mouse}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
-    \begin{itemize}
-          \item $Force-directed$ $Graph^{G}$.
-    \end{itemize}
-    \item \textbf{Postcondizioni}: Viene mostrato uno zoom dove si trova il puntatore del mouse.
-    \item \textbf{Scenario principale}:
-            \begin{enumerate}
-                \item L'utente sceglie se vuole effettuare uno zoom-in \hyperref[sec:UC7.2.1]{UC7.2.1} oppure uno zoom-out \hyperref[sec:UC7.2.2]{UC7.2.2} nel grafico.
-            \end{enumerate}
-\end{itemize}
-
-\paragraph{UC7.2.1 - Zoom-in con scroll del mouse}
-\label{sec:UC7.2.1}
-\begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
-    \begin{itemize}
-          \item $Force-directed$ $Graph^{G}$.
-    \end{itemize}
-    \item \textbf{Postcondizioni}: Viene mostrato uno zoom-in dove si trova il puntatore del mouse.
-    \item \textbf{Scenario principale}:
-          \begin{enumerate}
-              \item L'utente posiziona il puntatore del mouse sulla zona di interesse.
-              \item Per zoomare, l'utente esegue lo \textit{scroll} del mouse o utilizza le \textit{gesture} per lo zoom del \textit{trackpad}.
-              \item L'area selezionata viene ingrandita.
-          \end{enumerate}
-\end{itemize}
-
-\paragraph{UC7.2.2 - Zoom-out con scroll del mouse}
-\label{sec:UC7.2.2}
-\begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
-    \begin{itemize}
-          \item $Force-directed$ $Graph^{G}$.
-    \end{itemize}
-    \item \textbf{Postcondizioni}: Il grafico subisce uno zoom-out.
-    \item \textbf{Scenario principale}:
-          \begin{enumerate}
-              \item L'utente posiziona il puntatore del mouse sulla zona di interesse.
-              \item Per effettuare uno zoom-out, l'utente esegue lo \textit{scroll} del mouse o utilizza le \textit{gesture} per lo zoom-out del \textit{trackpad}.
-              \item L'area selezionata viene rimpicciolita.
-              \item Se il grafico è già stato rimpicciolito al massimo non accade nulla.
-          \end{enumerate}
-\end{itemize}
-
 \newpage
 
 % --------------------------------------------------------------------
@@ -677,17 +453,15 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Attore primario:} Utente.
     \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha scelto quale tipologia di grafico visualizzare e ha selezionato una vista$^{G}$.
     \item \textbf{Postcondizioni:} Vengono mostrate all'utente informazioni utili relative all'elemento su cui il mouse sta eseguendo l'hover.
-    \item \textbf{Scenario principale}: 
+    \item \textbf{Scenario principale}:
     \begin{enumerate}
-		\item L'utente passa con il mouse sopra ad un elemento di interesse. 
+		\item L'utente passa con il mouse sopra ad un elemento di interesse.
 		\item Visualizza delle informazioni utili.
-		\item L'elemento viene evidenziato. 
+		\item L'elemento viene evidenziato.
 	\end{enumerate}
 	Le tipologie di informazioni fornite dipendono dal grafico con cui l'utente interagisce, per questo vengono riportate le seguenti generalizzazioni.
     \item \textbf{Generalizzazioni:} \begin{enumerate}
                                         \item Dettagli aggiuntivi su \textit{$Scatter$ $Plot^{G}$} [\hyperref[sec:UC8.1]{UC8.1}]
-                                        \item Dettagli aggiuntivi su \textit{$Parallel$ $Coordinates^{G}$} [\hyperref[sec:UC8.2]{UC8.2}]
-                                        \item Dettagli aggiuntivi su \textit{$Force-directed$ $Graph^{G}$} [\hyperref[sec:UC8.3]{UC8.3}]
                                         \item Dettagli aggiuntivi su \textit{$Sankey$ $Diagram^{G}$} [\hyperref[sec:UC8.4]{UC8.4}]
                                     \end{enumerate}
 \end{itemize}
@@ -698,39 +472,11 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Attore primario:} Utente.
     \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico $Scatter$ $Plot^{G}$ e ha selezionato una vista$^{G}$.
     \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse ad un punto sul grafico ottiene più informazioni relative a quel punto e lo evidenzia.
-    \item \textbf{Scenario principale}: 
+    \item \textbf{Scenario principale}:
     \begin{enumerate}
 		\item L'utente passa con il mouse sopra ad un punto sul grafico.
-		\item Visualizza un'etichetta che contiene informazioni più complete relative a quel punto, come ad esempio: valore delle coordinate delle x, valore delle coordinate delle y. 
+		\item Visualizza un'etichetta che contiene informazioni più complete relative a quel punto, come ad esempio: valore delle coordinate delle x, valore delle coordinate delle y.
 		\item Viene evidenziato il punto rispetto a tutti gli altri.
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC8.2 - Dettagli aggiuntivi su Parallel Coordinates}
-\label{sec:UC8.2}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente.
-    \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico $Parallel$ $Coordinates^{G}$ e ha selezionato una vista$^{G}$.
-    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse a una linea, a un gruppo di linee o ad un asse ottiene maggiori informazioni a riguardo.
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-		\item L'utente passa con il mouse sopra ad una linea, ad un gruppo di linee o ad un asse sul grafico.
-		\item Visualizza un'etichetta che contiene informazioni più complete relative a quella linea, a quel gruppo di linee o a quell'asse.
-		\item Vengono evidenziati la linea, il gruppo intero o l'asse stesso.
-	\end{enumerate}
-\end{itemize}
-
-\subsubsection{UC8.3 - Dettagli aggiuntivi su Force-directed Graph}
-\label{sec:UC8.3}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente.
-    \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico $Force-directed$ $Graph^{G}$ e ha selezionato una vista$^{G}$.
-    \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse a un nodo del grafo lo evidenzia ed ottiene maggiori informazioni a riguardo.
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-		\item L'utente passa con il mouse sopra ad un nodo del grafo.
-		\item Visualizza un \textit{tooltip} che mostra maggiori informazioni a riguardo. Ad esempio se un nodo rappresentasse il singolo tentativo di login, passandoci sopra con il mouse potrei visulizzare informazioni come l'ora in cui è avvenuto, l'indirizzo ip da cui si è verificato etc.
-		\item Viene evidenziato il nodo.
 	\end{enumerate}
 \end{itemize}
 
@@ -740,7 +486,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \item \textbf{Attore primario:} Utente.
     \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha scelto di visualizzare il grafico $Sankey$ $Diagram^{G}$ e ha selezionato una vista$^{G}$.
     \item \textbf{Postcondizioni:} L'utente passando sopra con il mouse ad elemento nel grafico lo evidenzia.
-    \item \textbf{Scenario principale}: 
+    \item \textbf{Scenario principale}:
     \begin{enumerate}
 		\item L'utente passa con il mouse sopra ad un nodo del grafo.
 		\item Vengono evidenziati il nodo ed i collegamenti da lui entranti e uscenti.
@@ -750,31 +496,6 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \end{itemize}
 
 \newpage
-
-
-% --------------------------------------------------------------------
-% SEZIONE UC9 - DRAG DI UN NODO - FORCE DIRECTED
-% --------------------------------------------------------------------
-\subsection{UC9 - Drag di un nodo}
-\label{sec:UC9}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[scale=0.60]{../../assets/drag_nodo.png}
-    \caption{UC9 - Drag di un nodo nel grafico $Force-directed$ $Graph^{G}$}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario}: Utente.
-    \item \textbf{Precondizioni}: Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. \par L'utente ha scelto la seguente tipologia di grafico:
-    \begin{itemize}
-    		\item $Force-directed$ $Graph^{G}$.
-    \end{itemize}
-    \item \textbf{Postcondizioni}: Il nodo viene trascinato secondo il movimento del mouse dell'utente.
-    \item \textbf{Scenario principale}:
-          \begin{enumerate}
-              \item L'utente seleziona con il mouse il nodo da trascinare e lo clicca.
-              \item Tenendo il nodo cliccato lo trascina a suo piacimento.
-          \end{enumerate}
-\end{itemize}
 
 \newpage
 
@@ -801,8 +522,6 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
           \end{enumerate}
   \item \textbf{Generalizzazioni:} \begin{enumerate}
                                         \item Nuova vista$^{G}$ su $Scatter$ $Plot^{G}$ [\hyperref[sec:UC10.2]{UC10.2}]
-                                        \item Nuova vista$^{G}$ su \textit{$Parallel$ $Coordinates^{G}$} [\hyperref[sec:UC10.3]{UC10.3}]
-                                        \item Nuova vista$^{G}$ su \textit{$Force-directed$ $Graph^{G}$} [\hyperref[sec:UC10.4]{UC10.4}]
                                         \item Nuova vista$^{G}$ su \textit{$Sankey$ $Diagram^{G}$} [\hyperref[sec:UC10.5]{UC10.5}]
                                     \end{enumerate}
 \end{itemize}
@@ -861,7 +580,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
         \item \textbf{Attore primario:} Utente.
         \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC10.2]{UC10.2}.
 	    \item \textbf{Postcondizioni:} L'utente ha associato le ${\mathrm{dimensioni^{G}}}$ disponibili con gli assi del grafico.
-	    \item \textbf{Scenario principale:} 
+	    \item \textbf{Scenario principale:}
 	    \begin{enumerate}
 	    		\item L'utente sceglie quali dimensioni$^{G}$ associare agli assi del grafico.
 		\end{enumerate}
@@ -873,125 +592,6 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
     \end{itemize}
 
 \newpage
-%Parallel Coordinates
-
-\subsubsection{UC10.3 - Nuova vista su Parallel Coordinates}
-\label{sec:UC10.3}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.60]{../../assets/nuova_vista_parallel.png}
-	\caption{UC10.3 - Nuova vista$^{G}$ su $Parallel$ $Coordinates^{G}$}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente.
-    \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista$^{G}$'' scegliendo quali celle/righe/colonne visualizzare (\hyperref[sec:UC10.1]{UC10.1}) e ha scelto il grafico $Parallel$ $Coordinates^{G}$.
-    \item \textbf{Postcondizioni:} Il grafico viene mostrato secondo le scelte selezionate dall'utente.
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-		\item L'utente decide di creare una nuova vista$^{G}$ per il grafico $Parallel$ $Coordinates^{G}$.
-		\item L'utente può associare le ${\mathrm{dimensioni^{G}}}$ desiderate agli assi \hyperref[sec:UC10.3.1]{UC10.3.1}.
-		\item L'utente può decidere ordine e numero degli assi \hyperref[sec:UC10.3.2]{UC10.3.2}.
-		\item L'utente può decidere lo \textit{scaling} dei dati \hyperref[sec:UC10.3.3]{UC10.3.3}.
-	\end{enumerate}
-\end{itemize}
-
-\paragraph{UC10.3.1 - Associazione delle dimensioni agli assi}
-\label{sec:UC10.3.1}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC10.3]{UC10.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha associato le ${\mathrm{dimensioni^{G}}}$ disponibili agli assi del grafico.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie quali colonne associare agli assi del grafico.
-		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente non abbia associato correttamente gli assi del grafico:
-              \begin{itemize}
-                  \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di personalizzazione grafico \hyperref[sec:UC16 - Errore di personalizzazione]{UC16}.
-              \end{itemize}
-    \end{itemize}
-    
-\paragraph{UC10.3.2 - Ordine e numero degli assi}
-\label{sec:UC10.3.2}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC10.3]{UC10.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha modificato l'ordine verticale degli assi e il numero.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie ordine e numero degli assi.
-		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente abbia creato nuovi assi ma non abbia associato nessuna ${\mathrm{dimen^{G}}}$ ad essi:
-              \begin{itemize}
-                  \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC16 - Errore di personalizzazione]{UC16}.
-              \end{itemize}
-    \end{itemize}
-    
-\paragraph{UC10.3.3 - Scaling dei dati}
-\label{sec:UC10.3.3}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC10.3]{UC10.3}.
-	    \item \textbf{Postcondizioni:} L'utente ha ridimensionato i dati in una nuova scala comune tra le variabili o viceversa.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie lo \textit{scaling} dei dati.
-		\end{enumerate}
-    \end{itemize}
-
-\newpage
-%Force-directed
-
-\subsubsection{UC10.4 - Nuova vista su Force-directed Graph}
-\label{sec:UC10.4}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.60]{../../assets/nuova_vista_force.png}
-	\caption{UC10.4 - Nuova vista$^{G}$ su $Force-directed$ $Graph^{G}$}
-\end{figure}
-\begin{itemize}
-    \item \textbf{Attore primario:} Utente.
-    \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista$^{G}$'' scegliendo quali celle/righe/colonne visualizzare (\hyperref[sec:UC10.1]{UC10.1}) e ha scelto il grafico $Force-directed Graph^{G}$.
-    \item \textbf{Postcondizioni:} Il grafico viene mostrato secondo le scelte selezionate dall'utente.
-    \item \textbf{Scenario principale}:
-    \begin{enumerate}
-		\item L'utente decide di creare una nuova vista$^{G}$ per il grafico $Force-directed$ $Graph^{G}$.
-		\item L'utente può decidere un algoritmo di integrazione \hyperref[sec:UC10.4.1]{UC10.4.1}.
-		\item L'utente può decidere la funzione di forza \hyperref[sec:UC10.4.2]{UC10.4.2}.
-	\end{enumerate}
-\end{itemize}
-
-\paragraph{UC10.4.1 - Scelta algoritmo di integrazione}
-\label{sec:UC10.4.1}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC10.4]{UC10.4}.
-	    \item \textbf{Postcondizioni:} L'utente ha associato l'algoritmo di integrazione che desidera.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie l'algoritmo di integrazione.
-		\end{enumerate}
-    \end{itemize}
-    
-\paragraph{UC10.4.2 - Scelta funzione di forza}
-\label{sec:UC10.4.2}
-    \begin{itemize}
-        \item \textbf{Attore primario:} Utente.
-        \item \textbf{Precondizioni:} Valgono le precondizioni di \hyperref[sec:UC10.4]{UC10.4}.
-	    \item \textbf{Postcondizioni:} L'utente ha deciso la funzione di forza tra i nodi.
-	    \item \textbf{Scenario principale:} 
-	    \begin{enumerate}
-	    		\item L'utente sceglie i parametri per la rappresentazione dei rapporti tra i nodi.
-		\end{enumerate}
-	    \item \textbf{Estensioni:} Nel caso l'utente abbia selezionato dei parametri che non rientrino nei limiti fissati:
-              \begin{itemize}
-                  \item Non viene visualizzato nessun grafico.
-                  \item Viene visualizzato un errore di visualizzazione personalizzazione grafico \hyperref[sec:UC16 - Errore di personalizzazione]{UC16}.
-              \end{itemize}
-    \end{itemize}
-
 
 %Sankey
 
@@ -1079,7 +679,7 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
           \end{enumerate}
     \item \textbf{Estensioni:}
     \begin{itemize}
-        \item Nel caso il ${\mathrm{.json^{G}}}$ contenente la vista$^{G}$ non sia ben formato: 
+        \item Nel caso il ${\mathrm{.json^{G}}}$ contenente la vista$^{G}$ non sia ben formato:
         \begin{enumerate}
             \item La vista$^{G}$ non viene caricata.
             \item Viene visualizzato un messaggio d'errore. [\hyperref[sec:UC17 - Errore caricamento vista]{UC17}]
@@ -1111,21 +711,21 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \label{sec:UC14 - Errore struttura dataset}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato  
-                                  (e.g. due o più colonne sono invertite oppure una o più colonne sono mancanti). 
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato ma che non è correttamente strutturato
+                                  (e.g. due o più colonne sono invertite oppure una o più colonne sono mancanti).
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore e il file non viene caricato.
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item L'utente visualizza un messaggio di errore esplicativo.
               \item L'utente clicca "OK" per proseguire.
-          \end{enumerate} 
+          \end{enumerate}
 \end{itemize}
 
 \subsection{UC15 - Errore validità riga nel dataset}
 \label{sec:UC15 - Errore validità riga}
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
-    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma una o più righe presentano un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).  
+    \item \textbf{Precondizioni:} L'utente carica un file nel formato supportato e ben strutturato ma una o più righe presentano un dato non valido (e.g. nella colonna relativa ai \textit{timestamp} il valore è negativo).
     \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore che chiede se ignorare la riga non valida, oppure continuare.
     \item \textbf{Scenario principale:}
     \begin{itemize}
@@ -1134,13 +734,13 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
                     \item L'utente visualizza un messaggio di errore esplicativo.
                     \item L'utente clicca "IGNORA" per ignorare la riga non valida.
                     \item Il file viene caricato escludendo la riga precedentemente ignorata.
-                \end{enumerate} 
+                \end{enumerate}
         \item   L'utente sceglie di proseguire:
                 \begin{enumerate}
                     \item L'utente visualizza un messaggio di errore esplicativo.
                     \item L'utente clicca "OK" per proseguire.
                     \item Il file non viene caricato.
-                \end{enumerate} 
+                \end{enumerate}
     \end{itemize}
 \end{itemize}
 
@@ -1180,12 +780,11 @@ Non essendo richiesto nessun tipo di servizio di autenticazione o più in genera
 \begin{itemize}
     \item \textbf{Attore primario:} Utente
     \item \textbf{Precondizioni:} Il ${\mathrm{dataset^{G}}}$ è stato caricato correttamente. L'utente ha cliccato il pulsante ``Creazione nuova vista$^{G}$'' e ha inserito le colonne/righe/celle che vuole utilizzare (\hyperref[sec:UC8.1]{UC8.1}).
-    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore per celle insufficienti. 
+    \item \textbf{Postcondizioni:} L'utente visualizza un messaggio di errore per celle insufficienti.
     \item \textbf{Scenario principale:}
           \begin{enumerate}
               \item L'utente ha selezionato un numero di celle insufficienti o nessuna.
               \item Viene visualizzato un messaggio di errore.
               \item L'utente clicca "OK" per proseguire.
-          \end{enumerate} 
+          \end{enumerate}
 \end{itemize}
-
