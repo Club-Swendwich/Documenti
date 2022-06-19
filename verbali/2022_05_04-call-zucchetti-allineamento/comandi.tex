@@ -1,0 +1,78 @@
+% Configurazione standard documento
+\newcommand{\docname}{Verbale 016}
+\newcommand{\docprojectname}{Login Warrior}
+\newcommand{\docstatus}{Approvato}
+\newcommand{\docdescription}{Verbale riguardante la call avvenuta in data 04/05 con il responsabile dell'azienda proponente Zucchetti S.p.A., relativa al ridimensionamento degli obiettivi del capitolato}
+\newcommand{\groupname}{Club Swendwich}
+\newcommand{\groupmail}{clubswendwich@gmail.com}
+\newcommand{\doceditors}{Samuele Pozzebon}
+\newcommand{\docverfiers}{Alessio Ferrarini}
+\newcommand{\docapprovers}{Marco Bustaffa}
+\newcommand{\doclocation}{Zoom Meeting}
+\newcommand{\docdata}{6 Maggio 2022}
+\newcommand{\docpresenti}{Barilla Gianmarco\\
+& Bustaffa Marco\\
+& Canel Alessandro\\
+& Ferrarini Alessio\\
+& Pozzebon Samuele}
+\newcommand{\docassenti}{}
+\newcommand*{\FirmaData}[1]{%
+    \par\noindent\makebox[6cm]{\hrulefill} \hfill\makebox[4cm]{\hrulefill}%
+    \par\noindent\makebox[6cm][l]{#1}      \hfill\makebox[4cm][l]{Data}%
+}%
+
+
+% Configurazione ORG
+\definecolor{orgcolorlight}{HTML}{99b755}
+\definecolor{orgcolordark}{HTML}{214932}
+
+
+% Configurazione colori link
+\hypersetup{
+	colorlinks=true,
+    linkcolor=[rgb]{0, 0.090, 0.549},
+    filecolor=[rgb]{0.431, 0, 0.431},      
+    urlcolor=[rgb]{0, 0.431, 0.431},
+    pdftitle={Verbale ________},	% da compilare
+    pdfpagemode=FullScreen,
+}
+
+
+% Definizione copertina
+\newcommand{\FirstPage}{
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.35]{../../assets/ClubSweLogo.png}
+
+			\vspace{0.5cm}
+			
+			\textcolor{orgcolordark}{\Large\textbf{\docprojectname}{}} \\
+					
+			\href{mailto:clubswendwich@gmail.com}{clubswendwich@gmail.com}
+			
+			\vspace{0.3cm}
+			
+			\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
+
+			\begin{table}[H]
+   			\centering
+    				\begin{tabular}{l|l}
+    				\multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
+    				\hline
+					\textbf{Stato}          & \docstatus                        \\
+					\textbf{Redattori}      & \doceditors                       \\
+					\hline
+					\textbf{Luogo}          & \doclocation                      \\
+					\textbf{Data}           & \docdata                          \\
+					\textbf{Presenti}       & \docpresenti                      \\
+					\textbf{Assenti}        & \docassenti                       \\
+    				\end{tabular}
+			\end{table}
+
+			\vspace{1cm}
+			\textbf{Descrizione:}
+			\docdescription
+	\end{center}
+\end{titlepage}
+}
+
