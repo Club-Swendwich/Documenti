@@ -177,7 +177,6 @@ Di seguito vengono riportate le tabelle orarie ed i costi relativi associati per
 			\textcolor{white}{Totale} & \textcolor{white}{89} & \textcolor{white}{1855\euro}\\[4pt]	
     \end{tabular}	
 	\caption{Costi relativi al \\ preventivo orario}
-
 \end{minipage}
 \end{table}
 
@@ -201,7 +200,84 @@ Di seguito vengono riportate le tabelle orarie ed i costi relativi associati per
 \newpage
 
 %------------------------------------------------------------------------------------
-\subsection{Riepilogo preventivo}
+\subsection{Pianificazione di dettaglio e codifica}
+Di seguito vengono riportate le tabelle orarie ed i costi relativi associati per la fase di Pianificazione di dettaglio e codifica.
+
+\begin{table}[h!]
+	\footnotesize
+\begin{minipage}[c]{0.53\textwidth}
+	\centering
+    \begin{tabular}{>{\raggedright\arraybackslash}c|cccccc|c}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Componente}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{RE}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{AM}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{AN}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{PT}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{PG}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{VE}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Tot.}}}\\[4pt]
+		
+		\rowcolor[RGB]{216, 235, 171}
+	    	Barilla Gianmarco & 11 & 6 & 2 & 15 & 29 & 11 & 74		\\[9pt]
+	    \rowcolor[RGB]{216, 235, 171}
+	    	Bustaffa Marco & 11 & 4 & 4 & 11 & 24 & 6 & 60			\\[9pt]
+        \rowcolor[RGB]{233, 245, 206}
+	    	Canel Alessandro & 15 & 6 & 10 & 10 & 24 & 11 & 76		\\[9pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    	Ferrarini Alessio & 11 & 6 & 6 & 7 & 17 & 17 & 64 \\[9pt]
+        \rowcolor[RGB]{233, 245, 206}
+	    	Pozzebon Samuele & 9 & 4 & 9 & 11 & 22 & 8 & 63		\\[9pt]
+		\rowcolor[RGB]{47, 106, 73}
+			\textcolor{white}{Totale Ruolo} & \textcolor{white}{57} & \textcolor{white}{26} & \textcolor{white}{31} 
+			& \textcolor{white}{54} & \textcolor{white}{116} & \textcolor{white}{53}
+			& \textcolor{white}{337} \\[4pt]	
+    \end{tabular} 
+    \caption{Distribuzione delle ore nella fase di Pianificazione dettaglio e codifica}
+\end{minipage}
+\hfill
+\begin{minipage}{0.33\textwidth}
+	\centering
+	\begin{tabular}{cccc}
+	    \rowcolor[RGB]{33, 73, 50}
+	    \textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo}}\\[4pt]
+	    \rowcolor[RGB]{216, 235, 171}
+	    Responsabile & 57 & 1710\euro\\[4pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    Amministratore & 26 & 520\euro\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    Analista & 31 & 775\euro\\[4pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    Progettista & 54 & 1350\euro\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    Programmatore & 116 & 1740\euro\\[4pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    Verificatore & 53 & 795\euro\\[4pt]
+		\rowcolor[RGB]{47, 106, 73}
+			\textcolor{white}{Totale} & \textcolor{white}{337} & \textcolor{white}{6890\euro}\\[4pt]	
+    \end{tabular}	
+	\caption{Costi relativi al \\ preventivo orario}
+
+\end{minipage}
+\end{table}
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[c]{0.40\textwidth}
+		\includegraphics[scale=0.47]{../../assets/Diagrammi_Excel/RuoliPersone-DTECD.png}
+		\caption{Suddivisione ruoli per persona - Pianificazione di dettaglio e codifica}
+	\end{minipage}
+\hfill
+	\begin{minipage}[c]{0.46\textwidth}
+		\includegraphics[scale=0.37]{../../assets/Diagrammi_Excel/TortaRuoli-DTECD.png}
+		\caption{Prospetto ruoli per la fase con ripartizione percentuale oraria}
+	\end{minipage}
+\end{figure}
+
+\newpage
+
+%------------------------------------------------------------------------------------
+\subsection{Riepilogo preventivo pre RTB}
 
 \begin{table}[htb]
 	\footnotesize
@@ -265,13 +341,88 @@ Di seguito vengono riportate le tabelle orarie ed i costi relativi associati per
 
 \begin{figure}[h!]
 	\centering
-	\begin{minipage}[c]{0.42\textwidth}
+	\begin{minipage}[c]{0.40\textwidth}
     	\includegraphics[scale=0.42]{../../assets/Diagrammi_Excel/person_tot.png}
 		\caption{Riepilogo ruoli per persona}
 	\end{minipage}
 \hfill
 	\begin{minipage}[c]{0.46\textwidth}
 		\includegraphics[scale=0.38]{../../assets/Diagrammi_Excel/torta_tot.png}
+		\caption{Riepilogo ripartizione\\ percentuale oraria}
+	\end{minipage}
+\end{figure}
+\newpage
+
+%--------------------------------------------------------------------------------------------
+\subsection{Riepilogo preventivo pre PB}
+
+\begin{table}[htb]
+	\footnotesize
+\begin{minipage}[c]{0.53\textwidth}
+	\centering
+    \begin{tabular}{>{\raggedright\arraybackslash}c|cccccc|c}
+    \rowcolor[RGB]{33, 73, 50}
+    \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Componente}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{RE}}} 
+        & \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{AM}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{AN}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{PT}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{PG}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c}{\textcolor{white}{\textbf{VE}}}
+		& \multicolumn{1}{>{\centering\arraybackslash}c|}{\textcolor{white}{\textbf{Tot.}}}\\[4pt]
+		
+		\rowcolor[RGB]{216, 235, 171}
+	    	Barilla Gianmarco 	& 13 & 9 & 10 & 17 & 29 & 22 & 100			\\[9pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    	Bustaffa Marco 		& 19 & 9 & 14 & 13 & 29 & 16 & 100			\\[9pt]
+		\rowcolor[RGB]{216, 235, 171}
+	    	Canel Alessandro 	& 17 & 9 & 16 & 12 & 24 & 22 & 100 			\\[9pt]
+		\rowcolor[RGB]{233, 245, 206}
+	    	Ferrarini Alessio 	& 17 & 9 & 11 & 14 & 27 & 22 & 100			\\[9pt]
+		\rowcolor[RGB]{216, 235, 171}
+	    	Pozzebon Samuele 	& 16 & 9 & 16 & 16 & 27 & 16 & 100			\\[9pt]
+		\rowcolor[RGB]{47, 106, 73}
+			\textcolor{white}{Totale Ruolo} & \textcolor{white}{82} & \textcolor{white}{45} & \textcolor{white}{67} 
+			& \textcolor{white}{72} & \textcolor{white}{136} & \textcolor{white}{98}
+			& \textcolor{white}{500} \\[4pt]	
+    \end{tabular}
+    \caption{Riepilogo distribuzione oraria}
+\end{minipage}
+\hfill
+\begin{minipage}{0.33\textwidth}
+	\centering
+	\begin{tabular}{cccc}
+	    \rowcolor[RGB]{33, 73, 50}
+	    \textcolor{white}{\textbf{Ruolo}} & \textcolor{white}{\textbf{Ore}} & \textcolor{white}{\textbf{Costo}}\\[4pt]
+	    \rowcolor[RGB]{216, 235, 171}
+	    Responsabile & 82 & 2460\euro\\[4pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    Amministratore & 45 & 900\euro\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    Analista & 67 & 1675\euro\\[4pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    Progettista & 72 & 1800\euro\\[4pt]
+        \rowcolor[RGB]{216, 235, 171}
+	    Programmatore & 136 & 2040\euro\\[4pt]
+	    \rowcolor[RGB]{233, 245, 206}
+	    Verificatore & 98 & 1470\euro\\[4pt]
+		\rowcolor[RGB]{47, 106, 73}
+			\textcolor{white}{Totale} & \textcolor{white}{500} & \textcolor{white}{10345\euro}\\[4pt]	
+    \end{tabular}	
+	\caption{Riepilogo costi}
+
+\end{minipage}
+\end{table}
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[c]{0.42\textwidth}
+    	\includegraphics[scale=0.42]{../../assets/Diagrammi_Excel/RiepilogoPB-Ruoli.png}
+		\caption{Riepilogo ruoli per persona}
+	\end{minipage}
+\hfill
+	\begin{minipage}[c]{0.46\textwidth}
+		\includegraphics[scale=0.38]{../../assets/Diagrammi_Excel/RiepilogoPB-torta.png}
 		\caption{Riepilogo ripartizione\\ percentuale oraria}
 	\end{minipage}
 \end{figure}
