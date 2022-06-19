@@ -58,18 +58,20 @@ la nostra architettura risulta essere standard, senza perdere di flessibilità.
   \caption{Dimostrazione di composizione generica}
 \end{figure}
 
-Il view composer date delle higher-order functions in grado di costruire i vari
-componenti necessari, le preferenze, le dimensioni, un riferimento al dataset e
-un riferimento al transformer sarà in grado di posizionare tutti i componenti
-necessari per l'intreazione con l'utente ed effettuare il rendering della vista
-e di orchestrarli quando avviene un cambiamento.
+Questo permette di riutilizzare al massimo tutta la logica comune (grazie al fatto
+che le varie componenti implementano tutte una interfaccia) non si è deciso di usare
+il pattern \texttt{TemplateMethod} in quanto i componenti di react devono essere
+funzioni (I class components sono deprecati).
+
+Risulta estremamente flessibile anche nel caso si voglia cambiare anche un solo
+componente ad esempio fornire un dimension selector sullo ScatterPlot.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.55]{../../assets/classi_uml/interazione_gw.png}
   \caption{Dimostrazione dell'orchestrazione dell' aggiornamento delle
-    dimensioni da parte di generic view, ovviamente per semplcità è stato
-    trattato dimension selector come un unico componente}
+    dimensioni da parte di generic view, ovviamente per semplcità sono riportate
+    le solo i modelli e non anche le loro view e viewmodel.}
 \end{figure}
 
 \subsection{Stato dell' applicazione}
@@ -86,16 +88,41 @@ funzioni che trasformano un campo di una entry del dataset in qualcosa che il
 renderer è in grado di disegnare). \\
 Esso espone 2 interfacce così da segregarne l'uso, una è destinata alla ricerca di
 trasformazioni (TransformationQuerryable) e l'altra al riferimento delle stesse tramite
-signature (TransformationProvider).
-\begin{figure}[h!]
+signature (TransformationProvider). \\
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.65]{../../assets/classi_uml/modeltransfomer.png}
 \end{figure}
+Questo modella il \texttt{Repository} che si occupa di eseguire query
+basate su constraints (e.s. Trasformazioni che possono trasformare un intero
+in un colore) quindi \\ \texttt{TransformationQuerryable} o in base all'id
+\texttt{TransformationProvider}, non sono state implementante altre operazioni
+tipiche \texttt{CRUD} in quanto non risultano essere necessarie e avrebbero
+solo aumentato la complessità del codice senza un motivo valido.
+
+Inoltre Transformer è anche un singleton.
 
 \subsubsection{Dataset}
 Il dataset$^{G}$ raggruppa i dati caricati dall'utente in una collezione di
 \texttt{DatasetEntry} che non sono altro che una collezione di coppie nome del
 campo e valore (uno storable type). \\
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.65]{../../assets/classi_uml/datasetentrypng.png}
+\end{figure}
+Tramite la modellazione tramite sumtype e l'utilizzo di typelevel function
+possiamo operare su un dataset eterogeneo mantenedo comunque typesafety.
+\begin{verbatim}
+  export type StorableTypeToRepr<T extends StorableType>
+    = T extends StorableType.Int ? Int
+      : T extends StorableType.String ? string
+        : T extends StorableType.Date ? Date
+          : T extends StorableType.Ip ? string
+            : LoginType;
+\end{verbatim}
+Esempio di typelevel function che trasforma una istanza dell'enum
+\texttt{StorableType} nel tipo che rappresenta.
+\\
 
 \noindent
 Il dataset non è altro che un insieme di \texttt{DatasetEntry} che rappresentano
@@ -103,6 +130,12 @@ una riga del dataset in un qualsiasi momento dell' elaborazione, una entry è un
 insieme di field accompagnati dal loro tipo così da poter mostrare all'utente
 solo opzioni sensate di rendering all'utente, il dataset espone la sua signature
 cioè i suoi campi e loro tipo così da permettere introspezione su di esso.\\
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/dataset.png}
+  \caption{Dataset e DatasetEntry}
+\end{figure}
 
 \noindent
 Per mettere l'estrazione di dati derivati il dataset espone un metodo di map,
@@ -117,6 +150,11 @@ nascondere l'operazione dietro una interfaccia \texttt{DatasetParser}, questo
 tipo di architettura risulterà anche molto flessibile in quanto potrà anche
 essere parallelizzata facilmente in formati in cui il contesto è la singola
 linea tipo \texttt{CSV} aggregandone più diversi.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/datasetparser.png}
+  \caption{DatasetParser}
+\end{figure}
 
 \paragraph{Caricamento del Dataset:}
 Sempre seguendo la stessa filosofia del parsing anche il caricamento del dataset
@@ -127,17 +165,24 @@ futuro si potrebbe anche creare un Dataset Provider anche per lo storage locale 
 Browser. Tutte queste ovviamente utilizzano la dependency injection per rimanere
 agnostici al formato del dataset ricevendo una istanza di \texttt{DatasetParser}
 alla costruzione.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/datasetprovider.png}
+  \caption{DatasetProvider}
+\end{figure}
+Ovviamente le operazioni sono trattate come asincrone in modo da poi non
+bloccare il rendering della user interface.
 
 \subsubsection{Viste utilizzabili dall'utente}
 Le viste sono il raggruppamento delle preferenze del grafico e delle dimensioni
-scelte dall'utente durante la fase esplorativa. Le viste all'interno dell'
-applicazione sono identificate tutte da un nome univoco scelto dall'utente al
-momento della creazione o della modifica di una di esse. Esse sono manipolabili
-tramite la classe \texttt{ViewRepository} che permette di selezionare, eliminare
-e creare nuove viste tramite il loro identificatore univoco. Tramite l'utilizzo
-dei \texttt{sumtypes} è possibile utilizzare un unico tipo per rappresentare le
-preferenze e dimensioni di qualsiasi tipo di grafico disponibile all'interno
-dell' applicativo.
+scelte dall'utente durante la fase esplorativa. Le viste sono salvate all'interno
+di \texttt{FullView} che raggruppa più viste differenti come quella dello
+ScatterPlot e Sankey.
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/vister.png}
+  \caption{Viste}
+\end{figure}
 
 \paragraph{Salvataggio e caricamento viste}
 I tipi delle varie viste (Dimensioni e Preferenze) sono agglomerati all'interno
@@ -146,19 +191,78 @@ discriminando il campo \texttt{type}, queste vengono serializzate e
 deserializzare dal formato \texttt{JSON} dalle classi \texttt{ViewSerializer} e
 \texttt{ViewDeserializer}
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/viewparser.png}
+  \caption{ViewParser}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/viewserializer.png}
+  \caption{ViewSerializer}
+\end{figure}
+
+Inoltre il \texttt{ViewSerializer} espone metodi per permettere alla logica di salvataggio
+di comprendere come costruire il file in cui salvare l'istanza serializzata.
+
+\subsection{Componenti}
+Al cuore di qualsiasi applicativo scritto con la libreria React per tutte le
+funzionalità implementate dal punto di vista di modello (ad esempio: Caricamento e Parsing
+del dataset, caricamento e parsing delle viste create da utente) sono stati creati degli
+appositi functional components sempre sfruttando la dependency injection, alcuni esempi sono:
+\begin{itemize}
+  \item \texttt{LoadDatasetView}
+  \item \texttt{ViewsDownloaderView}
+  \item \texttt{ViewsLoaderView}
+\end{itemize}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.55]{../../assets/classi_uml/components.png}
+  \caption{Alcuni dei componenti}
+\end{figure}
+
+Questo come si può intuire grazie alla dependency injection oltre a rendere
+facile il testing permette anche di cambiare il comportamento di alcuni componenti
+senza cambiare nulla (es: Dataset in formato JSON e Views in formato CSV).
+
 \subsection{Routing}
 La possibilità di poter cambiare vista selezionata è parte integrante dell'esperienza
 di utilizzo dell' applicativo, il routing è gestito tramite la libreria
-\texttt{react-router} e con la creazione delle varie route (che poi corrisponderanno)
-alle viste caricate dall'utente nell' applicazione.
+\texttt{react-router} e con la creazione delle varie route che permettono all'utente di
+spostarsi tra le varie pagine dell'applicazione mantenendo uno stato valido
 
-Sempre seguendo il pattern mvvm anche il routing seguirà questo pattern:
+\subsection{Composizione elementi di UI}
+Una visione ad alto livello della composizione dei vari elementi di UI, si nota in
+particolare che i vari \texttt{Renderer} non ne fanno parte in quanto non sono
+loro stessi ad essere parti della vista in quanto essi sfruttano un \texttt{div}
+facente parte del \texttt{DOM HTML} sul quale posizionare il render
+fatto tramite \texttt{WebGL}.
+
 \begin{figure}[h!]
   \centering
-  \includegraphics[scale=0.55]{../../assets/classi_uml/viewrepo.png}
-  \caption{Implementazione repository}
+  \includegraphics[scale=0.55]{../../assets/classi_uml/vistaglobale.png}
+  \caption{Alcuni dei componenti}
 \end{figure}
 
+Sono presenti solo i componenti esportati dai vari file \texttt{.tsx} in quanto i vari
+sotto componenti più piccoli non sono interessanti ai fini architetturali e non li si vuole
+esporre in quanto potrebbero creare dipendenze non necessarie.
+
+\subsubsection{Proprietà dello stato globale}
+Lo stato dell'applicazione è gestito tramite gli hook di \texttt{React} per questo è importante
+evidenziare che componenti possiedono, modificano e leggono esso per comprendere la dipendenze
+e quali componenti effettivamente subiscono un render quando c'è un aggiornamento.
+
+I componenti dello stato mutabile sono posseduti dal componente \texttt{App} che poi distribuisce
+i getter e i setter generati dallo \texttt{stateHook} tramite i props dei vari componenti.
+
+Perché non si è utilizzato \texttt{redux} o similari per la gestione dello stato? Lo stato
+non è sufficiente complesso per giustificare l'introduzione di tale complessità extra inoltre
+rende meno chiare le dipendenze (che ora sono facilmente visibili tramite la struttura dei
+vari props) e inoltre non sarebbe typesafe cosa che invece all'interno dell' applicazione
+ci si è impegnati a mantenere.
 
 % \subsection{Diagrammi dei package}
 % \subsection{Diagrammi delle classi}
