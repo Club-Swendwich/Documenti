@@ -98,14 +98,20 @@ Sono presenti due bacheche:
     \end{itemdescript}
 \end{itemize}
 Tutto il codice prodotto deve essere mantenuto all'interno della repo$^G$  git$^G$ hostata su GitHub.
-%La struttura della repository è la seguente:
-%\begin{itemize}
-%    \item \texttt{...}: ...
-%\end{itemize}
+La struttura della repository è la seguente:
+\begin{itemize}
+    \item \texttt{public}: Cartella che contiene gli eventuali assets usati dall'app. Inoltre ha al suo interno il file index.htlm, il primo file che viene caricato all'avvio dell'app, che contiene il <div> 'root', cioè il componente dentro il quale tutti gli elementi di react verranno inseriti.
+    \item \item \texttt{src}: Cartella del della repo. Al suo interno si trova il file App.tsx, il componente principale di React e funge da contenitore per tutti gli altri componenti dichiarati.
+    \item \begin{itemize}
+        \item \texttt{model}: Cartella che contiene le interfacce e i modelli base dell'applicazione.
+        \item \texttt{genericview}: Cartella che contiene le interfacce per gli elementi necessari per la renderizzazione dei grafici.
+        \item \texttt{scatterplot}: Cartella che contiene tutte le componenti necessarie per la visualizzazione del grafico scatterplot.
+    \end{itemize}
+\end{itemize}
 
 \subparagraph{Gestione degli Sprint$^G$}
 \mbox{}\\
-Ogni 2 settimane inizia un nuovo sprint$^G$. Nello sprint$^G$ precedente sarà già stato preparato, dal responsabile del gruppo, il backlog per lo sprint$^G$ in partenza, e tali card saranno state posizionate nella lista \textit{Next Sprint}$^G$. \\
+Ogni settimana inizia un nuovo sprint$^G$. Nello sprint$^G$ precedente sarà già stato preparato, dal responsabile del gruppo, il backlog per lo sprint$^G$ in partenza, e tali card saranno state posizionate nella lista \textit{Next Sprint}$^G$. \\
 Con questa condizione soddisfatta, si comincia il nuovo sprint$^G$ premendo il pulsante \textit{Next Sprint}$^G$. Questo causa lo spostamento delle card da \textit{Next Sprint}$^G$ a \textit{Sprtint Backlog} e da \textit{Done - Current Sprint}$^G$ a \textit{Done - All Time}.\\
 Queste ultime schede vengono inoltre rinominate automaticamente nel seguente modo: \texttt{Sprint$^G$ \{data inizio sprint$^G$\}\footnote{La data corrisponde all'inizio del primo sprint$^G$ di appartenenza della card dato che potrebbe accadere, per varie motivazioni, che una card sia incompleta alla fine dello sprint$^G$ e venga inclusa in quello successivo.} to \{data fine sprint$^G$\} - \{titolo della card\}}.\\
 A questo punto si procede con l'assegnazione delle cards (e delle corrispondenti issues$^G$ ) ai vari componenti.
