@@ -1,0 +1,64 @@
+% Configurazione standard documento
+\newcommand{\docname}{Verbale 019}
+\newcommand{\docprojectname}{Login Warrior}
+\newcommand{\docstatus}{Da verificare}
+\newcommand{\docdescription}{Verbale riguardante la riunione di gruppo del 16 Maggio 2022}
+\newcommand{\groupname}{Club Swendwich}
+\newcommand{\groupmail}{clubswendwich@gmail.com}
+\newcommand{\doceditors}{Canel Alessandro}
+\newcommand{\docverfiers}{Alessio Ferrarini}
+\newcommand{\docapprovers}{Marco Bustaffa}
+
+\newcommand{\doclocation}{Discord meeting}
+\newcommand{\docdata}{16 Maggio 2022}
+\newcommand{\docpresenti}{Barilla Gianmarco\\
+						  & Bustaffa Marco\\
+						  & Canel Alessandro\\
+						  & Ferrarini Alessio\\
+						  & Pozzebon Samuele}
+\newcommand{\docassenti}{-}
+
+% Configurazione ORG
+\definecolor{orgcolorlight}{HTML}{99b755}
+\definecolor{orgcolordark}{HTML}{214932}
+
+
+% Definizione copertina
+\newcommand{\FirstPage}{
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[scale=0.35]{../../assets/ClubSweLogo.png}
+
+			\vspace{0.5cm}
+
+			\textcolor{orgcolordark}{\Large\textbf{\docprojectname}{}} \\
+
+			\href{mailto:clubswendwich@gmail.com}{clubswendwich@gmail.com}
+
+			\vspace{0.3cm}
+
+			\textcolor{orgcolorlight}{\Huge\textbf{\docname}}
+
+			\begin{table}[H]
+   			\centering
+    				\begin{tabular}{l|l}
+    				\multicolumn{2}{l}{\textbf{Informazioni sul documento}}  \\
+    				\hline
+					\textbf{Stato}          & \docstatus                        \\
+					\textbf{Redattori}      & \doceditors                       \\
+					\textbf{Verificatori}   & \docverfiers						\\
+					\textbf{Approvatori}    & \docapprovers						\\
+					\hline
+					\textbf{Luogo}          & \doclocation                      \\
+					\textbf{Data}           & \docdata                          \\
+					\textbf{Presenti}       & \docpresenti                      \\
+					\textbf{Assenti}        & \docassenti                       \\
+    				\end{tabular}
+			\end{table}
+
+			\vspace{1cm}
+			\textbf{Descrizione:}
+			\docdescription
+	\end{center}
+\end{titlepage}
+}
